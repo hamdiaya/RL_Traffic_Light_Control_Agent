@@ -1,0 +1,11 @@
+<additional>
+   
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="13.9"/>
+
+    <tlLogic id="n0" type="static" programID="1" offset="0">
+        <phase duration="30" state="GGrrrrGGrrrr"/>  <!-- North-South Green -->
+        <phase duration="5" state="yyrrrryyrrrr"/>   <!-- North-South Yellow -->
+        <phase duration="30" state="rrGGrrrrGGrr"/>  <!-- East-West Green -->
+        <phase duration="5" state="rryyrrrryyrr"/>   <!-- East-West Yellow -->
+    </tlLogic>
+</additional>
