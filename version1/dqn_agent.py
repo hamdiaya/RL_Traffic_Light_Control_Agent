@@ -1,10 +1,10 @@
-# dqn_agent.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import random
 from collections import deque
 import numpy as np
+import matplotlib.pyplot as plt
 
 class DQN(nn.Module):
     def __init__(self, input_dim, output_dim):
@@ -29,6 +29,8 @@ class DQNAgent:
         self.memory = deque(maxlen=10000)  # Replay memory
         self.model = DQN(state_dim, action_dim)
         self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
+        self.rewards = []  # To store rewards for each episode
+        self.losses = []   # To store loss for each training step
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
@@ -59,5 +61,29 @@ class DQNAgent:
         loss.backward()
         self.optimizer.step()
 
+        self.losses.append(loss.item())  # Store the loss
+
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
+
+    def plot_results(self):
+        plt.figure(figsize=(12, 5))
+
+        # Plot rewards
+        plt.subplot(1, 2, 1)
+        plt.plot(self.rewards, label='Rewards per Episode')
+        plt.xlabel('Episode')
+        plt.ylabel('Total Reward')
+        plt.title('Rewards Over Time')
+        plt.legend()
+
+        # Plot loss
+        plt.subplot(1, 2, 2)
+        plt.plot(self.losses, label='Loss per Training Step', color='orange')
+        plt.xlabel('Training Step')
+        plt.ylabel('Loss')
+        plt.title('Loss Over Time')
+        plt.legend()
+
+        plt.show()
+

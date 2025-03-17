@@ -1,4 +1,3 @@
-# train.py
 import traci
 import numpy as np
 from version1.dqn_agent import DQNAgent
@@ -49,7 +48,21 @@ def run_simulation():
         agent.remember(state, action, reward, next_state, done)
         agent.replay(32)  # Train on a batch of 32 experiences
 
+        # Track total reward for the episode
+        if episode == 0:
+            total_reward = reward
+        else:
+            total_reward += reward
+
+        # Store the total reward for the episode
+        if done:
+            agent.rewards.append(total_reward)
+            print(f"Episode: {episode + 1}, Total Reward: {total_reward}, Epsilon: {agent.epsilon}")
+
     traci.close()
+
+    # Plot the results after training
+    agent.plot_results()
 
 if __name__ == "__main__":
     run_simulation()
