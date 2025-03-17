@@ -1,11 +1,21 @@
 <additional>
-   
-    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="13.9"/>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" />
 
     <tlLogic id="n0" type="static" programID="1" offset="0">
-        <phase duration="30" state="GGrrrrGGrrrr"/>  <!-- North-South Green -->
-        <phase duration="5" state="yyrrrryyrrrr"/>   <!-- North-South Yellow -->
-        <phase duration="30" state="rrGGrrrrGGrr"/>  <!-- East-West Green -->
-        <phase duration="5" state="rryyrrrryyrr"/>   <!-- East-West Yellow -->
+        <!-- Phase 1: North-South Straight + Right -->
+        <phase duration="30" state="GGGGrrrrGGGGrrrr"/>
+        <phase duration="5"  state="yyyyrrrryyyyrrrr"/>  <!-- Yellow -->
+
+        <!-- Phase 2: North-South Left Turn -->
+        <phase duration="10" state="rrrrGGGGrrrrGGGG"/>
+        <phase duration="5"  state="rrrryyyyrrrryyyy"/>  <!-- Yellow -->
+
+        <!-- Phase 3: East-West Straight + Right -->
+        <phase duration="30" state="rrrrGGGGrrrrGGGG"/>
+        <phase duration="5"  state="rrrryyyyrrrryyyy"/>  <!-- Yellow -->
+
+        <!-- Phase 4: East-West Left Turn -->
+        <phase duration="10" state="rrrrrrrrGGGGGGGG"/>
+        <phase duration="5"  state="rrrrrrrryyyyyyyy"/>  <!-- Yellow -->
     </tlLogic>
 </additional>

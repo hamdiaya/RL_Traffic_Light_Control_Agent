@@ -1,0 +1,18 @@
+# Define valid vehicle routes (updated for new lanes)
+routes = {
+    "route_1": ["E1_in", "E2_out"],  # West to East (Straight)
+    "route_2": ["E1_in", "E4_out"],  # West to North (Right Turn)
+    "route_3": ["E1_in", "E3_out"],  # West to South (Left Turn),
+
+    "route_4": ["E3_in", "E1_out"],  # South to West (Left Turn)
+    "route_5": ["E3_in", "E4_out"],  # South to North (Straight)
+    "route_6": ["E3_in", "E2_out"],  # South to East (Right Turn),
+
+    "route_7": ["E4_in", "E3_out"],  # North to South (Straight)
+    "route_8": ["E4_in", "E1_out"],  # North to West (Right Turn)
+    "route_9": ["E4_in", "E2_out"],  # North to East (Left Turn),
+
+    "route_10": ["E2_in", "E1_out"],  # East to West (Straight)
+    "route_11": ["E2_in", "E3_out"],  # East to South (Right Turn)
+    "route_12": ["E2_in", "E4_out"],  # East to North (Left Turn)
+}
