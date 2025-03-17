@@ -1,0 +1,39 @@
+2025-03-17 03:05:33,066 - Episode: 1, Total Reward: -5043908.849999987, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:06:15,933 - Episode: 2, Total Reward: -4987284.699999983, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:06:53,290 - Episode: 3, Total Reward: -5994004.350000015, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:07:29,655 - Episode: 4, Total Reward: -5324076.450000003, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:10:29,657 - Episode: 1, Total Reward: -5042912.400000012, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:11:47,893 - Episode: 1, Total Reward: -5225877.550000003, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:12:30,376 - Episode: 2, Total Reward: -5297425.650000004, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:13:12,304 - Episode: 3, Total Reward: -4754777.549999999, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:19:52,950 - Episode: 1, Total Reward: -4821570.499999999, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:22:01,158 - Episode: 2, Total Reward: -4900689.15, Exploration Status: Exploit, Epsilon: 0.0100
+2025-03-17 03:28:16,763 - Episode: 1, Total Reward: -4909472.049999997, Explores: 295, Exploits: 3305, Epsilon: 0.0100
+2025-03-17 03:29:13,014 - Episode: 2, Total Reward: -4592471.100000004, Explores: 31, Exploits: 3569, Epsilon: 0.0100
+2025-03-17 03:31:05,682 - Episode: 1, Total Reward: -436192.0499999999, Explores: 246, Exploits: 754, Epsilon: 0.0100
+2025-03-17 03:31:16,935 - Episode: 2, Total Reward: -409684.44999999984, Explores: 7, Exploits: 993, Epsilon: 0.0100
+2025-03-17 03:31:32,948 - Episode: 3, Total Reward: -607124.5500000007, Explores: 13, Exploits: 987, Epsilon: 0.0100
+2025-03-17 03:31:49,466 - Episode: 4, Total Reward: -486077.5499999999, Explores: 12, Exploits: 988, Epsilon: 0.0100
+2025-03-17 03:32:24,850 - Episode: 1, Total Reward: -363284.6999999999, Explores: 273, Exploits: 727, Epsilon: 0.0100
+2025-03-17 03:32:30,434 - Episode: 2, Total Reward: -422515.2, Explores: 11, Exploits: 989, Epsilon: 0.0100
+2025-03-17 03:32:35,742 - Episode: 3, Total Reward: -310068.10000000003, Explores: 14, Exploits: 986, Epsilon: 0.0100
+2025-03-17 03:32:41,283 - Episode: 4, Total Reward: -418577.85000000015, Explores: 7, Exploits: 993, Epsilon: 0.0100
+2025-03-17 03:32:47,269 - Episode: 5, Total Reward: -530233.4999999994, Explores: 7, Exploits: 993, Epsilon: 0.0100
+2025-03-17 03:32:52,884 - Episode: 6, Total Reward: -393675.64999999997, Explores: 6, Exploits: 994, Epsilon: 0.0100
+2025-03-17 03:32:58,318 - Episode: 7, Total Reward: -365157.0999999999, Explores: 9, Exploits: 991, Epsilon: 0.0100
+2025-03-17 03:33:03,776 - Episode: 8, Total Reward: -403754.4500000002, Explores: 11, Exploits: 989, Epsilon: 0.0100
+2025-03-17 03:33:09,541 - Episode: 9, Total Reward: -494508.8000000002, Explores: 15, Exploits: 985, Epsilon: 0.0100
+2025-03-17 03:33:15,525 - Episode: 10, Total Reward: -530295.2000000004, Explores: 13, Exploits: 987, Epsilon: 0.0100
+2025-03-17 03:33:21,347 - Episode: 11, Total Reward: -452507.69999999955, Explores: 16, Exploits: 984, Epsilon: 0.0100
+2025-03-17 03:33:27,251 - Episode: 12, Total Reward: -429380.1000000003, Explores: 12, Exploits: 988, Epsilon: 0.0100
+2025-03-17 03:33:32,852 - Episode: 13, Total Reward: -410747.4499999998, Explores: 8, Exploits: 992, Epsilon: 0.0100
+2025-03-17 03:33:39,090 - Episode: 14, Total Reward: -440717.3000000001, Explores: 14, Exploits: 986, Epsilon: 0.0100
+2025-03-17 03:33:45,083 - Episode: 15, Total Reward: -432750.9999999997, Explores: 5, Exploits: 995, Epsilon: 0.0100
+2025-03-17 03:33:51,426 - Episode: 16, Total Reward: -533202.9000000001, Explores: 12, Exploits: 988, Epsilon: 0.0100
+2025-03-17 03:33:57,118 - Episode: 17, Total Reward: -347258.0999999998, Explores: 4, Exploits: 996, Epsilon: 0.0100
+2025-03-17 03:34:03,117 - Episode: 18, Total Reward: -463190.49999999977, Explores: 13, Exploits: 987, Epsilon: 0.0100
+2025-03-17 03:34:09,548 - Episode: 19, Total Reward: -563035.5499999993, Explores: 11, Exploits: 989, Epsilon: 0.0100
+2025-03-17 03:34:15,586 - Episode: 20, Total Reward: -429150.89999999985, Explores: 8, Exploits: 992, Epsilon: 0.0100
+2025-03-17 03:34:21,650 - Episode: 21, Total Reward: -458682.5499999996, Explores: 8, Exploits: 992, Epsilon: 0.0100
+2025-03-17 03:34:27,770 - Episode: 22, Total Reward: -515619.29999999993, Explores: 12, Exploits: 988, Epsilon: 0.0100
+2025-03-17 03:34:34,296 - Episode: 23, Total Reward: -552989.6499999997, Explores: 12, Exploits: 988, Epsilon: 0.0100

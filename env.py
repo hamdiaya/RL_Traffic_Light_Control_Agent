@@ -2,10 +2,11 @@ import os
 import random
 import traci
 from sumolib import checkBinary
+import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"
-sumo_binary = checkBinary("sumo-gui")  # Use "sumo-gui" for visualization
+sumo_binary = checkBinary("sumo")  # Use "sumo-gui" for visualization
 
 # Define valid vehicle routes (updated for new lanes)
 routes = {
@@ -29,10 +30,12 @@ routes = {
 class TrafficEnv:
     def __init__(self):
         """Initialize SUMO environment."""
-        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1"])
+        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1","--no-warnings"])
         self.simulation_time = 0
         self.last_action = None  # Track the last action for phase switching penalty
         self.current_action = None  # Track the current action for phase switching penalty
+        self.action_space = [0, 1, 2, 3]  # 4 actions corresponding to the 4 traffic light phases
+        self.state_space = self.get_state().shape  # Define state space
 
     def generate_random_traffic(self):
         """Generate random vehicles dynamically based on new lane setup."""
@@ -56,55 +59,31 @@ class TrafficEnv:
             vehicle_id = f"veh_{self.simulation_time}"
             traci.vehicle.add(vehicle_id, route_id, typeID="car", departLane=depart_lane, departSpeed=str(depart_speed))
 
-    def get_vehicle_direction(self, veh_id):
-        """Determine vehicle movement direction based on new lane assignments."""
-        route = traci.vehicle.getRoute(veh_id)
-        if len(route) < 2:
-            return "unknown"
+    def get_state(self):
+        """Retrieve the current state of the environment."""
+        state = []
 
-        current_edge = traci.vehicle.getRoadID(veh_id)
-        next_edge = route[1]
+        # 1. Current Traffic Light Phase
+        current_phase = traci.trafficlight.getPhase("n0")
+        state.append(current_phase)
 
-        # Define turns for each incoming lane
-        direction_map = {
-            "E1_in": {"E2_out": "straight", "E3_out": "left", "E4_out": "right"},
-            "E3_in": {"E1_out": "left", "E2_out": "right", "E4_out": "straight"},
-            "E4_in": {"E1_out": "right", "E2_out": "left", "E3_out": "straight"},
-            "E2_in": {"E1_out": "straight", "E3_out": "right", "E4_out": "left"},
-        }
+        # 2. Number of Vehicles Waiting at Each Lane
+        for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
+            state.append(traci.edge.getLastStepVehicleNumber(edge))
 
-        return direction_map.get(current_edge, {}).get(next_edge, "unknown")
+        # 3. Waiting Time of Vehicles at Each Lane
+        for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
+            state.append(traci.edge.getWaitingTime(edge))
 
-    def get_simulation_info(self):
-        """Retrieve SUMO state data."""
-        observation = {
-            "traffic_light_state": traci.trafficlight.getPhase("n0"),
-            "vehicles": [],
-        }
+        # 4. Queue Length at Each Lane
+        for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
+            state.append(traci.edge.getLastStepHaltingNumber(edge))
 
-        vehicle_ids = traci.vehicle.getIDList()
-        for veh_id in vehicle_ids:
-            position = traci.vehicle.getPosition(veh_id)
-            speed = traci.vehicle.getSpeed(veh_id)
-            waiting_time = traci.vehicle.getWaitingTime(veh_id)
-            route = traci.vehicle.getRoute(veh_id)
-            next_edge = route[1] if len(route) > 1 else "Destination"
-            direction = self.get_vehicle_direction(veh_id)
-
-            observation["vehicles"].append({
-                "id": veh_id,
-                "position": position,
-                "speed": speed,
-                "waiting_time": waiting_time,
-                "next_edge": next_edge,
-                "direction": direction,
-            })
-
-        return observation
+        return np.array(state)
 
     def calculate_reward(self):
         """Calculate the reward based on traffic conditions."""
-        # Define the edges to monitor (update these based on your SUMO network)
+        # Define the edges to monitor
         incoming_edges = ["E1_in", "E2_in", "E3_in", "E4_in"]
         outgoing_edges = ["E1_out", "E2_out", "E3_out", "E4_out"]
 
@@ -127,10 +106,8 @@ class TrafficEnv:
         phase_switching_penalty = 1 if self.last_action != self.current_action else 0
 
         # 6. Fairness Penalty (Penalty)
-        # Get the current phase duration (a single float value)
         current_phase_duration = traci.trafficlight.getPhaseDuration("n0")
-        # For fairness, compare the current phase duration to a target duration (e.g., 30 seconds)
-        target_duration = 30  # Adjust this based on your traffic light configuration
+        target_duration = 30  # Target phase duration
         fairness_penalty = abs(current_phase_duration - target_duration)
 
         # Combine components with weights
@@ -154,17 +131,29 @@ class TrafficEnv:
 
         return reward
 
-    def step(self):
-        """Advance the simulation."""
+    def step(self, action):
+        """Advance the simulation by one step."""
+        self.current_action = action
+        traci.trafficlight.setPhase("n0", action)  # Set the traffic light phase based on the action
         traci.simulationStep()
         self.simulation_time += 1
         if random.random() < 0.5:
             self.generate_random_traffic()
 
-        observation = self.get_simulation_info()
+        next_state = self.get_state()
         reward = self.calculate_reward()
+        done = self.simulation_time >= 3600  # End episode after 1 hour
 
-        return observation, reward
+        return next_state, reward, done
+
+    def reset(self):
+        """Reset the environment to start a new episode."""
+        traci.close()
+        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1"])
+        self.simulation_time = 0
+        self.last_action = None
+        self.current_action = None
+        return self.get_state()
 
     def close(self):
         """Close SUMO connection."""
@@ -175,8 +164,10 @@ if __name__ == "__main__":
     env = TrafficEnv()
     try:
         for _ in range(3600):  # 1-hour simulation
-            observation, reward = env.step()
+            action = random.choice(env.action_space)  # Random action for testing
+            next_state, reward, done = env.step(action)
             print(f"Reward: {reward}")
-            
+            if done:
+                break
     finally:
         env.close()
