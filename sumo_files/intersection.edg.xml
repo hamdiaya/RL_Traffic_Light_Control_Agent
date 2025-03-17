@@ -1,0 +1,13 @@
+<edges>
+    <edge id="E1_in" from="n1" to="n0" numLanes="2" speed="13.9"/>  <!-- West to Intersection -->
+    <edge id="E1_out" from="n0" to="n1" numLanes="2" speed="13.9"/> <!-- Intersection to West -->
+
+    <edge id="E2_in" from="n2" to="n0" numLanes="2" speed="13.9"/>  <!-- East to Intersection -->
+    <edge id="E2_out" from="n0" to="n2" numLanes="2" speed="13.9"/> <!-- Intersection to East -->
+
+    <edge id="E3_in" from="n3" to="n0" numLanes="2" speed="13.9"/>  <!-- South to Intersection -->
+    <edge id="E3_out" from="n0" to="n3" numLanes="2" speed="13.9"/> <!-- Intersection to South -->
+
+    <edge id="E4_in" from="n4" to="n0" numLanes="2" speed="13.9"/>  <!-- North to Intersection -->
+    <edge id="E4_out" from="n0" to="n4" numLanes="2" speed="13.9"/> <!-- Intersection to North -->
+</edges>
