@@ -122,8 +122,6 @@ class TrafficEnv:
         """Advance the simulation with correct traffic light control."""
         self.current_action = GREEN_PHASES[action]  # Map action to correct green phase
 
-        
-
         if self.last_action is not None and self.last_action != self.current_action:
             # Introduce a yellow transition before switching to new green phase
             yellow_phase = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]  # Correct mapping

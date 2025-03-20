@@ -1541,3 +1541,17 @@
 2025-03-20 03:13:30,551 - Episode 63: Reward=346.00000000000006, Explores=5, Exploits=410, Epsilon=0.0100
 2025-03-20 03:13:34,150 - Episode 64: Reward=376.94999999999976, Explores=3, Exploits=414, Epsilon=0.0100
 2025-03-20 03:13:37,545 - Episode 65: Reward=358.1999999999998, Explores=7, Exploits=423, Epsilon=0.0100
+2025-03-20 03:23:09,581 - Episode 1: Reward=-2889992.5999999978, Explores=254, Exploits=466, Epsilon=0.0371
+2025-03-20 03:23:15,662 - Episode 2: Reward=-3788918.7500000005, Explores=9, Exploits=711, Epsilon=0.0100
+2025-03-20 03:23:21,956 - Episode 3: Reward=-2706436.9999999995, Explores=9, Exploits=711, Epsilon=0.0100
+2025-03-20 03:28:34,532 - Episode 1: Reward=0.0, Explores=236, Exploits=295, Epsilon=0.0958
+2025-03-20 03:28:37,507 - Episode 2: Reward=0.0, Explores=21, Exploits=665, Epsilon=0.0100
+2025-03-20 03:28:40,530 - Episode 3: Reward=0.0, Explores=6, Exploits=710, Epsilon=0.0100
+2025-03-20 03:28:43,364 - Episode 4: Reward=0.0, Explores=6, Exploits=708, Epsilon=0.0100
+2025-03-20 03:45:19,440 - Episode 1: Reward=-2107.1500000000005, Explores=226, Exploits=137, Epsilon=0.2223
+2025-03-20 03:45:21,789 - Episode 2: Reward=214.89999999999986, Explores=46, Exploits=343, Epsilon=0.0316
+2025-03-20 03:45:24,256 - Episode 3: Reward=57.69999999999995, Explores=3, Exploits=411, Epsilon=0.0100
+2025-03-20 03:45:26,641 - Episode 4: Reward=228.69999999999965, Explores=5, Exploits=405, Epsilon=0.0100
+2025-03-20 03:45:29,150 - Episode 5: Reward=272.94999999999976, Explores=5, Exploits=403, Epsilon=0.0100
+2025-03-20 03:45:31,555 - Episode 6: Reward=265.65000000000015, Explores=3, Exploits=388, Epsilon=0.0100
+2025-03-20 03:45:34,071 - Episode 7: Reward=233.8000000000001, Explores=5, Exploits=375, Epsilon=0.0100
