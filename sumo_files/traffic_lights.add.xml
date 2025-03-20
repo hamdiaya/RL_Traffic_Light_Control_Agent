@@ -1,34 +1,28 @@
 <additional>
     <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" />
+    
     <tlLogic id="n0" type="static" programID="1" offset="0">
         
-        <!-- Phase 1: North-South Straight -->
-        <phase duration="30" state="rrGGrrrrGGrr"/>  <!-- North (E4_in) and South (E3_in) straight -->
+        <!-- Phase 0: North-South Straight (Controlled by RL) -->
+        <phase duration="30" state="GGGrrrrGGGrr"/>  <!-- 12 characters -->
+        <!-- Phase 1: Yellow Transition -->
+        <phase duration="3"  state="yyyrrrryyyrr"/>  <!-- 12 characters -->
 
-        <!-- Yellow Phase after Phase 1 -->
-        <phase duration="3" state="rryyrrrryyrr"/>   <!-- Yellow for North (E4_in) and South (E3_in) -->
+        <!-- Phase 2: North-South Left Turns (Controlled by RL) -->
+        <phase duration="20" state="rrrGGGrrrGGG"/>  <!-- 12 characters -->
+        <!-- Phase 3: Yellow Transition -->
+        <phase duration="3"  state="rrryyyrrryyy"/>  <!-- 12 characters -->
 
+        <!-- Phase 4: East-West Straight (Controlled by RL) -->
+        <phase duration="30" state="rrrrGGGrrrrG"/>  <!-- 12 characters -->
+        <!-- Phase 5: Yellow Transition -->
+        <phase duration="3"  state="rrrryyyrrrry"/>  <!-- 12 characters -->
 
-        <!-- Phase 2: North-South Left Turns -->
-        <phase duration="20" state="rrrrrrGGrrrr"/>  <!-- North (E4_in) left turn -->
-
-        <!-- Yellow Phase after Phase 2 -->
-        <phase duration="3" state="rrrrrryyrrrr"/>    <!-- Yellow for North (E4_in) -->
-
-
-        <!-- Phase 3: East-West Straight -->
-        <phase duration="30" state="GGrrrrGGrrrr"/>  <!-- East (E2_in) and West (E1_in) straight -->
-
-        <!-- Yellow Phase after Phase 3 -->
-        <phase duration="3" state="yyrrrryyrrrr"/>   <!-- Yellow for East (E2_in) and West (E1_in) -->
-
-
-        <!-- Phase 4: East-West Left Turns -->
-        <phase duration="20" state="GGrrrrrrrrrr"/>  <!-- West (E1_in) left turn -->
-
-        <!-- Yellow Phase after Phase 4 -->
-        <phase duration="3" state="yyrrrrrrrrrr"/>    <!-- Yellow for West (E1_in) -->
+        <!-- Phase 6: East-West Left Turns (Controlled by RL) -->
+        <phase duration="20" state="rrrrrrrGGGrr"/>  <!-- 12 characters -->
+        <!-- Phase 7: Yellow Transition -->
+        <phase duration="3"  state="rrrrrrryyyrr"/>  <!-- 12 characters -->
 
     </tlLogic>
- 
+
 </additional>

@@ -8,7 +8,7 @@ import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"
-sumo_binary = checkBinary("sumo-gui")  # Use "sumo-gui" for visualization
+sumo_binary = checkBinary("sumo")  # Use "sumo-gui" for visualization
 
 # Define valid vehicle routes (unchanged)
 routes = {
@@ -29,7 +29,6 @@ routes = {
     "route_12": ["E2_in", "E4_out"],  # East to North (Left Turn)
 }
 
-# Traffic light phases: 0-3 are green phases, 4-7 are yellow transitions
 GREEN_PHASES = [0, 2, 4, 6]
 YELLOW_PHASES = [1, 3, 5, 7]
 
@@ -67,7 +66,7 @@ class TrafficEnv:
         if random.random() < vehicle_probability:
             route_name, edges = random.choice(list(routes.items()))
             depart_lane = random.choice(["0", "1"])  # Choose one of the two lanes
-            depart_speed = random.uniform(5, 13.9)
+            depart_speed = random.uniform(5, 11.1)
 
             route_id = f"{route_name}_{self.simulation_time}"
             traci.route.add(route_id, edges)
@@ -109,15 +108,12 @@ class TrafficEnv:
         total_queue_length = sum(traci.edge.getLastStepHaltingNumber(edge) for edge in incoming_edges)
         throughput = sum(traci.edge.getLastStepVehicleNumber(edge) for edge in outgoing_edges)
 
-        # Phase switching penalty
-        phase_switch_penalty = -2 if self.last_action != self.current_action else 0
-
         # Reward function
         reward = (
             -0.1 * total_waiting_time  # Penalize high waiting time
             -0.05 * total_queue_length  # Penalize large queues
             + 0.2 * throughput          # Reward vehicle throughput
-            + phase_switch_penalty      # Discourage frequent phase switching
+            
         )
 
         return reward
@@ -126,11 +122,13 @@ class TrafficEnv:
         """Advance the simulation with correct traffic light control."""
         self.current_action = GREEN_PHASES[action]  # Map action to correct green phase
 
+        
+
         if self.last_action is not None and self.last_action != self.current_action:
             # Introduce a yellow transition before switching to new green phase
             yellow_phase = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]  # Correct mapping
             traci.trafficlight.setPhase("n0", yellow_phase)
-            for _ in range(5):  # Yellow phase lasts 5 seconds
+            for _ in range(7):  # Yellow phase lasts 5 seconds
                 traci.simulationStep()
                 self.simulation_time += 1
 
