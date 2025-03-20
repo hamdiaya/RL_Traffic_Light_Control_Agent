@@ -8,7 +8,7 @@ import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"
-sumo_binary = checkBinary("sumo")  # Use "sumo-gui" for visualization
+sumo_binary = checkBinary("sumo-gui")  # Use "sumo-gui" for visualization
 
 # Define valid vehicle routes (unchanged)
 routes = {

@@ -1,18 +1,34 @@
-# Define valid vehicle routes (updated for new lanes)
-routes = {
-    "route_1": ["E1_in", "E2_out"],  # West to East (Straight)
-    "route_2": ["E1_in", "E4_out"],  # West to North (Right Turn)
-    "route_3": ["E1_in", "E3_out"],  # West to South (Left Turn),
+<additional>
+    <tlLogic id="intersection" type="static" programID="1" offset="0">
+        <!-- Phase 1: West-East Straight -->
+        <phase duration="30" state="GGrrrrGGrrrr"/>  <!-- E1_in and E2_in straight -->
 
-    "route_4": ["E3_in", "E1_out"],  # South to West (Left Turn)
-    "route_5": ["E3_in", "E4_out"],  # South to North (Straight)
-    "route_6": ["E3_in", "E2_out"],  # South to East (Right Turn),
+        <!-- Yellow Phase after Phase 1 -->
+        <phase duration="3" state="yyrrrryyrrrr"/>   <!-- Yellow for E1_in and E2_in -->
 
-    "route_7": ["E4_in", "E3_out"],  # North to South (Straight)
-    "route_8": ["E4_in", "E1_out"],  # North to West (Right Turn)
-    "route_9": ["E4_in", "E2_out"],  # North to East (Left Turn),
+       
 
-    "route_10": ["E2_in", "E1_out"],  # East to West (Straight)
-    "route_11": ["E2_in", "E3_out"],  # East to South (Right Turn)
-    "route_12": ["E2_in", "E4_out"],  # East to North (Left Turn)
-}
+        <!-- Phase 2: West-East Protected Left Turns -->
+        <phase duration="20" state="GGrrrrrrrrrr"/>  <!-- E1_in left turn (protected) -->
+
+        <!-- Yellow Phase after Phase 2 -->
+        <phase duration="3" state="yyrrrrrrrrrr"/>    <!-- Yellow for E1_in left turn -->
+
+        
+
+        <!-- Phase 3: North-South Straight -->
+        <phase duration="30" state="rrGGrrrrGGrr"/>  <!-- E3_in and E4_in straight -->
+
+        <!-- Yellow Phase after Phase 3 -->
+        <phase duration="3" state="rryyrrrryyrr"/>   <!-- Yellow for E3_in and E4_in -->
+
+
+        <!-- Phase 4: North-South Protected Left Turns -->
+        <phase duration="20" state="rrrrrrGGrrrr"/>  <!-- E3_in left turn (protected) -->
+
+        <!-- Yellow Phase after Phase 4 -->
+        <phase duration="3" state="rrrrrryyrrrr"/>    <!-- Yellow for E3_in left turn -->
+
+        
+    </tlLogic>
+</additional>
