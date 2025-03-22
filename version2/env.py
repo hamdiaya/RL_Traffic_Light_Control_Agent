@@ -1,6 +1,5 @@
 import os
 import random
-
 import gym
 import traci
 from sumolib import checkBinary
@@ -26,6 +25,7 @@ routes = {
     "route_12": ["E2_in", "E4_out"],  # East to North (Left Turn)
 }
 
+# Traffic light phases: 0-3 are green phases, 4-7 are yellow transitions
 GREEN_PHASES = [0, 2, 4, 6]
 YELLOW_PHASES = [1, 3, 5, 7]
 
@@ -58,12 +58,12 @@ class TrafficEnv:
         }
 
         profile = random.choices(list(traffic_profiles.keys()), weights=list(traffic_profiles.values()), k=1)[0]
-        vehicle_probability = {"low": 0.2, "medium": 0.5, "high": 0.8}[profile]
+        vehicle_probability = {"low": 0.1, "medium": 0.3, "high": 0.6}[profile]
 
         if random.random() < vehicle_probability:
             route_name, edges = random.choice(list(routes.items()))
             depart_lane = random.choice(["0", "1"])  # Choose one of the two lanes
-            depart_speed = random.uniform(5, 11.1)
+            depart_speed = random.uniform(5, 11.9)  # Align with speed limits in the network
 
             route_id = f"{route_name}_{self.simulation_time}"
             traci.route.add(route_id, edges)
@@ -80,17 +80,20 @@ class TrafficEnv:
         phase_encoding = [1 if current_phase == p else 0 for p in GREEN_PHASES]
         state.extend(phase_encoding)
 
-        # 2. Number of Vehicles Waiting at Each Lane
+        # 2. Number of Vehicles Waiting at Each Lane (Normalized)
+        max_vehicles = 20  # Assume a maximum of 20 vehicles per lane
         for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
-            state.append(traci.edge.getLastStepVehicleNumber(edge))
+            state.append(traci.edge.getLastStepVehicleNumber(edge) / max_vehicles)
 
-        # 3. Waiting Time of Vehicles
+        # 3. Waiting Time of Vehicles (Normalized)
+        max_waiting_time = 100  # Assume a maximum waiting time of 100 seconds
         for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
-            state.append(traci.edge.getWaitingTime(edge))
+            state.append(traci.edge.getWaitingTime(edge) / max_waiting_time)
 
-        # 4. Queue Length at Each Lane
+        # 4. Queue Length at Each Lane (Normalized)
+        max_queue_length = 20  # Assume a maximum queue length of 20 vehicles
         for edge in ["E1_in", "E2_in", "E3_in", "E4_in"]:
-            state.append(traci.edge.getLastStepHaltingNumber(edge))
+            state.append(traci.edge.getLastStepHaltingNumber(edge) / max_queue_length)
 
         assert len(state) == 16, f"State size mismatch! Expected 16, got {len(state)}"
         return np.array(state, dtype=np.float32)
@@ -110,37 +113,42 @@ class TrafficEnv:
             -0.1 * total_waiting_time  # Penalize high waiting time
             -0.05 * total_queue_length  # Penalize large queues
             + 0.2 * throughput          # Reward vehicle throughput
-            
         )
 
         return reward
 
-    def step(self, action):
-        """Advance the simulation with correct traffic light control."""
-        self.current_action = GREEN_PHASES[action]  # Map action to correct green phase
+    # Constants for phase timing
+    GREEN_DURATION = 30  # 30 seconds (30 steps)
+    YELLOW_DURATION = 5   # 5 seconds (5 steps)
 
+    def step(self, action):
+        """Improved traffic light control with realistic timing"""
+        self.current_action = GREEN_PHASES[action]
+        total_reward = 0
+
+        # Yellow phase transition (only if changing phase)
         if self.last_action is not None and self.last_action != self.current_action:
-            # Introduce a yellow transition before switching to new green phase
-            yellow_phase = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]  # Correct mapping
+            yellow_phase = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]
             traci.trafficlight.setPhase("n0", yellow_phase)
-            for _ in range(7):  # Yellow phase lasts 5 seconds
+            for _ in range(self.YELLOW_DURATION):
                 traci.simulationStep()
                 self.simulation_time += 1
+                total_reward += self.calculate_reward()  # Accumulate rewards
+                self.generate_random_traffic()  # Continue traffic generation
 
-        # Set new green phase
+        # Green phase
         traci.trafficlight.setPhase("n0", self.current_action)
-        for _ in range(5):  # Green phase lasts 5 steps per action
+        for _ in range(self.GREEN_DURATION):
             traci.simulationStep()
             self.simulation_time += 1
-            if random.random() < 0.5:  # Keep dynamic traffic generation
+            total_reward += self.calculate_reward()
+            if random.random() < 0.3:  # Reduced generation frequency
                 self.generate_random_traffic()
 
-        self.last_action = self.current_action  # Update phase history
-        next_state = self.get_state()
-        reward = self.calculate_reward()
-        done = self.simulation_time >= 3600  # Stop after 1-hour simulation
-
-        return next_state, reward, done
+        # Update system state
+        self.last_action = self.current_action
+        done = self.simulation_time >= 3600
+        return self.get_state(), total_reward, done
 
     def reset(self):
         """Reset the environment for a new episode."""
@@ -165,7 +173,7 @@ if __name__ == "__main__":
         for _ in range(3600):  # 1-hour simulation
             action = env.action_space.sample()  # Random action for testing
             next_state, reward, done = env.step(action)
-            #print(f"Reward: {reward}")
+            print(f"Reward: {reward}")
             print(env.get_state())
             if done:
                 break
