@@ -32,7 +32,7 @@ YELLOW_PHASES = [1, 3, 5, 7]
 class TrafficEnv:
     def __init__(self):
         """Initialize SUMO environment."""
-        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1", "--no-warnings"])
+        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1", "--no-warnings" ])
         self.simulation_time = 0
         self.last_action = None
         self.current_action = None
@@ -102,21 +102,37 @@ class TrafficEnv:
         """Calculate the reward based on traffic conditions."""
         incoming_edges = ["E1_in", "E2_in", "E3_in", "E4_in"]
         outgoing_edges = ["E1_out", "E2_out", "E3_out", "E4_out"]
-
-        # Penalize waiting time & queue length, reward throughput
+    
+        # 1. Penalize waiting time (normalized)
         total_waiting_time = sum(traci.edge.getWaitingTime(edge) for edge in incoming_edges)
+        max_waiting_time = 100  # Maximum waiting time for normalization
+        waiting_time_penalty = -0.1 * (total_waiting_time / max_waiting_time)
+    
+        # 2. Penalize queue length (normalized)
         total_queue_length = sum(traci.edge.getLastStepHaltingNumber(edge) for edge in incoming_edges)
+        max_queue_length = 20  # Maximum queue length for normalization
+        queue_length_penalty = -0.05 * (total_queue_length / max_queue_length)
+    
+        # 3. Reward throughput (normalized)
         throughput = sum(traci.edge.getLastStepVehicleNumber(edge) for edge in outgoing_edges)
-
-        # Reward function
+        max_throughput = 50  # Maximum throughput for normalization
+        throughput_reward = 0.2 * (throughput / max_throughput)
+   
+    
+    # # 5. Reward smooth traffic flow (based on vehicle stops)
+    #     total_stops = sum(traci.edge.getLastStepHaltingNumber(edge) for edge in incoming_edges)
+    #     max_stops = 20  # Maximum stops for normalization
+    #     smooth_flow_reward = -0.05 * (total_stops / max_stops)
+    
+        # Combine all components into the final reward
         reward = (
-            -0.1 * total_waiting_time  # Penalize high waiting time
-            -0.05 * total_queue_length  # Penalize large queues
-            + 0.2 * throughput          # Reward vehicle throughput
+            waiting_time_penalty +
+            queue_length_penalty +
+            throughput_reward 
+          
         )
-
+    
         return reward
-
     # Constants for phase timing
     GREEN_DURATION = 30  # 30 seconds (30 steps)
     YELLOW_DURATION = 5   # 5 seconds (5 steps)
