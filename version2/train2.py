@@ -1,6 +1,6 @@
 import time
 import logging
-
+import os
 from matplotlib import pyplot as plt
 import numpy as np
 import torch
@@ -17,11 +17,11 @@ LR = 1e-3
 GAMMA = 0.99
 EPSILON_START = 1.0  # Initial epsilon
 EPSILON_MIN = 0.01   # Minimum epsilon
-EPSILON_DECAY_STEPS = 1000  # Number of steps to decay epsilon linearly
+EPSILON_DECAY_STEPS = 200000  # Decay epsilon over 2,000,000 steps
 BUFFER_CAPACITY = 10000
-BATCH_SIZE = 64
-NUM_EPISODES = 1000
-MAX_STEPS = 1000
+BATCH_SIZE = 128
+NUM_EPISODES = 2000
+MAX_STEPS = 2000
 TARGET_UPDATE_FREQ = 10
 EVAL_EPISODES = 20
 SAVE_MODEL_EVERY = 50
@@ -91,43 +91,82 @@ for episode in range(NUM_EPISODES):
     if episode % SAVE_MODEL_EVERY == 0:
         agent.save_model()
 
+# Create a directory to save the plots
+if not os.path.exists("plots"):
+    os.makedirs("plots")
+
 # Plot performance metrics
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(16, 12))
 
 # Plot total reward per episode
-plt.subplot(2, 2, 1)
+plt.subplot(3, 3, 1)
 plt.plot(episode_rewards, label="Total Reward")
 plt.xlabel("Episode")
 plt.ylabel("Total Reward")
 plt.title("Total Reward per Episode")
 plt.legend()
+plt.savefig("plots/total_reward_per_episode.png")  # Save the plot
 
 # Plot exploration vs. exploitation
-plt.subplot(2, 2, 2)
+plt.subplot(3, 3, 2)
 plt.plot(explore_counts, label="Exploration")
 plt.plot(exploit_counts, label="Exploitation")
 plt.xlabel("Episode")
 plt.ylabel("Count")
 plt.title("Exploration vs. Exploitation")
 plt.legend()
+plt.savefig("plots/exploration_vs_exploitation.png")  # Save the plot
 
 # Plot epsilon decay
-plt.subplot(2, 2, 3)
+plt.subplot(3, 3, 3)
 plt.plot(epsilon_values, label="Epsilon")
 plt.xlabel("Episode")
 plt.ylabel("Epsilon")
 plt.title("Epsilon Decay Over Time")
 plt.legend()
+plt.savefig("plots/epsilon_decay.png")  # Save the plot
 
-# Plot moving average of rewards (to smooth the curve)
+# Plot moving average of rewards
 window_size = 50
 moving_avg = [np.mean(episode_rewards[max(0, i - window_size):i+1]) for i in range(len(episode_rewards))]
-plt.subplot(2, 2, 4)
+plt.subplot(3, 3, 4)
 plt.plot(moving_avg, label="Moving Avg Reward")
 plt.xlabel("Episode")
 plt.ylabel("Moving Avg Reward")
 plt.title(f"Moving Average Reward (Window Size={window_size})")
 plt.legend()
+plt.savefig("plots/moving_avg_reward.png")  # Save the plot
+
+# Plot cumulative reward
+plt.subplot(3, 3, 5)
+cumulative_rewards = np.cumsum(episode_rewards)
+plt.plot(cumulative_rewards, label="Cumulative Reward")
+plt.xlabel("Episode")
+plt.ylabel("Cumulative Reward")
+plt.title("Cumulative Reward Over Episodes")
+plt.legend()
+plt.savefig("plots/cumulative_reward.png")  # Save the plot
+
+# Plot exploration vs. exploitation ratio
+plt.subplot(3, 3, 6)
+explore_ratio = [explore_counts[i] / (explore_counts[i] + exploit_counts[i]) for i in range(len(explore_counts))]
+plt.plot(explore_ratio, label="Exploration Ratio")
+plt.xlabel("Episode")
+plt.ylabel("Exploration Ratio")
+plt.title("Exploration vs. Exploitation Ratio")
+plt.legend()
+plt.savefig("plots/exploration_ratio.png")  # Save the plot
+
+
+# Plot reward distribution
+plt.subplot(3, 3, 8)
+plt.hist(episode_rewards, bins=50, label="Reward Distribution")
+plt.xlabel("Reward")
+plt.ylabel("Frequency")
+plt.title("Reward Distribution")
+plt.legend()
+plt.savefig("plots/reward_distribution.png")  # Save the plot
+
 
 plt.tight_layout()
 plt.show()

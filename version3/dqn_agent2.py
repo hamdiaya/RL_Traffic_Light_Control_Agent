@@ -33,14 +33,15 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
-# Define the DQN Agent
 class DQNAgent:
-    def __init__(self, state_size, action_size, hidden_size=64, lr=1e-3, gamma=0.99, epsilon_start=1.0, epsilon_min=0.01, epsilon_decay_steps=1000, buffer_capacity=10000, batch_size=64, tau=0.01, device=None):
+    def __init__(self, state_size, action_size, hidden_size=64, lr=1e-3, gamma=0.99, epsilon_start=1.0, epsilon_min=0.01, epsilon_decay_steps=2000000, buffer_capacity=10000, batch_size=64, tau=0.01, device=None):
         self.state_size = state_size
         self.action_size = action_size
         self.gamma = gamma
-        self.epsilon = epsilon_start
-        self.epsilon_min = epsilon_min
+        self.epsilon = epsilon_start  # Initial exploration rate
+        self.epsilon_start = epsilon_start  # Starting value of epsilon
+        self.epsilon_min = epsilon_min  # Minimum value of epsilon
+        self.epsilon_decay_steps = epsilon_decay_steps  # Number of steps to decay epsilon
         self.epsilon_decay = (epsilon_start - epsilon_min) / epsilon_decay_steps  # Linear decay rate
         self.batch_size = batch_size
         self.tau = tau  # Soft update factor
@@ -66,7 +67,6 @@ class DQNAgent:
             q_values = self.q_network(state)
             return torch.argmax(q_values).item(), False  # Exploit
 
-    # Training
     def update(self):
         if len(self.replay_buffer) < self.batch_size:
             return

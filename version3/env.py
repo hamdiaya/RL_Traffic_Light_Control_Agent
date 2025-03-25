@@ -44,43 +44,90 @@ class TrafficEnv:
         self.current_action = None
         self.prev_waiting = 0  # New tracking variable
         self.prev_queues = 0   # New tracking variable
-        
+        self.prev_exited = 0
         # Spaces remain same structure
         self.state_size = 16
         self.action_size = 4
         self.observation_space = gym.spaces.Box(low=0, high=1, shape=(self.state_size,), dtype=np.float32)
         self.action_space = gym.spaces.Discrete(self.action_size)
 
-    def generate_random_traffic(self):
-        """Generate vehicles with proper lane selection for new edges"""
-        traffic_profiles = {
-            "low": 0.3,
-            "medium": 0.5,
-            "high": 0.2,
+        # Define incoming and outgoing edges as class-level attributes
+        self.incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
+        self.outgoing_edges = ["TL2W", "TL2E", "TL2N", "TL2S"]
+
+        self.episode_count = 0  # Track curriculum progression
+        self.current_difficulty = 0.0
+        
+        # Curriculum parameters
+        self.base_traffic = {
+            'low': {'prob': 0.8, 'spawn': 0.1, 'max_lanes': 1},
+            'medium': {'prob': 0.2, 'spawn': 0.3, 'max_lanes': 2},
+            'high': {'prob': 0.0, 'spawn': 0.5, 'max_lanes': 3}
+        }
+        self.target_traffic = {
+            'low': {'prob': 0.1, 'spawn': 0.3, 'max_lanes': 1},
+            'medium': {'prob': 0.3, 'spawn': 0.6, 'max_lanes': 3},
+            'high': {'prob': 0.6, 'spawn': 0.9, 'max_lanes': 4}
         }
 
-        profile = random.choices(list(traffic_profiles.keys()), 
-                              weights=list(traffic_profiles.values()), k=1)[0]
-        vehicle_probability = {"low": 0.2, "medium": 0.5, "high": 0.8}[profile]
+        
 
-        if random.random() < vehicle_probability:
+
+    def generate_random_traffic(self):
+                # Curriculum-based vehicle generation
+        traffic_profile = {}
+        for key in self.base_traffic:
+            traffic_profile[key] = {
+                'prob': self._lerp(
+                    self.base_traffic[key]['prob'], 
+                    self.target_traffic[key]['prob']
+                ),
+                'spawn': self._lerp(
+                    self.base_traffic[key]['spawn'],
+                    self.target_traffic[key]['spawn']
+                ),
+                'max_lanes': min(  # Ensure we don't exceed physical lanes
+                    int(self._lerp(
+                        self.base_traffic[key]['max_lanes'],
+                        self.target_traffic[key]['max_lanes']
+                    )),
+                    traci.edge.getLaneNumber("E2TL")  # Physical lane limit
+                )
+            }
+        
+        # Normalize probabilities and select profile
+        total_prob = sum(v['prob'] for v in traffic_profile.values())
+        profile = random.choices(
+            list(traffic_profile.keys()),
+            weights=[v['prob'] / total_prob for v in traffic_profile.values()],
+            k=1
+        )[0]
+        config = traffic_profile[profile]
+        
+        # Generate vehicle if spawn check passes
+        if random.random() < config['spawn']:
             route_name, edges = random.choice(list(routes.items()))
             
-            # Dynamic lane selection based on actual edge lanes
-            edge_data = traci.edge.getLaneNumber(edges[0])
-            depart_lane = str(random.randint(0, edge_data - 1))  # Now handles 1-3 lanes
+            # Ensure we don't request non-existent lanes
+            available_lanes = min(config['max_lanes'], traci.edge.getLaneNumber(edges[0]))
+            depart_lane = str(random.randint(0, available_lanes - 1))
             
-            depart_speed = random.uniform(5, 11.1)  # Matches network speed limits
-
+            depart_speed = random.uniform(5, 12.8)  # Network speed limits
+        
             route_id = f"{route_name}_{self.simulation_time}"
             traci.route.add(route_id, edges)
-
+        
             vehicle_id = f"veh_{self.simulation_time}"
             traci.vehicle.add(
                 vehicle_id, route_id, 
                 typeID="car", 
                 departLane=depart_lane,
-                departSpeed=str(depart_speed))
+                departSpeed=str(depart_speed)
+        )
+        
+    def _lerp(self, start, end):
+            """Linear interpolation between start and end values"""
+            return start + (end - start) * self.current_difficulty
                 
     def get_state(self):
         """State observation with new edge IDs and normalization"""
@@ -95,43 +142,66 @@ class TrafficEnv:
         incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
         
         # Vehicle count (normalized by max 40 vehicles)
-        state.extend([traci.edge.getLastStepVehicleNumber(e)/40 for e in incoming_edges])
+        state.extend([traci.edge.getLastStepVehicleNumber(e)/200 for e in incoming_edges])
         
         # Waiting time (normalized by 2 minutes)
-        state.extend([traci.edge.getWaitingTime(e)/120 for e in incoming_edges])
+        state.extend([traci.edge.getWaitingTime(e)/240 for e in incoming_edges])
         
         # Queue length (normalized by 20 vehicles)
-        state.extend([traci.edge.getLastStepHaltingNumber(e)/20 for e in incoming_edges])
+        state.extend([traci.edge.getLastStepHaltingNumber(e)/80 for e in incoming_edges])
 
         return np.array(state, dtype=np.float32)
-
+    
     def calculate_reward(self):
-        """Improved reward function with delta calculations"""
+        """Optimized reward function for SUMO traffic light control"""
         incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
         outgoing_edges = ["TL2W", "TL2E", "TL2N", "TL2S"]
-
-        # Current metrics
+        
+        # 1. Core Traffic Metrics
         current_waiting = sum(traci.edge.getWaitingTime(e) for e in incoming_edges)
         current_queues = sum(traci.edge.getLastStepHaltingNumber(e) for e in incoming_edges)
-        throughput = sum(traci.edge.getLastStepVehicleNumber(e) for e in outgoing_edges)
-
-        # Calculate deltas from previous step
+        
+        # 2. Throughput Calculation (improved)
+        current_exited = traci.simulation.getArrivedNumber()
+        throughput = current_exited - self.prev_exited 
+        self.prev_exited = current_exited
+        
+        # 3. Additional Key Metrics
+        avg_speed = np.mean([traci.edge.getLastStepMeanSpeed(e) for e in incoming_edges])
+        
+        # 4. Improvement Deltas
         delta_waiting = self.prev_waiting - current_waiting  # Positive if improved
-        delta_queues = self.prev_queues - current_queues    # Positive if improved
-
-        # Store current values for next calculation
+        delta_queues = self.prev_queues - current_queues
+        
+        # Store for next step
         self.prev_waiting = current_waiting
         self.prev_queues = current_queues
-
-        # Balanced reward components
+        
+        # 5. Normalization Factors (tuned for your 4-lane intersection)
+        MAX_WAITING = 3600    # 1 hour max waiting (reasonable upper bound)
+        MAX_QUEUE = 200       # 4 lanes × 50 vehicles/lane
+        MAX_THROUGHPUT = 60   # ~1 vehicle/second max throughput
+        MAX_SPEED = 13.89     # From your net file (50 km/h)
+        
+        # 6. Reward Components
         reward = (
-            + 0.4 * delta_waiting        # Reward for reducing waiting
-            + 0.3 * delta_queues         # Reward for reducing queues
-            + 0.2 * throughput           # Reward for throughput
-            - 0.1 * current_waiting/100  # Small penalty for absolute waiting
+            + 1.5 * (delta_waiting / MAX_WAITING)          # Waiting time improvement
+            + 1.0 * (delta_queues / MAX_QUEUE)             # Queue improvement
+            + 0.8 * (throughput / MAX_THROUGHPUT)          # Throughput bonus
+            - 0.5 * (current_waiting / MAX_WAITING)        # Absolute waiting penalty
+            - 0.4 * (current_queues / MAX_QUEUE)           # Absolute queue penalty
+            + 0.3 * (avg_speed / MAX_SPEED)                # Speed bonus
+                                   # Safety penalty
         )
-
+        
+        # 7. Phase Change Penalty (tuned)
+        if self.last_action is not None and self.current_action != self.last_action:
+            reward -= 0.3  # Fixed penalty per change (better than multiplicative)
+        
+        
+        
         return round(reward, 2)
+                                              
 
     def step(self, action):
         """Updated phase control with TL_ID"""
@@ -141,21 +211,21 @@ class TrafficEnv:
         if self.last_action is not None and self.last_action != self.current_action:
             yellow_phase = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]
             traci.trafficlight.setPhase(TL_ID, yellow_phase)
-            for _ in range(10):  # Maintain 7-step yellow duration
+            for _ in range(5):  # Maintain 7-step yellow duration
                 traci.simulationStep()
                 self.simulation_time += 1
                 self.generate_random_traffic()
 
         # Set green phase
         traci.trafficlight.setPhase(TL_ID, self.current_action)
-        for _ in range(60):  # 5-step green phase
+        for _ in range(30):  # 5-step green phase
             traci.simulationStep()
             self.simulation_time += 1
             if random.random() < 0.5:
                 self.generate_random_traffic()
 
         self.last_action = self.current_action
-        return self.get_state(), self.calculate_reward(), self.simulation_time >= 3600
+        return self.get_state(), self.calculate_reward(), self.simulation_time >= 7200
 
     def reset(self):
         traci.close()
@@ -166,7 +236,12 @@ class TrafficEnv:
         self.prev_waiting = 0  # Reset tracking variables
         self.prev_queues = 0   # Reset tracking variables
         traci.trafficlight.setPhase(TL_ID, GREEN_PHASES[0])
+
+        self.episode_count += 1
+        # Update difficulty (full difficulty at episode 2000)
+        self.current_difficulty = min(self.episode_count / 2000, 1.0)
         return self.get_state()
+        
 
     def close(self):
         traci.close()
