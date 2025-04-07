@@ -130,27 +130,42 @@ class TrafficEnv:
             return start + (end - start) * self.current_difficulty
                 
     def get_state(self):
-        """State observation with new edge IDs and normalization"""
-        state = []
-        
-        # Phase one-hot encoding
-        current_phase = traci.trafficlight.getPhase(TL_ID)
-        phase_encoding = [1 if current_phase == p else 0 for p in GREEN_PHASES]
-        state.extend(phase_encoding)
+      """State observation aligned with reward normalization"""
+      state = []
+  
+      # Phase one-hot encoding (helps learning cause-effect)
+      current_phase = traci.trafficlight.getPhase(TL_ID)
+      phase_encoding = [1 if current_phase == p else 0 for p in GREEN_PHASES]
+      state.extend(phase_encoding)
+  
+      # Incoming traffic metrics
+      incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
+  
+      # Normalization constants (match reward)
+      MAX_VEHICLES = 200      # total across edges
+      MAX_WAITING = 3600      # 1 hour of waiting time total
+      MAX_QUEUE = 200         # Max 50 vehicles per edge × 4
+  
+      # Vehicle count per edge
+      state.extend([
+          traci.edge.getLastStepVehicleNumber(e) / MAX_VEHICLES
+          for e in incoming_edges
+      ])
+  
+      # Waiting time per edge
+      state.extend([
+          traci.edge.getWaitingTime(e) / MAX_WAITING
+          for e in incoming_edges
+      ])
+  
+      # Queue length per edge
+      state.extend([
+          traci.edge.getLastStepHaltingNumber(e) / MAX_QUEUE
+          for e in incoming_edges
+      ])
+  
+      return np.array(state, dtype=np.float32)
 
-        # Normalized metrics for new incoming edges
-        incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
-        
-        # Vehicle count (normalized by max 40 vehicles)
-        state.extend([traci.edge.getLastStepVehicleNumber(e)/200 for e in incoming_edges])
-        
-        # Waiting time (normalized by 2 minutes)
-        state.extend([traci.edge.getWaitingTime(e)/240 for e in incoming_edges])
-        
-        # Queue length (normalized by 20 vehicles)
-        state.extend([traci.edge.getLastStepHaltingNumber(e)/80 for e in incoming_edges])
-
-        return np.array(state, dtype=np.float32)
     
     def calculate_reward(self):
         """Optimized reward function for SUMO traffic light control"""
@@ -166,8 +181,6 @@ class TrafficEnv:
         throughput = current_exited - self.prev_exited 
         self.prev_exited = current_exited
         
-        # 3. Additional Key Metrics
-        avg_speed = np.mean([traci.edge.getLastStepMeanSpeed(e) for e in incoming_edges])
         
         # 4. Improvement Deltas
         delta_waiting = self.prev_waiting - current_waiting  # Positive if improved
@@ -181,24 +194,20 @@ class TrafficEnv:
         MAX_WAITING = 3600    # 1 hour max waiting (reasonable upper bound)
         MAX_QUEUE = 200       # 4 lanes × 50 vehicles/lane
         MAX_THROUGHPUT = 60   # ~1 vehicle/second max throughput
-        MAX_SPEED = 13.89     # From your net file (50 km/h)
+        
         
         # 6. Reward Components
         reward = (
             + 1.5 * (delta_waiting / MAX_WAITING)          # Waiting time improvement
             + 1.0 * (delta_queues / MAX_QUEUE)             # Queue improvement
             + 0.8 * (throughput / MAX_THROUGHPUT)          # Throughput bonus
-            - 0.5 * (current_waiting / MAX_WAITING)        # Absolute waiting penalty
-            - 0.4 * (current_queues / MAX_QUEUE)           # Absolute queue penalty
-            + 0.3 * (avg_speed / MAX_SPEED)                # Speed bonus
-                                   # Safety penalty
+           # - 0.5 * (current_waiting / MAX_WAITING)        # Absolute waiting penalty
+           # - 0.4 * (current_queues / MAX_QUEUE)           # Absolute queue penalty
+            
+                                  
         )
         
-        # 7. Phase Change Penalty (tuned)
-        if self.last_action is not None and self.current_action != self.last_action:
-            reward -= 0.3  # Fixed penalty per change (better than multiplicative)
-        
-        
+       
         
         return round(reward, 2)
                                               
