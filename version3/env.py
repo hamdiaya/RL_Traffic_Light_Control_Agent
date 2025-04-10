@@ -248,7 +248,8 @@ class TrafficEnv:
 
         self.episode_count += 1
         # Update difficulty (full difficulty at episode 2000)
-        self.current_difficulty = min(self.episode_count / 2000, 1.0)
+        #self.current_difficulty = min(self.episode_count / 2000, 1.0)
+        self.current_difficulty = 0.5
         return self.get_state()
         
 
