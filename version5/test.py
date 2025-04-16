@@ -53,9 +53,15 @@ else:
 
 # Disable exploration during testing
 agent.epsilon = 0.0 # Minimal exploration (can set to 0 if you want pure exploitation)
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
 def animate_q_values(q_logs, save_as="q_animation.gif"):
     fig, ax = plt.subplots()
-    actions = ['0', '1', '2', '3']
+    # Define action names corresponding to the numbers
+    action_map = {0: 'Red', 1: 'Green', 2: 'Yellow', 3: 'No Change'}
+    
+    actions = ['Red', 'Green', 'Yellow', 'No Change']
     bar_container = ax.bar(actions, [0]*4, color='grey')
     ax.set_ylim(-5, 5)  # Adjust according to your Q-value range
     ax.set_ylabel("Q-value")
@@ -66,12 +72,13 @@ def animate_q_values(q_logs, save_as="q_animation.gif"):
         for i, bar in enumerate(bar_container):
             bar.set_height(q_values[i])
             bar.set_color('red' if i == chosen else 'grey')
-        ax.set_title(f"Step {step} | Chosen Action: {chosen}")
+        ax.set_title(f"Step {step} | Chosen Action: {action_map[chosen]}")
         return bar_container
 
     anim = FuncAnimation(fig, update, frames=len(q_logs), blit=False, interval=50)
     anim.save(save_as, writer='pillow')
     plt.close("all")
+
 
 def run_episode(use_agent=True, seed=None ,collect_q=False):
     """Run one test episode"""
@@ -155,7 +162,8 @@ print(f"Agent Average Reward: {avg_agent:.1f}")
 print(f"Default Average Reward: {avg_default:.1f}")
 print(f"Improvement: {improvement:.1f}%")
 # print(f"Improvements: {improvements:.1f}%")
-import matplotlib.pyplot as plt
+
+action_map = {1: 'Red', 2: 'Green', 3: 'Yellow', 4: 'No Change'}
 
 # Plot actions for the last episode
 plt.figure(figsize=(12, 4))
@@ -163,12 +171,19 @@ plt.plot(agent_actions, drawstyle='steps-post', label="Agent Actions")
 plt.xlabel("Step")
 plt.ylabel("Action")
 plt.title("Agent Actions Over Time (Episode {})".format(NUM_TEST_EPISODES))
-plt.yticks([0, 1, 2, 3])
+plt.yticks([1, 2, 3, 4], [action_map[1], action_map[2], action_map[3], action_map[4]])
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
 plt.savefig("plots/agent_actions_episode_{}.png".format(NUM_TEST_EPISODES))
 plt.show()
 
+# Action 1 → Red phase
+
+# Action 2 → Green phase
+
+# Action 3 → Yellow phase
+
+# Action 4 → No Change (Neutral)
 
 env.close()
