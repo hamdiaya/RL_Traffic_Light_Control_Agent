@@ -25,6 +25,18 @@ TARGET_UPDATE_FREQ = 10
 EVAL_EPISODES = 20
 SAVE_MODEL_EVERY = 50
 
+def setup_logging():
+    """Configure logging"""
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler('plots/training.log'),
+            logging.StreamHandler()
+        ]
+    )
+
+setup_logging()
 # Initialize environment and agent
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 env = TrafficEnv()

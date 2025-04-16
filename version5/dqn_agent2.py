@@ -7,8 +7,8 @@ import random
 
 #Dueling DQN : 
 class QNetwork(nn.Module):
-    def init(self, state_size, action_size, hidden_size=64):
-        super(QNetwork, self).init()
+    def __init__(self, state_size, action_size, hidden_size=64):
+        super(QNetwork, self).__init__()
         self.feature = nn.Sequential(
             nn.Linear(state_size, hidden_size),
             nn.ReLU(),
@@ -76,13 +76,16 @@ class DQNAgent:
         # Replay Buffer
         self.replay_buffer = ReplayBuffer(buffer_capacity)
 
-    def act(self, state):
+    def act(self, state, return_q=False):
         if random.random() < self.epsilon:
             return random.randint(0, self.action_size - 1), True  # Explore
         else:
             state = torch.FloatTensor(state).unsqueeze(0).to(self.device)
             q_values = self.q_network(state)
-            return torch.argmax(q_values).item(), False  # Exploit
+        if return_q:
+            return torch.argmax(q_values).item(), False,q_values.squeeze(0).detach().cpu().numpy()
+        return torch.argmax(q_values).item(), False  # Exploit
+
 
     def update(self):
         if len(self.replay_buffer) < self.batch_size:
