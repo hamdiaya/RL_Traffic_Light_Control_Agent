@@ -3076,3 +3076,7 @@
 2025-04-28 10:55:29,318 - INFO - Episode 7/5000, Difficulty: 0.00, Reward: -0.6, Loss: 0.0061, Epsilon: 0.999, Explore: 194, Exploit: 0
 2025-04-28 10:55:34,479 - INFO - Episode 8/5000, Difficulty: 0.00, Reward: 0.0, Loss: 0.0053, Epsilon: 0.999, Explore: 189, Exploit: 0
 2025-04-28 10:55:39,839 - INFO - Episode 9/5000, Difficulty: 0.00, Reward: -0.2, Loss: 0.0042, Epsilon: 0.999, Explore: 190, Exploit: 0
+2025-04-28 10:55:54,268 - INFO - No saved model found, training from scratch.
+2025-04-28 10:55:57,637 - INFO - Episode 1/5000, Difficulty: 0.00, Reward: -0.0, Loss: 0.0000, Epsilon: 1.000, Explore: 191, Exploit: 0
+2025-04-28 10:56:02,610 - INFO - Episode 2/5000, Difficulty: 0.00, Reward: 0.0, Loss: 0.3308, Epsilon: 1.000, Explore: 200, Exploit: 0
+2025-04-28 10:56:08,279 - INFO - Episode 3/5000, Difficulty: 0.00, Reward: -0.2, Loss: 0.0792, Epsilon: 1.000, Explore: 191, Exploit: 0
