@@ -78,12 +78,25 @@ class DQNAgent:
         reward = torch.FloatTensor(reward).to(self.device)
         done = torch.FloatTensor(done).to(self.device)
 
-        # Compute Q-values using standard DQN
-        next_q_values = self.target_network(next_state).max(1)[0].detach()
+
+        next_actions = self.q_network(next_state).max(1)[1].detach()
+        
+        # 2. Target network evaluates those actions
+        next_q_values = self.target_network(next_state).gather(1, next_actions.unsqueeze(1)).squeeze()
+        
+        # 3. Compute target Q-values
         target_q_values = reward + (1 - done) * self.gamma * next_q_values
+        ############################
 
-
+        # Current Q-values (unchanged)
         q_values = self.q_network(state).gather(1, action.unsqueeze(1)).squeeze()
+        
+        # # Compute Q-values using standard DQN
+        # next_q_values = self.target_network(next_state).max(1)[0].detach()
+        # target_q_values = reward + (1 - done) * self.gamma * next_q_values
+
+
+        # q_values = self.q_network(state).gather(1, action.unsqueeze(1)).squeeze()
         loss = nn.MSELoss()(q_values, target_q_values)
         
         # Update network

@@ -7,7 +7,7 @@ import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"  # Ensure this points to new net file
-sumo_binary = checkBinary("sumo-gui") 
+sumo_binary = checkBinary("sumo") 
 TL_ID = "TL"  # Updated traffic light ID
 
 # Updated routes matching the new network edges
@@ -248,8 +248,7 @@ class TrafficEnv:
 
         self.episode_count += 1
         # Update difficulty (full difficulty at episode 2000)
-        #self.current_difficulty = min(self.episode_count / 2000, 1.0)
-        self.current_difficulty = 0.5
+        self.current_difficulty = min(self.episode_count / 2000, 1.0)
         return self.get_state()
         
 
