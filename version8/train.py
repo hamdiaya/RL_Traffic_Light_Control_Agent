@@ -1,28 +1,33 @@
 import os
+import time
 import logging
 import numpy as np
 import torch
-import traci
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from env import TrafficEnv
+import traci
 from ppo_agent import PPOAgent
 
-# Configuration
+# Hyperparameters
 STATE_SIZE = 16
 ACTION_SIZE = 12
 HIDDEN_SIZE = 128
-TEST_EPISODES = 20
+LR = 3e-4
+GAMMA = 0.99
+CLIP_EPSILON = 0.2
+PPO_EPOCHS = 10
+BATCH_SIZE = 64
+NUM_EPISODES = 2000  # Fewer episodes due to PPO’s efficiency
 MAX_STEPS = 7200
-MODEL_PATH = "ppo_model.pth"
-LOG_FILE = "test_ppo.log"
-PLOT_PATH = "plots/ppo_test_metrics.png"
+EVAL_EPISODES = 20
+SAVE_MODEL_EVERY = 50
 
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(LOG_FILE),
+            logging.FileHandler('training_ppo.log'),
             logging.StreamHandler()
         ]
     )
@@ -32,36 +37,38 @@ def initialize_environment():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     return env, device
 
-def load_agent(device):
-    agent = PPOAgent(
+def create_agent(device):
+    return PPOAgent(
         state_size=STATE_SIZE,
         action_size=ACTION_SIZE,
         hidden_size=HIDDEN_SIZE,
-        lr=3e-4,
-        gamma=0.99,
-        clip_epsilon=0.2,
-        ppo_epochs=10,
-        batch_size=64,
+        lr=LR,
+        gamma=GAMMA,
+        clip_epsilon=CLIP_EPSILON,
+        ppo_epochs=PPO_EPOCHS,
+        batch_size=BATCH_SIZE,
         device=device
     )
-    try:
-        agent.load_model(MODEL_PATH)
-        logging.info(f"Loaded trained PPO model from {MODEL_PATH}")
-    except FileNotFoundError:
-        logging.error(f"Model file {MODEL_PATH} not found")
-        raise FileNotFoundError(f"Model file {MODEL_PATH} not found")
-    return agent
 
-def test_agent(env, agent):
+def load_or_initialize_model(agent):
+    try:
+        agent.load_model("ppo_model.pth")
+        logging.info("Loaded existing PPO model.")
+    except FileNotFoundError:
+        logging.info("No saved PPO model found, training from scratch.")
+
+def train_agent(env, agent):
     metrics = {
-        'total_rewards': [],
+        'episode_rewards': [],
         'avg_waiting_times': [],
         'avg_queue_lengths': []
     }
 
-    for episode in range(TEST_EPISODES):
+    for episode in range(NUM_EPISODES):
+        curriculum_progress = min((episode / (NUM_EPISODES * 0.66)) ** 2, 1.0)
         state = env.reset()
-        env.current_difficulty = 1.0
+        env.current_difficulty = curriculum_progress
+
         total_reward = 0
         waiting_times = []
         queue_lengths = []
@@ -69,82 +76,101 @@ def test_agent(env, agent):
         step = 0
 
         while not done and step < MAX_STEPS:
-            action, _ = agent.act(state, eval_mode=True)
+            action, _ = agent.act(state)
             next_state, reward, done = env.step(action)
+            agent.store(state, action, reward, next_state, done, 0)  # Log_prob not used in training loop
+            loss = agent.update()
+
             waiting_time = sum(traci.edge.getWaitingTime(e) for e in env.incoming_edges)
             queue_length = sum(traci.edge.getLastStepHaltingNumber(e) for e in env.incoming_edges)
             waiting_times.append(waiting_time)
             queue_lengths.append(queue_length)
+
             state = next_state
             total_reward += reward
             step += 1
 
         avg_waiting_time = np.mean(waiting_times) if waiting_times else 0
         avg_queue_length = np.mean(queue_lengths) if queue_lengths else 0
-        metrics['total_rewards'].append(total_reward)
+
+        metrics['episode_rewards'].append(total_reward)
         metrics['avg_waiting_times'].append(avg_waiting_time)
         metrics['avg_queue_lengths'].append(avg_queue_length)
 
         logging.info(
-            f"Test Episode {episode + 1}/{TEST_EPISODES}, "
-            f"Total Reward: {total_reward:.1f}, "
+            f"Episode {episode + 1}/{NUM_EPISODES}, "
+            f"Difficulty: {curriculum_progress:.2f}, "
+            f"Reward: {total_reward:.1f}, "
             f"Avg Waiting Time: {avg_waiting_time:.1f}s, "
             f"Avg Queue Length: {avg_queue_length:.1f} vehicles"
         )
 
+        if (episode + 1) % SAVE_MODEL_EVERY == 0:
+            agent.save_model("ppo_model.pth")
+            logging.info(f"PPO model saved at episode {episode + 1}")
+
     return metrics
 
-def plot_metrics(metrics):
+def plot_metrics(metrics, agent):
     if not os.path.exists("plots"):
         os.makedirs("plots")
+
     plt.figure(figsize=(15, 10))
     plt.subplot(3, 1, 1)
-    plt.plot(metrics['total_rewards'], label='Total Reward')
+    plt.plot(metrics['episode_rewards'], label='Total Reward')
     plt.xlabel("Episode")
     plt.ylabel("Total Reward")
-    plt.title("Total Reward per Test Episode")
+    plt.title("Total Reward per Episode")
     plt.grid(True)
     plt.legend()
+
     plt.subplot(3, 1, 2)
     plt.plot(metrics['avg_waiting_times'], label='Avg Waiting Time', color='orange')
     plt.xlabel("Episode")
     plt.ylabel("Waiting Time (s)")
-    plt.title("Average Waiting Time per Test Episode")
+    plt.title("Average Waiting Time per Episode")
     plt.grid(True)
     plt.legend()
+
     plt.subplot(3, 1, 3)
     plt.plot(metrics['avg_queue_lengths'], label='Avg Queue Length', color='green')
     plt.xlabel("Episode")
     plt.ylabel("Queue Length (vehicles)")
-    plt.title("Average Queue Length per Test Episode")
+    plt.title("Average Queue Length per Episode")
     plt.grid(True)
     plt.legend()
+
     plt.tight_layout()
-    plt.savefig(PLOT_PATH)
+    plt.savefig("plots/ppo_training_metrics.png")
     plt.close()
-    logging.info(f"Test metrics plot saved to {PLOT_PATH}")
+
+def evaluate_agent(env, agent):
+    logging.info("Starting PPO evaluation...")
+    total_rewards = []
+    for _ in range(EVAL_EPISODES):
+        state = env.reset()
+        env.current_difficulty = 1.0
+        total_reward = 0
+        done = False
+        while not done:
+            action, _ = agent.act(state, eval_mode=True)
+            state, reward, done = env.step(action)
+            total_reward += reward
+        total_rewards.append(total_reward)
+    avg_reward = sum(total_rewards) / len(total_rewards)
+    logging.info(f"PPO Evaluation Complete - Average Reward: {avg_reward:.1f}")
 
 def main():
     setup_logging()
-    logging.info("Starting PPO testing phase...")
+    env, device = initialize_environment()
+    agent = create_agent(device)
+    load_or_initialize_model(agent)
     try:
-        env, device = initialize_environment()
-        agent = load_agent(device)
-        metrics = test_agent(env, agent)
-        plot_metrics(metrics)
-        avg_reward = np.mean(metrics['total_rewards'])
-        std_reward = np.std(metrics['total_rewards'])
-        avg_waiting = np.mean(metrics['avg_waiting_times'])
-        avg_queue = np.mean(metrics['avg_queue_lengths'])
-        logging.info(
-            f"Test Summary: "
-            f"Avg Reward: {avg_reward:.1f} (±{std_reward:.1f}), "
-            f"Avg Waiting Time: {avg_waiting:.1f}s, "
-            f"Avg Queue Length: {avg_queue:.1f} vehicles"
-        )
+        metrics = train_agent(env, agent)
+        plot_metrics(metrics, agent)
+        evaluate_agent(env, agent)
     except Exception as e:
-        logging.error(f"Testing failed: {e}")
-        raise
+        logging.error(f"Training failed: {e}")
     finally:
         try:
             env.close()

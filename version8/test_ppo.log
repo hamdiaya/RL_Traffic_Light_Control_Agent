@@ -1,0 +1,24 @@
+2025-05-05 00:12:10,198 - INFO - Starting PPO testing phase...
+2025-05-05 00:12:12,674 - INFO - Loaded trained PPO model from ppo_model.pth
+2025-05-05 00:12:48,926 - INFO - Test Episode 1/20, Total Reward: -43.1, Avg Waiting Time: 1967906.0s, Avg Queue Length: 750.7 vehicles
+2025-05-05 00:13:24,755 - INFO - Test Episode 2/20, Total Reward: -42.7, Avg Waiting Time: 2025519.5s, Avg Queue Length: 762.2 vehicles
+2025-05-05 00:13:58,959 - INFO - Test Episode 3/20, Total Reward: -43.4, Avg Waiting Time: 1929640.7s, Avg Queue Length: 750.6 vehicles
+2025-05-05 00:14:32,780 - INFO - Test Episode 4/20, Total Reward: -43.8, Avg Waiting Time: 1999518.1s, Avg Queue Length: 758.7 vehicles
+2025-05-05 00:15:09,346 - INFO - Test Episode 5/20, Total Reward: -44.5, Avg Waiting Time: 1990600.8s, Avg Queue Length: 758.1 vehicles
+2025-05-05 00:15:43,477 - INFO - Test Episode 6/20, Total Reward: -44.0, Avg Waiting Time: 1989301.7s, Avg Queue Length: 752.9 vehicles
+2025-05-05 00:16:16,471 - INFO - Test Episode 7/20, Total Reward: -43.5, Avg Waiting Time: 1943353.4s, Avg Queue Length: 743.1 vehicles
+2025-05-05 00:16:49,830 - INFO - Test Episode 8/20, Total Reward: -43.5, Avg Waiting Time: 1886573.8s, Avg Queue Length: 730.9 vehicles
+2025-05-05 00:17:21,563 - INFO - Test Episode 9/20, Total Reward: -44.8, Avg Waiting Time: 1949015.6s, Avg Queue Length: 744.6 vehicles
+2025-05-05 00:17:53,029 - INFO - Test Episode 10/20, Total Reward: -45.8, Avg Waiting Time: 1963502.4s, Avg Queue Length: 738.8 vehicles
+2025-05-05 00:18:23,508 - INFO - Test Episode 11/20, Total Reward: -43.6, Avg Waiting Time: 1877165.9s, Avg Queue Length: 726.4 vehicles
+2025-05-05 00:18:57,590 - INFO - Test Episode 12/20, Total Reward: -43.2, Avg Waiting Time: 2016456.3s, Avg Queue Length: 760.0 vehicles
+2025-05-05 00:19:36,359 - INFO - Test Episode 13/20, Total Reward: -44.3, Avg Waiting Time: 2047187.0s, Avg Queue Length: 775.5 vehicles
+2025-05-05 00:20:08,786 - INFO - Test Episode 14/20, Total Reward: -43.5, Avg Waiting Time: 1907148.0s, Avg Queue Length: 739.9 vehicles
+2025-05-05 00:20:42,490 - INFO - Test Episode 15/20, Total Reward: -43.7, Avg Waiting Time: 1996520.2s, Avg Queue Length: 756.2 vehicles
+2025-05-05 00:21:14,742 - INFO - Test Episode 16/20, Total Reward: -43.6, Avg Waiting Time: 1953722.2s, Avg Queue Length: 754.3 vehicles
+2025-05-05 00:21:47,959 - INFO - Test Episode 17/20, Total Reward: -43.4, Avg Waiting Time: 2041665.2s, Avg Queue Length: 775.7 vehicles
+2025-05-05 00:22:19,841 - INFO - Test Episode 18/20, Total Reward: -43.5, Avg Waiting Time: 1975203.5s, Avg Queue Length: 758.0 vehicles
+2025-05-05 00:22:52,946 - INFO - Test Episode 19/20, Total Reward: -44.1, Avg Waiting Time: 2064977.2s, Avg Queue Length: 777.2 vehicles
+2025-05-05 00:23:28,944 - INFO - Test Episode 20/20, Total Reward: -44.1, Avg Waiting Time: 1969667.2s, Avg Queue Length: 761.9 vehicles
+2025-05-05 00:23:29,501 - INFO - Test metrics plot saved to plots/ppo_test_metrics.png
+2025-05-05 00:23:29,501 - INFO - Test Summary: Avg Reward: -43.8 (±0.7), Avg Waiting Time: 1974732.2s, Avg Queue Length: 753.8 vehicles
