@@ -1,0 +1,21 @@
+2025-05-22 16:24:05,908 - INFO - No saved model found, training from scratch.
+2025-05-22 16:24:07,926 - INFO - Episode 1/5000, Difficulty: 0.00, Reward: -0.1, Waiting Time: 1258.6s, Queue Length: 9.5, Loss: 0.0000, Epsilon: 1.000, Explore: 198, Exploit: 0
+2025-05-22 16:24:10,877 - INFO - Episode 2/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 859.0s, Queue Length: 8.1, Loss: 0.2314, Epsilon: 1.000, Explore: 192, Exploit: 0
+2025-05-22 16:24:14,382 - INFO - Episode 3/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 1839.5s, Queue Length: 11.7, Loss: 0.0516, Epsilon: 1.000, Explore: 195, Exploit: 0
+2025-05-22 16:24:17,718 - INFO - Episode 4/5000, Difficulty: 0.00, Reward: -0.6, Waiting Time: 1160.4s, Queue Length: 9.8, Loss: 0.0232, Epsilon: 1.000, Explore: 191, Exploit: 0
+2025-05-22 16:24:21,167 - INFO - Episode 5/5000, Difficulty: 0.00, Reward: -0.5, Waiting Time: 1480.2s, Queue Length: 11.0, Loss: 0.0101, Epsilon: 1.000, Explore: 197, Exploit: 0
+2025-05-22 16:24:24,680 - INFO - Episode 6/5000, Difficulty: 0.00, Reward: -0.4, Waiting Time: 967.0s, Queue Length: 8.5, Loss: 0.0064, Epsilon: 1.000, Explore: 197, Exploit: 0
+2025-05-22 16:24:28,260 - INFO - Episode 7/5000, Difficulty: 0.00, Reward: -1.1, Waiting Time: 1398.8s, Queue Length: 10.3, Loss: 0.0049, Epsilon: 0.999, Explore: 201, Exploit: 0
+2025-05-22 16:24:31,750 - INFO - Episode 8/5000, Difficulty: 0.00, Reward: -0.6, Waiting Time: 975.3s, Queue Length: 9.1, Loss: 0.0043, Epsilon: 0.999, Explore: 186, Exploit: 0
+2025-05-22 16:24:35,191 - INFO - Episode 9/5000, Difficulty: 0.00, Reward: -0.6, Waiting Time: 1156.2s, Queue Length: 10.0, Loss: 0.0037, Epsilon: 0.999, Explore: 187, Exploit: 0
+2025-05-22 16:24:38,839 - INFO - Episode 10/5000, Difficulty: 0.00, Reward: -0.1, Waiting Time: 1183.0s, Queue Length: 10.2, Loss: 0.0027, Epsilon: 0.999, Explore: 196, Exploit: 0
+2025-05-22 16:24:42,260 - INFO - Episode 11/5000, Difficulty: 0.00, Reward: -0.3, Waiting Time: 1014.5s, Queue Length: 9.1, Loss: 0.0024, Epsilon: 0.999, Explore: 193, Exploit: 0
+2025-05-22 16:24:45,732 - INFO - Episode 12/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 942.8s, Queue Length: 8.6, Loss: 0.0020, Epsilon: 0.999, Explore: 193, Exploit: 0
+2025-05-22 16:24:49,253 - INFO - Episode 13/5000, Difficulty: 0.00, Reward: -1.2, Waiting Time: 1358.7s, Queue Length: 10.2, Loss: 0.0019, Epsilon: 0.999, Explore: 192, Exploit: 1
+2025-05-22 16:26:01,643 - INFO - No saved model found, training from scratch.
+2025-05-22 16:26:03,864 - INFO - Episode 1/5000, Difficulty: 0.00, Reward: 17.9, Waiting Time: 3305.5s, Queue Length: 15.9, Loss: 0.0000, Epsilon: 1.000, Explore: 126, Exploit: 0
+2025-05-22 16:26:06,012 - INFO - Episode 2/5000, Difficulty: 0.00, Reward: 11.7, Waiting Time: 1787.2s, Queue Length: 12.6, Loss: 0.0000, Epsilon: 1.000, Explore: 119, Exploit: 0
+2025-05-22 16:26:08,068 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-22 16:26:33,025 - INFO - No saved model found, training from scratch.
+2025-05-22 16:26:35,256 - INFO - Episode 1/5000, Difficulty: 0.00, Reward: 3.4, Waiting Time: 2370.8s, Queue Length: 13.9, Loss: 0.0000, Epsilon: 1.000, Explore: 129, Exploit: 0
+2025-05-22 16:26:37,464 - INFO - Episode 2/5000, Difficulty: 0.00, Reward: 3.6, Waiting Time: 2594.0s, Queue Length: 14.3, Loss: 0.0000, Epsilon: 1.000, Explore: 119, Exploit: 0

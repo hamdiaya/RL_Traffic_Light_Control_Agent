@@ -9,7 +9,7 @@ from env import TrafficEnv
 import traci
 
 # Hyperparameters
-STATE_SIZE = 16  # current phase + number of cars + waiting time
+STATE_SIZE = 16  # current phase + number of cars + waiting time + queue length
 ACTION_SIZE = 4
 HIDDEN_SIZE = 64
 LR = 1e-3

@@ -3061,3 +3061,5 @@
 2025-04-10 04:42:16,733 - INFO - Model saved at episode 3000
 2025-04-10 04:42:18,060 - INFO - Starting evaluation...
 2025-04-10 04:43:31,799 - INFO - Evaluation Complete - Average Reward: -3.7
+2025-05-04 10:48:24,610 - INFO - Loaded existing model.
+2025-05-04 10:48:25,636 - ERROR - Training failed: object of type 'ReplayBuffer' has no len()
