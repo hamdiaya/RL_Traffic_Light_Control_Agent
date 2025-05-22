@@ -6,6 +6,7 @@ import traci
 import matplotlib.pyplot as plt
 from env import TrafficEnv
 from dqn_agent2 import DQNAgent
+import csv
 
 # Configuration
 STATE_SIZE = 16
@@ -16,17 +17,23 @@ MAX_STEPS = 7200
 MODEL_PATH = "dqn_model.pth"
 LOG_FILE = "test.log"
 PLOT_PATH = "plots/test_metrics.png"
+CSV_LOG_PATH = "logs/test_results.csv"
 
+#########################################################################################
 def setup_logging():
+    log_dir = 'logs'
+    os.makedirs(log_dir, exist_ok=True)  # Create the folder if it doesn't exist
+    log_path = os.path.join(log_dir, LOG_FILE)
     """Configure logging for test results"""
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(LOG_FILE),
+            logging.FileHandler(log_path),
             logging.StreamHandler()
         ]
     )
+#########################################################################################
 
 def initialize_environment():
     """Initialize SUMO environment"""
@@ -71,48 +78,57 @@ def test_agent(env, agent):
         'avg_queue_lengths': []
     }
 
-    for episode in range(TEST_EPISODES):
-        state = env.reset()
-        env.current_difficulty = 1.0  # Maximum difficulty for testing
-        total_reward = 0
-        waiting_times = []
-        queue_lengths = []
-        done = False
-        step = 0
+    # Ensure plot directory exists
+    os.makedirs(os.path.dirname(CSV_LOG_PATH), exist_ok=True)
 
-        while not done and step < MAX_STEPS:
-            # Select greedy action (no exploration)
-            action, _ = agent.act(state, eval_mode=True)
-            next_state, reward, done = env.step(action)
+    # Open CSV file and write headers
+    with open(CSV_LOG_PATH, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Episode", "Agent_Reward", "Avg_Waiting_Time", "Avg_Queue_Length"])
 
-            # Collect metrics
-            total_reward += reward
-            waiting_time = sum(traci.edge.getWaitingTime(e) for e in env.incoming_edges)
-            queue_length = sum(traci.edge.getLastStepHaltingNumber(e) for e in env.incoming_edges)
-            waiting_times.append(waiting_time)
-            queue_lengths.append(queue_length)
+        for episode in range(TEST_EPISODES):
+            state = env.reset()
+            env.current_difficulty = 1.0  # Maximum difficulty for testing
+            total_reward = 0
+            waiting_times = []
+            queue_lengths = []
+            done = False
+            step = 0
 
-            state = next_state
-            step += 1
+            while not done and step < MAX_STEPS:
+                action, _ = agent.act(state, eval_mode=True)
+                next_state, reward, done = env.step(action)
 
-        # Calculate averages
-        avg_waiting_time = np.mean(waiting_times) if waiting_times else 0
-        avg_queue_length = np.mean(queue_lengths) if queue_lengths else 0
+                total_reward += reward
+                waiting_time = sum(traci.edge.getWaitingTime(e) for e in env.incoming_edges)
+                queue_length = sum(traci.edge.getLastStepHaltingNumber(e) for e in env.incoming_edges)
+                waiting_times.append(waiting_time)
+                queue_lengths.append(queue_length)
 
-        # Store metrics
-        metrics['total_rewards'].append(total_reward)
-        metrics['avg_waiting_times'].append(avg_waiting_time)
-        metrics['avg_queue_lengths'].append(avg_queue_length)
+                state = next_state
+                step += 1
 
-        # Log episode results
-        logging.info(
-            f"Test Episode {episode + 1}/{TEST_EPISODES}, "
-            f"Total Reward: {total_reward:.1f}, "
-            f"Avg Waiting Time: {avg_waiting_time:.1f}s, "
-            f"Avg Queue Length: {avg_queue_length:.1f} vehicles"
-        )
+            avg_waiting_time = np.mean(waiting_times) if waiting_times else 0
+            avg_queue_length = np.mean(queue_lengths) if queue_lengths else 0
+
+            # Store metrics
+            metrics['total_rewards'].append(total_reward)
+            metrics['avg_waiting_times'].append(avg_waiting_time)
+            metrics['avg_queue_lengths'].append(avg_queue_length)
+
+            # Log results to file
+            writer.writerow([episode + 1, total_reward, avg_waiting_time, avg_queue_length])
+
+            # Log to console/file
+            logging.info(
+                f"Test Episode {episode + 1}/{TEST_EPISODES}, "
+                f"Total Reward: {total_reward:.1f}, "
+                f"Avg Waiting Time: {avg_waiting_time:.1f}s, "
+                f"Avg Queue Length: {avg_queue_length:.1f} vehicles"
+            )
 
     return metrics
+
 
 def plot_metrics(metrics):
     """Plot test metrics"""

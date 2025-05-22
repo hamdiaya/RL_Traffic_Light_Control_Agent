@@ -1,0 +1,18 @@
+2025-05-21 18:49:44,097 - INFO - Loaded existing model.
+2025-05-21 18:49:49,748 - INFO - Episode 1/5000, Difficulty: 0.00, Reward: -0.3, Waiting Time: 1725.5s, Queue Length: 11.8, Loss: 0.0000, Epsilon: 0.501, Explore: 98, Exploit: 93
+2025-05-21 18:49:56,577 - INFO - Episode 2/5000, Difficulty: 0.00, Reward: -1.8, Waiting Time: 7618.4s, Queue Length: 20.0, Loss: 0.5260, Epsilon: 0.501, Explore: 95, Exploit: 92
+2025-05-21 18:50:02,446 - INFO - Episode 3/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 3477.8s, Queue Length: 13.9, Loss: 0.4390, Epsilon: 0.501, Explore: 92, Exploit: 99
+2025-05-21 18:50:07,922 - INFO - Episode 4/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 1399.0s, Queue Length: 9.9, Loss: 0.1501, Epsilon: 0.501, Explore: 98, Exploit: 80
+2025-05-21 18:50:14,171 - INFO - Episode 5/5000, Difficulty: 0.00, Reward: -1.6, Waiting Time: 1896.9s, Queue Length: 11.4, Loss: 0.0663, Epsilon: 0.501, Explore: 88, Exploit: 93
+2025-05-21 18:50:19,607 - INFO - Episode 6/5000, Difficulty: 0.00, Reward: -1.2, Waiting Time: 1820.7s, Queue Length: 10.7, Loss: 0.0601, Epsilon: 0.500, Explore: 82, Exploit: 89
+2025-05-21 18:50:25,436 - INFO - Episode 7/5000, Difficulty: 0.00, Reward: -0.5, Waiting Time: 1799.8s, Queue Length: 10.8, Loss: 0.0571, Epsilon: 0.500, Explore: 93, Exploit: 99
+2025-05-21 18:50:31,838 - INFO - Episode 8/5000, Difficulty: 0.00, Reward: -0.4, Waiting Time: 1010.2s, Queue Length: 7.9, Loss: 0.0551, Epsilon: 0.500, Explore: 115, Exploit: 112
+2025-05-21 18:50:37,938 - INFO - Episode 9/5000, Difficulty: 0.00, Reward: -1.4, Waiting Time: 1875.8s, Queue Length: 10.2, Loss: 0.0485, Epsilon: 0.500, Explore: 116, Exploit: 91
+2025-05-21 18:50:44,167 - INFO - Episode 10/5000, Difficulty: 0.00, Reward: -0.1, Waiting Time: 2057.8s, Queue Length: 10.8, Loss: 0.0462, Epsilon: 0.500, Explore: 104, Exploit: 97
+2025-05-21 18:50:50,054 - INFO - Episode 11/5000, Difficulty: 0.00, Reward: -0.2, Waiting Time: 2903.9s, Queue Length: 13.0, Loss: 0.0466, Epsilon: 0.500, Explore: 83, Exploit: 90
+2025-05-21 18:50:56,076 - INFO - Episode 12/5000, Difficulty: 0.00, Reward: -0.6, Waiting Time: 2200.8s, Queue Length: 12.3, Loss: 0.0484, Epsilon: 0.500, Explore: 79, Exploit: 94
+2025-05-21 18:51:01,937 - INFO - Episode 13/5000, Difficulty: 0.00, Reward: -0.6, Waiting Time: 1889.4s, Queue Length: 11.5, Loss: 0.0491, Epsilon: 0.500, Explore: 95, Exploit: 83
+2025-05-21 18:51:08,410 - INFO - Episode 14/5000, Difficulty: 0.00, Reward: -1.6, Waiting Time: 4294.5s, Queue Length: 15.2, Loss: 0.0524, Epsilon: 0.500, Explore: 76, Exploit: 114
+2025-05-21 18:51:15,042 - INFO - Episode 15/5000, Difficulty: 0.00, Reward: -0.8, Waiting Time: 2184.6s, Queue Length: 10.9, Loss: 0.0497, Epsilon: 0.500, Explore: 105, Exploit: 99
+2025-05-21 18:51:21,947 - INFO - Episode 16/5000, Difficulty: 0.00, Reward: -0.1, Waiting Time: 2061.1s, Queue Length: 12.3, Loss: 0.0511, Epsilon: 0.500, Explore: 98, Exploit: 104
+2025-05-21 18:51:33,199 - ERROR - Error closing environment: Connection closed by SUMO.

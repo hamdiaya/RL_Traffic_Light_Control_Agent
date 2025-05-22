@@ -1,0 +1,4 @@
+2025-05-21 18:52:01,184 - INFO - Starting testing phase...
+2025-05-21 18:52:03,545 - INFO - Loaded trained model from dqn_model.pth
+2025-05-21 18:52:30,727 - INFO - Test Episode 1/20, Total Reward: -1526.5, Avg Waiting Time: 1163259.5s, Avg Queue Length: 613.5 vehicles
+2025-05-21 18:52:36,945 - ERROR - Error closing environment: Connection closed by SUMO.
