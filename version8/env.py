@@ -288,6 +288,7 @@ class TrafficEnv:
         traci.trafficlight.setPhase(TL_ID, GREEN_PHASES[0])
         self.episode_count += 1
         self.current_difficulty = min(1.0, self.episode_count / 100)
+  
         return self.get_state()
 
     def close(self):
