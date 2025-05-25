@@ -2,7 +2,7 @@ import numpy as np
 import torch
 import pandas as pd
 from env import TrafficEnv
-from dqn_agent2 import DQNAgent
+from dqn_agent import DQNAgent
 import traci
 import random
 import os
@@ -22,16 +22,21 @@ env = TrafficEnv()
 agent = DQNAgent(
     state_size=16,
     action_size=4,
-    hidden_size=64,
+    hidden_size=128,  # Updated to match training
     lr=1e-3,
     gamma=0.99,
     epsilon_start=0.01,
     epsilon_min=0.01,
-    epsilon_decay_steps=900000,
-    buffer_capacity=50000,
+    epsilon_decay=0.9995,  # Updated to match training
+    buffer_capacity=100000,  # Updated to match training
     batch_size=128,
-    tau=0.01,
-    device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    tau=0.005,  # Updated to match training
+    update_every=4,  # Added to match training
+    epsilon_decay_steps=900000,
+    device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+    use_double=True,  # Added to match training
+    use_dueling=True,  # Added to match training
+    use_per=True  # Added to match training
 )
 
 # Load the trained model
@@ -53,8 +58,10 @@ def run_episode(use_agent=True, seed=None):
         torch.manual_seed(seed)
     
     state = env.reset()
-   
+    
     total_reward = 0
+    wait_total_list = []
+    queue_total_list = []
     step = 0
     done = False
     
@@ -64,7 +71,7 @@ def run_episode(use_agent=True, seed=None):
     
     while not done and step < MAX_STEPS:
         if use_agent:
-            action, _ = agent.act(state)
+            action, _ = agent.act(state, eval_mode=True)  # Use eval_mode for consistency
         else:
             if step % phase_duration == 0:
                 current_phase = (current_phase + 1) % 4
@@ -72,18 +79,17 @@ def run_episode(use_agent=True, seed=None):
             
         next_state, reward, done = env.step(action)
         total_reward += reward
+        
+        # Extract waiting times and queue lengths from current state
+        wait_times = state[8:12] * MAX_WAITING
+        queue_lengths = state[12:16] * MAX_QUEUE
+        wait_total_list.append(np.mean(wait_times))
+        queue_total_list.append(np.mean(queue_lengths))
+        
         state = next_state
         step += 1
     
-    # Extract waiting times from final state (indices 8, 9, 10, 11)
-    wait_times = state[8:12] * MAX_WAITING  # Denormalize
-    avg_wait = np.mean(wait_times)  # Average over 4 edges
-    
-    # Extract queue lengths from final state (indices 12, 13, 14, 15)
-    queue_lengths = state[12:16] * MAX_QUEUE  # Denormalize
-    avg_queue = np.mean(queue_lengths)  # Average over 4 edges
-    
-    return total_reward, avg_wait, avg_queue
+    return total_reward, np.mean(wait_total_list) if wait_total_list else 0, np.mean(queue_total_list) if queue_total_list else 0
 
 # Testing
 print("\n=== Testing Started ===")

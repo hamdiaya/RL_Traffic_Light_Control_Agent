@@ -5,10 +5,10 @@ import numpy as np
 from collections import deque
 import random
 
-#Dueling DQN : 
+# Dueling DQN
 class QNetwork(nn.Module):
-    def init(self, state_size, action_size, hidden_size=64):
-        super(QNetwork, self).init()
+    def __init__(self, state_size, action_size, hidden_size=64):
+        super(QNetwork, self).__init__()
         self.feature = nn.Sequential(
             nn.Linear(state_size, hidden_size),
             nn.ReLU(),
@@ -55,13 +55,13 @@ class DQNAgent:
         self.state_size = state_size
         self.action_size = action_size
         self.gamma = gamma
-        self.epsilon = epsilon_start  # Initial exploration rate
-        self.epsilon_start = epsilon_start  # Starting value of epsilon
-        self.epsilon_min = epsilon_min  # Minimum value of epsilon
-        self.epsilon_decay_steps = epsilon_decay_steps  # Number of steps to decay epsilon
-        self.epsilon_decay = (epsilon_start - epsilon_min) / epsilon_decay_steps  # Linear decay rate
+        self.epsilon = epsilon_start
+        self.epsilon_start = epsilon_start
+        self.epsilon_min = epsilon_min
+        self.epsilon_decay_steps = epsilon_decay_steps
+        self.epsilon_decay = (epsilon_start - epsilon_min) / epsilon_decay_steps
         self.batch_size = batch_size
-        self.tau = tau  # Soft update factor
+        self.tau = tau
 
         # Device selection
         self.device = device if device else torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -71,7 +71,7 @@ class DQNAgent:
         self.target_network = QNetwork(state_size, action_size, hidden_size).to(self.device)
         self.target_network.load_state_dict(self.q_network.state_dict())
         self.optimizer = optim.Adam(self.q_network.parameters(), lr=lr)
-        self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=100, gamma=0.9)  # Learning rate decay
+        self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=100, gamma=0.9)
 
         # Replay Buffer
         self.replay_buffer = ReplayBuffer(buffer_capacity)
@@ -95,27 +95,17 @@ class DQNAgent:
         reward = torch.FloatTensor(reward).to(self.device)
         done = torch.FloatTensor(done).to(self.device)
 
-
         next_actions = self.q_network(next_state).max(1)[1].detach()
-        
-        # 2. Target network evaluates those actions
         next_q_values = self.target_network(next_state).gather(1, next_actions.unsqueeze(1)).squeeze()
-        
-        # 3. Compute target Q-values
         target_q_values = reward + (1 - done) * self.gamma * next_q_values
-        ############################
 
-        # Current Q-values (unchanged)
         q_values = self.q_network(state).gather(1, action.unsqueeze(1)).squeeze()
-        
-     
-        # q_values = self.q_network(state).gather(1, action.unsqueeze(1)).squeeze()
         loss = nn.MSELoss()(q_values, target_q_values)
-        
+
         # Update network
         self.optimizer.zero_grad()
         loss.backward()
-        torch.nn.utils.clip_grad_norm_(self.q_network.parameters(), max_norm=1.0)  # Gradient clipping
+        torch.nn.utils.clip_grad_norm_(self.q_network.parameters(), max_norm=1.0)
         self.optimizer.step()
         self.scheduler.step()
 
@@ -131,3 +121,4 @@ class DQNAgent:
 
     def load_model(self, filename="dqn_model.pth"):
         self.q_network.load_state_dict(torch.load(filename))
+        self.target_network.load_state_dict(self.q_network.state_dict())
