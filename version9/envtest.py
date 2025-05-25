@@ -8,21 +8,21 @@ import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"
-sumo_binary = checkBinary("sumo")
+sumo_binary = checkBinary("sumo-gui")
 TL_ID = "TL"
 
 import logging
 import sys
 
 # Logging setup
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("traffic_agent.log"),
+# logging.basicConfig(
+    # level=logging.INFO,
+    # format="%(asctime)s - %(levelname)s - %(message)s",
+    # handlers=[
+        # logging.FileHandler("traffic_agent.log"),
         
-    ]
-)
+    # ]
+# )
 
 # Routes mapping
 routes = {
@@ -67,8 +67,7 @@ class TrafficEnv:
         self.simulation_time = 0
         self.last_action = None
         self.current_action = None
-        self.TL_ID = TL_ID
-
+        
         self.prev_waiting_active = 0
         self.prev_queue_active = 0
         self.prev_waiting_inactive = 0
@@ -78,8 +77,8 @@ class TrafficEnv:
         # State & action spaces
         self.state_size = 17
         # Define discrete duration options 
-        self.phase_durations = [20, 30, 40, 50, 60, 70, 80, 90]
-        self.action_size = len(GREEN_PHASES) * len(self.phase_durations)  
+        self.percentage_thresholds = [0.2, 0.5, 0.8]  # 20%, 50%, 80%
+        self.action_size = len(GREEN_PHASES) * len(self.percentage_thresholds)  
         self.observation_space = gym.spaces.Box(low=0, high=1, shape=(self.state_size,), dtype=np.float32)
         self.action_space = gym.spaces.Discrete(self.action_size)
 
@@ -87,9 +86,10 @@ class TrafficEnv:
         self.incoming_edges = ["E2TL", "N2TL", "S2TL", "W2TL"]
         self.outgoing_edges = ["TL2W", "TL2E", "TL2N", "TL2S"]
         
-        self.GREEN_PHASES  = GREEN_PHASES
+        
         self.GREEN_PHASE_DEFS = GREEN_PHASE_DEFS
 
+        self.max_phase_duration = 90  # Seconds
 
         # Curriculum learning parameters
         self.episode_count = 0
@@ -108,41 +108,15 @@ class TrafficEnv:
     def _lerp(self, start, end):
         return start + (end - start) * self.current_difficulty
 
-    def generate_random_traffic(self):
-        # Curriculum-based profile blending
-        traffic_profile = {}
-        for key in self.base_traffic:
-            traffic_profile[key] = {
-                'prob': self._lerp(self.base_traffic[key]['prob'], self.target_traffic[key]['prob']),
-                'spawn': self._lerp(self.base_traffic[key]['spawn'], self.target_traffic[key]['spawn']),
-                'max_lanes': min(
-                    int(self._lerp(self.base_traffic[key]['max_lanes'], self.target_traffic[key]['max_lanes'])),
-                    traci.edge.getLaneNumber("E2TL")
-                )
-            }
-        # Normalize & choose profile
-        total = sum(v['prob'] for v in traffic_profile.values())
-        profile = random.choices(list(traffic_profile), weights=[v['prob']/total for v in traffic_profile.values()], k=1)[0]
-        config = traffic_profile[profile]
-
-        if random.random() < config['spawn']:
-            route_name, edges = random.choice(list(routes.items()))
-            available_lanes = min(config['max_lanes'], traci.edge.getLaneNumber(edges[0]))
-            depart_lane  = str(random.randint(0, max(available_lanes-1, 0)))
-            depart_speed = random.uniform(5, 12.8)
-            rid = f"{route_name}_{self.simulation_time}"
-            traci.route.add(rid, edges)
-            vid = f"veh_{self.simulation_time}"
-            traci.vehicle.add(vid, rid, typeID="car", departLane=depart_lane, departSpeed=str(depart_speed))
 
     def get_state(self):
         current_phase = traci.trafficlight.getPhase(TL_ID)
         one_hot = [1 if i == GREEN_PHASES.index(current_phase) else 0 for i in range(len(GREEN_PHASES))]
     
         MAX_Q = 50
-        MAX_WAIT = 36000
+        MAX_WAIT = 600
         MAX_VEH = 10
-        MAX_DUR = max(self.phase_durations)
+        MAX_PERCENT = 1.0
     
         state = []
     
@@ -178,8 +152,8 @@ class TrafficEnv:
             ])
     
         # Add normalized duration of current phase
-        norm_dur = (self.current_duration / MAX_DUR) if hasattr(self, "current_duration") else 0.0
-        state.append(round(norm_dur, 3))
+        norm_percent_passed = (self.current_percent_passed / MAX_PERCENT) if hasattr(self, "current_percent_passed") else 0.0
+        state.append(round(norm_percent_passed, 3))
         state.extend(one_hot)
         return state
 
@@ -232,13 +206,13 @@ class TrafficEnv:
         # Normalization constants
         MAX_WAIT = 600
         MAX_Q = 50
-        MAX_T = 10
+        MAX_PERCENT = 1.0
     
         # Compute reward
         reward = (
             +1.5 * (delta_wait_active / MAX_WAIT)
             +1.0 * (delta_queue_active / MAX_Q)
-            +0.8 * (throughput / MAX_T)
+            +2.0 * (self.current_percent_passed / MAX_PERCENT if hasattr(self, "current_percent_passed") else 0.0)  # Reward percentage passed
             -1.0 * (delta_wait_inactive / MAX_WAIT)
             -0.5 * (delta_queue_inactive / MAX_Q)
         )
@@ -247,14 +221,14 @@ class TrafficEnv:
 
     
     def step(self, action):
-        # Decode action -> phase + duration
-        phase_idx = action // len(self.phase_durations)
-        duration_idx = action % len(self.phase_durations)
-    
+        # Decode action -> phase + percentage threshold
+        phase_idx = action // len(self.percentage_thresholds)
+        threshold_idx = action % len(self.percentage_thresholds)
+        
         self.current_action = GREEN_PHASES[phase_idx]
-        selected_duration = self.phase_durations[duration_idx]
-        self.current_duration = selected_duration  # ✅ Store for state
-    
+        target_percentage = self.percentage_thresholds[threshold_idx]
+        self.current_percent_passed = 0.0
+        
         # Yellow transition
         if self.last_action is not None and self.last_action != self.current_action:
             y = YELLOW_PHASES[GREEN_PHASES.index(self.last_action)]
@@ -262,39 +236,60 @@ class TrafficEnv:
             for _ in range(5):
                 traci.simulationStep()
                 self.simulation_time += 1
-                self.generate_random_traffic()
-    
+                
+        
         # Green phase
         traci.trafficlight.setPhase(TL_ID, self.current_action)
-        for _ in range(selected_duration):
+        phase_info = self.GREEN_PHASE_DEFS[self.current_action]
+        active_lanes = [f"{edge}_{lane_index}" for edge in phase_info['edges'] for lane_index in phase_info['lanes']]
+        outgoing_edges = phase_info['outgoing']
+        initial_vehicles = sum(traci.lane.getLastStepVehicleNumber(l) for l in active_lanes)
+        vehicle_ids = []
+        for lane in active_lanes:
+            vehicle_ids.extend(traci.lane.getLastStepVehicleIDs(lane))
+        exited_vehicles = set()
+        vehicles_exited = 0
+        phase_time = 0
+        
+        while phase_time < self.max_phase_duration and (initial_vehicles == 0 or self.current_percent_passed < target_percentage):
             traci.simulationStep()
             self.simulation_time += 1
-            if random.random() < 0.5:
-                self.generate_random_traffic()
-    
+            phase_time += 1
+            
+            
+            if initial_vehicles > 0:
+                for vid in vehicle_ids:
+                    if vid not in exited_vehicles and traci.vehicle.getRoadID(vid) in outgoing_edges:
+                        exited_vehicles.add(vid)
+                vehicles_exited = len(exited_vehicles)
+                self.current_percent_passed = vehicles_exited / initial_vehicles
+        
         self.last_action = self.current_action
-    
+        
         # Get state and reward
         state = self.get_state()
         reward = self.calculate_reward()
-    
-        # Logging the action, state and reward
-        logging.info("=" * 50)
-        logging.info(f"Simulation Time      : {self.simulation_time}")
-        logging.info(f"Action Taken         : Phase={self.current_action}, Duration={selected_duration}s")
-        logging.info(f"State                : {state}")
-        logging.info(f"Reward               : {reward:.3f}")
-        logging.info("=" * 50)
-    
+        
+        # Logging the action, state, reward, and vehicle details
+        # logging.info("=" * 50)
+        # logging.info(f"Simulation Time      : {self.simulation_time}")
+        # logging.info(f"Action Taken         : Phase={self.current_action}, Percentage Threshold={target_percentage*100}%")
+        # logging.info(f"Initial Vehicles     : {initial_vehicles}")
+        # logging.info(f"Vehicles Exited      : {vehicles_exited}")
+        # logging.info(f"Percent Passed       : {self.current_percent_passed*100:.1f}%")
+        # logging.info(f"State                : {state}")
+        # logging.info(f"Reward               : {reward:.3f}")
+        # logging.info("=" * 50)
+        
         return state, reward, self.simulation_time >= 7200
-    
-
+      
     def reset(self):
         traci.close()
         traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1", "--no-warnings"])
         self.simulation_time = 0
         self.last_action = None
         self.current_action = GREEN_PHASES[0]
+        self.current_percent_passed = 0.0
         self.prev_waiting_active = 0
         self.prev_queue_active = 0
         self.prev_waiting_inactive = 0
@@ -303,8 +298,7 @@ class TrafficEnv:
         self.current_duration = 0 
         traci.trafficlight.setPhase(TL_ID, GREEN_PHASES[0])
         self.episode_count += 1
-        # self.current_difficulty = min(1.0, self.episode_count / 100)
-        self.current_difficulty = 0.2
+        self.current_difficulty = min(1.0, self.episode_count / 100)
         return self.get_state()
 
     def close(self):

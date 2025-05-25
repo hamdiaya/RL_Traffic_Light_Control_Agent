@@ -7,12 +7,13 @@ import numpy as np
 
 # SUMO configuration
 sumo_config = "sumo_files/sumo_config.sumocfg"  # Ensure this points to new net file
-sumo_binary = checkBinary("sumo") 
+sumo_binary = checkBinary("sumo")
 TL_ID = "TL"  # Updated traffic light ID
 
 # Updated routes matching the new network edges
 routes = {
     # East approaches
+
     "E2TL_EW_straight": ["E2TL", "TL2W"],
     "E2TL_NS_right": ["E2TL", "TL2N"],
     "E2TL_SW_left": ["E2TL", "TL2S"],
@@ -38,7 +39,7 @@ YELLOW_PHASES = [1, 3, 5, 7]
 
 class TrafficEnv:
     def __init__(self):
-        traci.start([sumo_binary, "-c", sumo_config, "--step-length", "1", "--no-warnings"])
+        traci.start([sumo_binary, "-gui", sumo_config, "--step-length", "1", "--no-warnings"])
         self.simulation_time = 0
         self.last_action = None
         self.current_action = None

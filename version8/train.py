@@ -3,40 +3,54 @@ import time
 import logging
 import numpy as np
 import torch
+import traci
+import pandas as pd
 from matplotlib import pyplot as plt
 from env import TrafficEnv
-import traci
 from dqn_agent import DQNAgent
+from plot import plot_metrics  
 
-# Hyperparameters
-STATE_SIZE = 16
-ACTION_SIZE = 12
+# if 'SUMO_HOME' not in os.environ:
+#     os.environ['SUMO_HOME'] = "C:/path/to/your/sumo"  # Replace with actual SUMO path
+#     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+#     sys.path.append(tools)
+
+# Hyperparameters 
+STATE_SIZE = 17
+ACTION_SIZE = 32
 HIDDEN_SIZE = 128
 LR = 1e-3
 GAMMA = 0.99
 EPSILON_START = 1.0
 EPSILON_MIN = 0.01
 EPSILON_DECAY = 0.9995
-EPSILON_DECAY_STEPS = 900000  # Changed from 900000
-BUFFER_CAPACITY = 100000    # Increased from 100000
-BATCH_SIZE = 128
-NUM_EPISODES = 3000
+EPSILON_DECAY_STEPS = 2e6
+BUFFER_CAPACITY = 200000
+BATCH_SIZE = 256
+NUM_EPISODES = 5000
 MAX_STEPS = 7200
 TARGET_UPDATE_FREQ = 4
 TAU = 0.005
 EVAL_EPISODES = 20
 SAVE_MODEL_EVERY = 50
+LOG_FILE = "training.log"
 
+#########################################################################################
 def setup_logging():
+    log_dir = 'logs'
+    os.makedirs(log_dir, exist_ok=True)  # Create the folder if it doesn't exist
+    log_path = os.path.join(log_dir, LOG_FILE )
+
     """Configure logging"""
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler('training.log'),
+            logging.FileHandler(log_path),
             logging.StreamHandler()
         ]
     )
+#########################################################################################
 
 def initialize_environment():
     """Initialize SUMO environment"""
@@ -79,12 +93,17 @@ def train_agent(env, agent):
     # Tracking metrics
     metrics = {
         'episode_rewards': [],
+        'waiting_times': [],
+        'queue_lengths': [],
+        'actions': [],
         'explore_counts': [],
         'exploit_counts': [],
         'epsilon_values': [],
         'curriculum_difficulties': [],
         'vehicle_counts': [],
-        'losses': []
+        'losses': [],
+        'states': [],  # Store state samples (queue lengths)
+        'gradient_norms': []
     }
 
     for episode in range(NUM_EPISODES):
@@ -95,12 +114,16 @@ def train_agent(env, agent):
 
         # Episode tracking
         total_reward = 0
+        total_waiting_time = 0
+        total_queue_length = 0
+        episode_actions = []
         done = False
         step = 0
         explore_count = 0
         exploit_count = 0
         episode_loss = 0
         update_count = 0
+        episode_states = []
 
         while not done and step < MAX_STEPS:
             # Agent takes action
@@ -118,16 +141,24 @@ def train_agent(env, agent):
 
                 # Track gradient norms
                 total_norm = 0
-                for p in agent.q_network.parameters():  # Fixed: Using q_network instead of qnetwork_local
+                for p in agent.q_network.parameters():
                     if p.grad is not None:
                         param_norm = p.grad.data.norm(2)
                         total_norm += param_norm.item() ** 2
                 total_norm = total_norm ** 0.5
                 agent.gradient_norms.append(total_norm)
 
+            # Collect traffic metrics
+            waiting_time = sum(traci.edge.getWaitingTime(e) for e in env.incoming_edges)
+            queue_length = sum(traci.edge.getLastStepHaltingNumber(e) for e in env.incoming_edges)
+            
             # Update state and counters
-            state = next_state
             total_reward += reward
+            total_waiting_time += waiting_time
+            total_queue_length += queue_length
+            episode_actions.append(action)
+            episode_states.append(state[4:8])  # Queue lengths (indices 4-7 in state)
+            state = next_state
             step += 1
 
             if is_exploring:
@@ -135,23 +166,32 @@ def train_agent(env, agent):
             else:
                 exploit_count += 1
 
-        # Calculate average loss
+        # Calculate averages
         avg_loss = episode_loss / max(1, update_count)
+        avg_waiting_time = total_waiting_time / max(1, step)
+        avg_queue_length = total_queue_length / max(1, step)
         
         # Store metrics
         metrics['episode_rewards'].append(total_reward)
+        metrics['waiting_times'].append(avg_waiting_time)
+        metrics['queue_lengths'].append(avg_queue_length)
+        metrics['actions'].extend(episode_actions)
         metrics['explore_counts'].append(explore_count)
         metrics['exploit_counts'].append(exploit_count)
         metrics['epsilon_values'].append(agent.epsilon)
         metrics['curriculum_difficulties'].append(curriculum_progress)
         metrics['vehicle_counts'].append(sum(traci.edge.getLastStepVehicleNumber(e) for e in env.incoming_edges))
         metrics['losses'].append(avg_loss)
+        metrics['states'].extend(episode_states)
+        metrics['gradient_norms'].extend(agent.gradient_norms[-update_count:])
 
         # Log progress
         logging.info(
             f"Episode {episode + 1}/{NUM_EPISODES}, "
             f"Difficulty: {curriculum_progress:.2f}, "
             f"Reward: {total_reward:.1f}, "
+            f"Waiting Time: {avg_waiting_time:.1f}s, "
+            f"Queue Length: {avg_queue_length:.1f}, "
             f"Loss: {avg_loss:.4f}, "
             f"Epsilon: {agent.epsilon:.3f}, "
             f"Explore: {explore_count}, "
@@ -163,82 +203,33 @@ def train_agent(env, agent):
             agent.save_model("dqn_model.pth")
             logging.info(f"Model saved at episode {episode + 1}")
 
+    # Save metrics to CSV
+    metrics_df = pd.DataFrame({
+        'episode': np.arange(1, len(metrics['episode_rewards']) + 1),
+        'episode_rewards': metrics['episode_rewards'],
+        'waiting_times': metrics['waiting_times'],
+        'queue_lengths': metrics['queue_lengths'],
+        'explore_counts': metrics['explore_counts'],
+        'exploit_counts': metrics['exploit_counts'],
+        'epsilon_values': metrics['epsilon_values'],
+        'curriculum_difficulties': metrics['curriculum_difficulties'],
+        'vehicle_counts': metrics['vehicle_counts'],
+        'losses': metrics['losses']
+    })
+    metrics_df.to_csv("metrics.csv", index=False)
+    
+    # Save actions and states separately due to different lengths
+    pd.DataFrame({'actions': metrics['actions']}).to_csv("actions.csv", index=False)
+    pd.DataFrame(metrics['states'], columns=['queue_ns', 'queue_ew', 'queue_sn', 'queue_ws']).to_csv("states.csv", index=False)
+    pd.DataFrame({'gradient_norms': metrics['gradient_norms']}).to_csv("gradient_norms.csv", index=False)
+    
     return metrics
 
-def plot_metrics(metrics, agent):
-    """Visualize training metrics"""
-    if not os.path.exists("plots"):
-        os.makedirs("plots")
-
-    plt.figure(figsize=(20, 20))
-    
-    # Plot configurations
-    plots = [
-        ('episode_rewards', "Total Reward", "Total Reward per Episode"),
-        ('explore_counts', "Exploration", "Exploration vs. Exploitation", 'exploit_counts'),
-        ('epsilon_values', "Epsilon", "Epsilon Decay Over Time"),
-        ('losses', "Training Loss", "Training Loss Over Episodes"),
-        ('curriculum_difficulties', "Curriculum Difficulty", "Curriculum Progression", 'vehicle_counts')
-    ]
-    
-    for i, plot in enumerate(plots, 1):
-        plt.subplot(3, 3, i)
-        
-        if len(plot) == 3:  # Single plot
-            key, ylabel, title = plot
-            plt.plot(metrics[key])
-            plt.ylabel(ylabel)
-        else:  # Dual plot
-            key1, label1, title, key2 = plot
-            plt.plot(metrics[key1], label=label1)
-            if key2 == 'vehicle_counts':
-                norm_counts = np.array(metrics[key2]) / max(1, max(metrics[key2]))
-                plt.plot(norm_counts, label="Normalized Vehicle Count")
-            else:
-                plt.plot(metrics[key2], label=label1.replace("Exploration", "Exploitation"))
-            plt.legend()
-        
-        plt.xlabel("Episode")
-        plt.title(title)
-
-    # Additional plots
-    plt.subplot(3, 3, 6)
-    explore_ratio = [
-        e/(e+x) for e, x in zip(metrics['explore_counts'], metrics['exploit_counts'])
-    ]
-    plt.plot(explore_ratio, label="Exploration Ratio")
-    plt.xlabel("Episode")
-    plt.ylabel("Ratio")
-    plt.title("Exploration Ratio Over Time")
-    plt.legend()
-
-    plt.subplot(3, 3, 7)
-    window_size = 50
-    moving_avg = [
-        np.mean(metrics['episode_rewards'][max(0, i-window_size):i+1]) 
-        for i in range(len(metrics['episode_rewards']))
-    ]
-    plt.plot(moving_avg, label=f"Moving Avg (Window={window_size})")
-    plt.xlabel("Episode")
-    plt.ylabel("Reward")
-    plt.title("Moving Average Reward")
-    plt.legend()
-
-    plt.subplot(3, 3, 8)
-    plt.hist(metrics['episode_rewards'], bins=50)
-    plt.xlabel("Reward")
-    plt.ylabel("Frequency")
-    plt.title("Reward Distribution")
-
-    plt.subplot(3, 3, 9)
-    plt.plot(agent.gradient_norms)
-    plt.xlabel("Update Step")
-    plt.ylabel("Gradient Norm")
-    plt.title("Gradient Norms During Training")
-
-    plt.tight_layout()
-    plt.savefig("plots/training_metrics.png")
-    plt.close()
+def plot_metrics_wrapper(metrics, agent):
+    """Wrapper to call plot_metrics from plot.py"""
+    # Ensure gradient_norms is included
+    metrics['gradient_norms'] = agent.gradient_norms
+    plot_metrics(metrics)
 
 def evaluate_agent(env, agent):
     """Evaluate trained agent"""
@@ -271,7 +262,7 @@ def main():
     
     try:
         metrics = train_agent(env, agent)
-        plot_metrics(metrics, agent)
+        plot_metrics_wrapper(metrics, agent)  # Call plotting function
         evaluate_agent(env, agent)
     except Exception as e:
         logging.error(f"Training failed: {e}")

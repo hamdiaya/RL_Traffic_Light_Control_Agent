@@ -1,0 +1,27 @@
+2025-05-24 19:10:32,227 - INFO - Loaded trained model successfully.
+2025-05-24 19:10:40,582 - ERROR - Error closing environment: Connection closed by SUMO.
+2025-05-24 19:10:57,845 - INFO - Loaded trained model successfully.
+2025-05-24 19:11:10,401 - INFO - Test Episode 1/20, Reward: 5919.8, Waiting Time: 1162497.8s, Queue Length: 460.6
+2025-05-24 19:11:24,181 - INFO - Test Episode 2/20, Reward: 5949.3, Waiting Time: 1180215.9s, Queue Length: 470.1
+2025-05-24 19:11:35,760 - ERROR - Error closing environment: Connection closed by SUMO.
+2025-05-24 19:11:53,278 - INFO - Loaded trained model successfully.
+2025-05-24 19:12:06,424 - INFO - Test Episode 1/10, Reward: 5977.3, Waiting Time: 1169772.5s, Queue Length: 463.1
+2025-05-24 19:12:20,132 - INFO - Test Episode 2/10, Reward: 3875.5, Waiting Time: 946180.2s, Queue Length: 425.7
+2025-05-24 19:12:32,285 - INFO - Loaded trained model successfully.
+2025-05-24 19:12:45,615 - INFO - Test Episode 1/10, Reward: 5958.6, Waiting Time: 1204825.1s, Queue Length: 473.7
+2025-05-24 19:12:58,738 - INFO - Test Episode 2/10, Reward: 5916.2, Waiting Time: 1171335.0s, Queue Length: 467.1
+2025-05-24 19:13:12,497 - INFO - Test Episode 3/10, Reward: 3855.5, Waiting Time: 960108.7s, Queue Length: 429.2
+2025-05-24 19:13:26,278 - INFO - Test Episode 4/10, Reward: 5926.0, Waiting Time: 1129234.6s, Queue Length: 466.2
+2025-05-24 19:13:40,372 - INFO - Test Episode 5/10, Reward: 5970.0, Waiting Time: 1136690.8s, Queue Length: 460.4
+2025-05-24 19:13:54,100 - INFO - Test Episode 6/10, Reward: 5953.3, Waiting Time: 1143076.2s, Queue Length: 465.7
+2025-05-24 19:14:08,523 - INFO - Test Episode 7/10, Reward: 3853.0, Waiting Time: 1051789.2s, Queue Length: 455.9
+2025-05-24 19:14:25,769 - INFO - Test Episode 8/10, Reward: 5933.3, Waiting Time: 1158376.7s, Queue Length: 468.6
+2025-05-24 19:14:45,511 - INFO - Test Episode 9/10, Reward: 5966.3, Waiting Time: 1119776.3s, Queue Length: 459.2
+2025-05-24 19:15:07,265 - INFO - Test Episode 10/10, Reward: 3866.8, Waiting Time: 992788.1s, Queue Length: 447.2
+2025-05-24 19:15:07,265 - INFO - Evaluation Complete - Average Reward: 5319.9, Average Waiting Time: 1106800.1s, Average Queue Length: 459.3
+2025-05-24 19:37:54,876 - INFO - Loaded trained model successfully.
+2025-05-24 19:37:55,482 - ERROR - Testing failed: The vehicle 'veh_1' to add already exists.
+2025-05-24 23:12:12,190 - INFO - Loaded trained model successfully.
+2025-05-24 23:12:12,791 - ERROR - Testing failed: The vehicle 'veh_1' to add already exists.
+2025-05-24 23:12:34,578 - INFO - Loaded trained model successfully.
+2025-05-24 23:14:22,905 - ERROR - Testing failed: Connection closed by SUMO.
