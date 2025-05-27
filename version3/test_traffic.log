@@ -1,0 +1,7 @@
+2025-05-26 18:40:33,805 - INFO - Environment initialized successfully
+2025-05-26 18:40:35,137 - INFO - Agent initialized successfully
+2025-05-26 18:40:35,148 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-26 18:40:35,148 - INFO - === Testing Started ===
+2025-05-26 18:40:36,188 - ERROR - Episode failed: name 'agent' is not defined
+2025-05-26 18:40:36,188 - ERROR - Testing failed: name 'agent' is not defined
+2025-05-26 18:40:36,192 - INFO - Environment closed successfully

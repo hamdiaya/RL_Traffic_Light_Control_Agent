@@ -12,9 +12,9 @@ MODEL_PATH = "dqn_model.pth"
 NUM_TEST_EPISODES = 50
 MAX_STEPS = 7200
 FIXED_SEED = 42
-MAX_WAITING = 3600  # From TrafficEnv.get_state for denormalization
-MAX_QUEUE = 200     # From TrafficEnv.get_state for queue denormalization
-MAX_THROUGHPUT = 60 # From TrafficEnv.calculate_reward
+MAX_WAITING = 600  # From TrafficEnv.get_state for denormalization
+MAX_QUEUE = 20    # From TrafficEnv.get_state for queue denormalization
+MAX_THROUGHPUT = 30 # From TrafficEnv.calculate_reward
 
 # Initialize environment
 env = TrafficEnv()

@@ -1,0 +1,50 @@
+2025-05-25 21:32:47,382 - INFO - Environment initialized successfully
+2025-05-25 21:32:47,382 - INFO - === Default Controller Testing Started ===
+2025-05-25 21:32:51,012 - INFO - Episode 1/10
+2025-05-25 21:32:51,012 - INFO - Default Reward: 1.6
+2025-05-25 21:32:51,012 - INFO - Default Avg Waiting Time: 211.2 seconds
+2025-05-25 21:32:51,012 - INFO - Default Avg Queue Length: 5.5 vehicles
+2025-05-25 21:32:53,266 - ERROR - Error closing environment: 122
+2025-05-25 21:33:06,277 - INFO - Environment initialized successfully
+2025-05-25 21:33:06,278 - INFO - === Default Controller Testing Started ===
+2025-05-25 21:33:09,754 - INFO - Episode 1/50
+2025-05-25 21:33:09,754 - INFO - Default Reward: 1.6
+2025-05-25 21:33:09,755 - INFO - Default Avg Waiting Time: 211.2 seconds
+2025-05-25 21:33:09,755 - INFO - Default Avg Queue Length: 5.5 vehicles
+2025-05-25 21:33:13,256 - INFO - Episode 2/50
+2025-05-25 21:33:13,256 - INFO - Default Reward: 2.1
+2025-05-25 21:33:13,256 - INFO - Default Avg Waiting Time: 212.0 seconds
+2025-05-25 21:33:13,256 - INFO - Default Avg Queue Length: 5.4 vehicles
+2025-05-25 21:33:16,780 - INFO - Episode 3/50
+2025-05-25 21:33:16,780 - INFO - Default Reward: 1.1
+2025-05-25 21:33:16,780 - INFO - Default Avg Waiting Time: 219.2 seconds
+2025-05-25 21:33:16,780 - INFO - Default Avg Queue Length: 5.6 vehicles
+2025-05-25 21:33:20,305 - INFO - Episode 4/50
+2025-05-25 21:33:20,305 - INFO - Default Reward: 1.9
+2025-05-25 21:33:20,305 - INFO - Default Avg Waiting Time: 208.9 seconds
+2025-05-25 21:33:20,305 - INFO - Default Avg Queue Length: 5.4 vehicles
+2025-05-25 21:33:23,776 - INFO - Episode 5/50
+2025-05-25 21:33:23,776 - INFO - Default Reward: 1.5
+2025-05-25 21:33:23,777 - INFO - Default Avg Waiting Time: 218.5 seconds
+2025-05-25 21:33:23,777 - INFO - Default Avg Queue Length: 5.6 vehicles
+2025-05-25 21:33:27,263 - INFO - Episode 6/50
+2025-05-25 21:33:27,263 - INFO - Default Reward: 2.4
+2025-05-25 21:33:27,263 - INFO - Default Avg Waiting Time: 219.8 seconds
+2025-05-25 21:33:27,263 - INFO - Default Avg Queue Length: 5.7 vehicles
+2025-05-25 21:33:30,802 - INFO - Episode 7/50
+2025-05-25 21:33:30,802 - INFO - Default Reward: 2.7
+2025-05-25 21:33:30,802 - INFO - Default Avg Waiting Time: 214.7 seconds
+2025-05-25 21:33:30,802 - INFO - Default Avg Queue Length: 5.6 vehicles
+2025-05-25 21:33:34,322 - INFO - Episode 8/50
+2025-05-25 21:33:34,322 - INFO - Default Reward: 1.7
+2025-05-25 21:33:34,322 - INFO - Default Avg Waiting Time: 216.2 seconds
+2025-05-25 21:33:34,322 - INFO - Default Avg Queue Length: 5.6 vehicles
+2025-05-25 21:33:37,742 - INFO - Episode 9/50
+2025-05-25 21:33:37,743 - INFO - Default Reward: 2.0
+2025-05-25 21:33:37,743 - INFO - Default Avg Waiting Time: 214.4 seconds
+2025-05-25 21:33:37,743 - INFO - Default Avg Queue Length: 5.5 vehicles
+2025-05-25 21:33:41,214 - INFO - Episode 10/50
+2025-05-25 21:33:41,215 - INFO - Default Reward: 1.7
+2025-05-25 21:33:41,215 - INFO - Default Avg Waiting Time: 216.4 seconds
+2025-05-25 21:33:41,215 - INFO - Default Avg Queue Length: 5.6 vehicles
+2025-05-25 21:33:44,010 - ERROR - Error closing environment: Connection closed by SUMO.

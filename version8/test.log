@@ -1,0 +1,1182 @@
+2025-05-25 15:15:22,579 - INFO - Environment initialized successfully
+2025-05-25 15:15:23,629 - INFO - Agent initialized successfully
+2025-05-25 15:15:23,639 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:15:23,639 - INFO - === Testing Started ===
+2025-05-25 15:15:24,751 - ERROR - Episode failed: list indices must be integers or slices, not tuple
+2025-05-25 15:15:24,751 - ERROR - Testing failed: list indices must be integers or slices, not tuple
+2025-05-25 15:15:24,755 - INFO - Environment closed successfully
+2025-05-25 15:17:35,518 - INFO - Environment initialized successfully
+2025-05-25 15:17:36,599 - INFO - Agent initialized successfully
+2025-05-25 15:17:36,610 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:17:36,610 - INFO - === Testing Started ===
+2025-05-25 15:18:08,947 - INFO - Episode 1/50
+2025-05-25 15:18:08,947 - INFO - Agent Reward: 7296.4 | Default Reward: 719.7
+2025-05-25 15:18:08,947 - INFO - Agent Avg Waiting Time (All Lanes): 396357.2 seconds | Default Avg Waiting Time (All Lanes): 76360.6 seconds
+2025-05-25 15:18:08,947 - INFO - Agent Avg Queue Length (All Lanes): 162.4 vehicles | Default Avg Queue Length (All Lanes): 89.0 vehicles
+2025-05-25 15:18:08,947 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:18:21,936 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-25 15:18:43,348 - INFO - Environment initialized successfully
+2025-05-25 15:18:44,351 - INFO - Agent initialized successfully
+2025-05-25 15:18:44,360 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:18:44,360 - INFO - === Testing Started ===
+2025-05-25 15:18:55,362 - INFO - Episode 1/50
+2025-05-25 15:18:55,362 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 15:18:55,362 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 15:18:55,362 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 15:18:55,362 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:19:02,711 - INFO - Episode 2/50
+2025-05-25 15:19:02,711 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 15:19:02,711 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 15:19:02,711 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 15:19:02,711 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:19:14,761 - INFO - Episode 3/50
+2025-05-25 15:19:14,761 - INFO - Agent Reward: 1579.3 | Default Reward: 164.5
+2025-05-25 15:19:14,761 - INFO - Agent Avg Waiting Time (All Lanes): 66528.9 seconds | Default Avg Waiting Time (All Lanes): 19719.2 seconds
+2025-05-25 15:19:14,761 - INFO - Agent Avg Queue Length (All Lanes): 38.6 vehicles | Default Avg Queue Length (All Lanes): 23.0 vehicles
+2025-05-25 15:19:14,761 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:19:26,624 - INFO - Episode 4/50
+2025-05-25 15:19:26,624 - INFO - Agent Reward: 1950.2 | Default Reward: 171.9
+2025-05-25 15:19:26,624 - INFO - Agent Avg Waiting Time (All Lanes): 76524.4 seconds | Default Avg Waiting Time (All Lanes): 20285.9 seconds
+2025-05-25 15:19:26,624 - INFO - Agent Avg Queue Length (All Lanes): 40.8 vehicles | Default Avg Queue Length (All Lanes): 23.7 vehicles
+2025-05-25 15:19:26,624 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:19:29,760 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-25 15:32:35,025 - INFO - Environment initialized successfully
+2025-05-25 15:32:36,047 - INFO - Agent initialized successfully
+2025-05-25 15:32:36,054 - ERROR - Failed to load model: Error(s) in loading state_dict for QNetwork:
+	size mismatch for feature.0.weight: copying a param with shape torch.Size([128, 17]) from checkpoint, the shape in current model is torch.Size([64, 17]).
+	size mismatch for feature.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for feature.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for feature.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for feature.4.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([64, 64]).
+	size mismatch for feature.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for feature.5.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for feature.5.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for value_stream.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([32, 64]).
+	size mismatch for value_stream.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([32]).
+	size mismatch for value_stream.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 32]).
+	size mismatch for advantage_stream.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([32, 64]).
+	size mismatch for advantage_stream.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([32]).
+	size mismatch for advantage_stream.2.weight: copying a param with shape torch.Size([32, 64]) from checkpoint, the shape in current model is torch.Size([32, 32]).
+2025-05-25 15:36:02,479 - INFO - Environment initialized successfully
+2025-05-25 15:36:03,532 - INFO - Agent initialized successfully
+2025-05-25 15:36:03,541 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:36:03,541 - INFO - === Testing Started ===
+2025-05-25 15:36:36,133 - INFO - Episode 1/50
+2025-05-25 15:36:36,133 - INFO - Agent Reward: 7296.4 | Default Reward: 719.7
+2025-05-25 15:36:36,133 - INFO - Agent Avg Waiting Time (All Lanes): 342600.4 seconds | Default Avg Waiting Time (All Lanes): 39127.3 seconds
+2025-05-25 15:36:36,133 - INFO - Agent Avg Queue Length (All Lanes): 292.1 vehicles | Default Avg Queue Length (All Lanes): 2725.3 vehicles
+2025-05-25 15:36:36,133 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:36:49,123 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-25 15:37:12,311 - INFO - Environment initialized successfully
+2025-05-25 15:37:13,329 - INFO - Agent initialized successfully
+2025-05-25 15:37:13,337 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:37:13,337 - INFO - === Testing Started ===
+2025-05-25 15:37:24,747 - INFO - Episode 1/50
+2025-05-25 15:37:24,747 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 15:37:24,747 - INFO - Agent Avg Waiting Time (All Lanes): 50599.2 seconds | Default Avg Waiting Time (All Lanes): 9918.7 seconds
+2025-05-25 15:37:24,747 - INFO - Agent Avg Queue Length (All Lanes): 660.6 vehicles | Default Avg Queue Length (All Lanes): 526.5 vehicles
+2025-05-25 15:37:24,747 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:37:32,221 - INFO - Episode 2/50
+2025-05-25 15:37:32,222 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 15:37:32,222 - INFO - Agent Avg Waiting Time (All Lanes): 591.1 seconds | Default Avg Waiting Time (All Lanes): 10486.2 seconds
+2025-05-25 15:37:32,222 - INFO - Agent Avg Queue Length (All Lanes): 70.6 vehicles | Default Avg Queue Length (All Lanes): 573.3 vehicles
+2025-05-25 15:37:32,222 - INFO - Agent Throughput: 0.0 vehicles | Default Throughput: 0.0 vehicles
+2025-05-25 15:37:42,004 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-25 15:39:04,702 - INFO - Environment initialized successfully
+2025-05-25 15:39:05,669 - INFO - Agent initialized successfully
+2025-05-25 15:39:05,677 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:39:05,677 - INFO - === Testing Started ===
+2025-05-25 15:39:14,089 - ERROR - Testing failed: not enough values to unpack (expected 4, got 3)
+2025-05-25 15:39:14,095 - INFO - Environment closed successfully
+2025-05-25 15:39:31,771 - INFO - Environment initialized successfully
+2025-05-25 15:39:32,759 - INFO - Agent initialized successfully
+2025-05-25 15:39:32,767 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:39:32,767 - INFO - === Testing Started ===
+2025-05-25 15:39:43,532 - ERROR - Testing failed: not enough values to unpack (expected 4, got 3)
+2025-05-25 15:39:43,537 - INFO - Environment closed successfully
+2025-05-25 15:39:59,835 - INFO - Environment initialized successfully
+2025-05-25 15:40:00,814 - INFO - Agent initialized successfully
+2025-05-25 15:40:00,822 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:40:00,822 - INFO - === Testing Started ===
+2025-05-25 15:40:12,426 - INFO - Episode 1/50
+2025-05-25 15:40:12,426 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 15:40:12,426 - INFO - Agent Avg Waiting Time (All Lanes): 50599.2 seconds | Default Avg Waiting Time (All Lanes): 9918.7 seconds
+2025-05-25 15:40:12,426 - INFO - Agent Avg Queue Length (All Lanes): 660.6 vehicles | Default Avg Queue Length (All Lanes): 526.5 vehicles
+2025-05-25 15:40:20,113 - INFO - Episode 2/50
+2025-05-25 15:40:20,113 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 15:40:20,113 - INFO - Agent Avg Waiting Time (All Lanes): 591.1 seconds | Default Avg Waiting Time (All Lanes): 10486.2 seconds
+2025-05-25 15:40:20,113 - INFO - Agent Avg Queue Length (All Lanes): 70.6 vehicles | Default Avg Queue Length (All Lanes): 573.3 vehicles
+2025-05-25 15:40:31,999 - INFO - Episode 3/50
+2025-05-25 15:40:31,999 - INFO - Agent Reward: 1579.3 | Default Reward: 164.5
+2025-05-25 15:40:31,999 - INFO - Agent Avg Waiting Time (All Lanes): 60861.7 seconds | Default Avg Waiting Time (All Lanes): 11387.7 seconds
+2025-05-25 15:40:31,999 - INFO - Agent Avg Queue Length (All Lanes): 560.5 vehicles | Default Avg Queue Length (All Lanes): 612.5 vehicles
+2025-05-25 15:40:43,490 - INFO - Episode 4/50
+2025-05-25 15:40:43,490 - INFO - Agent Reward: 1950.2 | Default Reward: 171.9
+2025-05-25 15:40:43,490 - INFO - Agent Avg Waiting Time (All Lanes): 69459.4 seconds | Default Avg Waiting Time (All Lanes): 11180.5 seconds
+2025-05-25 15:40:43,490 - INFO - Agent Avg Queue Length (All Lanes): 675.1 vehicles | Default Avg Queue Length (All Lanes): 678.2 vehicles
+2025-05-25 15:40:57,305 - INFO - Episode 5/50
+2025-05-25 15:40:57,305 - INFO - Agent Reward: 2716.5 | Default Reward: 150.1
+2025-05-25 15:40:57,305 - INFO - Agent Avg Waiting Time (All Lanes): 102837.0 seconds | Default Avg Waiting Time (All Lanes): 11199.5 seconds
+2025-05-25 15:40:57,305 - INFO - Agent Avg Queue Length (All Lanes): 1286.6 vehicles | Default Avg Queue Length (All Lanes): 689.5 vehicles
+2025-05-25 15:41:10,894 - INFO - Episode 6/50
+2025-05-25 15:41:10,894 - INFO - Agent Reward: 2144.8 | Default Reward: 196.2
+2025-05-25 15:41:10,895 - INFO - Agent Avg Waiting Time (All Lanes): 76935.3 seconds | Default Avg Waiting Time (All Lanes): 11800.5 seconds
+2025-05-25 15:41:10,895 - INFO - Agent Avg Queue Length (All Lanes): 784.2 vehicles | Default Avg Queue Length (All Lanes): 722.9 vehicles
+2025-05-25 15:41:24,957 - INFO - Episode 7/50
+2025-05-25 15:41:24,957 - INFO - Agent Reward: 2759.5 | Default Reward: 157.0
+2025-05-25 15:41:24,958 - INFO - Agent Avg Waiting Time (All Lanes): 104552.1 seconds | Default Avg Waiting Time (All Lanes): 11885.2 seconds
+2025-05-25 15:41:24,958 - INFO - Agent Avg Queue Length (All Lanes): 15.4 vehicles | Default Avg Queue Length (All Lanes): 661.0 vehicles
+2025-05-25 15:41:38,048 - INFO - Episode 8/50
+2025-05-25 15:41:38,048 - INFO - Agent Reward: 1761.0 | Default Reward: 188.0
+2025-05-25 15:41:38,048 - INFO - Agent Avg Waiting Time (All Lanes): 53306.4 seconds | Default Avg Waiting Time (All Lanes): 13694.1 seconds
+2025-05-25 15:41:38,048 - INFO - Agent Avg Queue Length (All Lanes): 701.4 vehicles | Default Avg Queue Length (All Lanes): 754.5 vehicles
+2025-05-25 15:41:51,153 - INFO - Episode 9/50
+2025-05-25 15:41:51,153 - INFO - Agent Reward: 1864.3 | Default Reward: 231.5
+2025-05-25 15:41:51,153 - INFO - Agent Avg Waiting Time (All Lanes): 73679.0 seconds | Default Avg Waiting Time (All Lanes): 14372.6 seconds
+2025-05-25 15:41:51,153 - INFO - Agent Avg Queue Length (All Lanes): 875.6 vehicles | Default Avg Queue Length (All Lanes): 843.6 vehicles
+2025-05-25 15:42:05,841 - INFO - Episode 10/50
+2025-05-25 15:42:05,842 - INFO - Agent Reward: 2556.7 | Default Reward: 243.8
+2025-05-25 15:42:05,842 - INFO - Agent Avg Waiting Time (All Lanes): 92850.4 seconds | Default Avg Waiting Time (All Lanes): 15374.4 seconds
+2025-05-25 15:42:05,842 - INFO - Agent Avg Queue Length (All Lanes): 917.5 vehicles | Default Avg Queue Length (All Lanes): 783.8 vehicles
+2025-05-25 15:42:21,867 - INFO - Episode 11/50
+2025-05-25 15:42:21,867 - INFO - Agent Reward: 3158.0 | Default Reward: 268.6
+2025-05-25 15:42:21,867 - INFO - Agent Avg Waiting Time (All Lanes): 113200.1 seconds | Default Avg Waiting Time (All Lanes): 16053.9 seconds
+2025-05-25 15:42:21,867 - INFO - Agent Avg Queue Length (All Lanes): 1280.1 vehicles | Default Avg Queue Length (All Lanes): 840.9 vehicles
+2025-05-25 15:42:35,891 - INFO - Episode 12/50
+2025-05-25 15:42:35,891 - INFO - Agent Reward: 2124.6 | Default Reward: 211.6
+2025-05-25 15:42:35,891 - INFO - Agent Avg Waiting Time (All Lanes): 69396.3 seconds | Default Avg Waiting Time (All Lanes): 16462.3 seconds
+2025-05-25 15:42:35,891 - INFO - Agent Avg Queue Length (All Lanes): 795.8 vehicles | Default Avg Queue Length (All Lanes): 1067.7 vehicles
+2025-05-25 15:42:51,687 - INFO - Episode 13/50
+2025-05-25 15:42:51,687 - INFO - Agent Reward: 3382.2 | Default Reward: 244.6
+2025-05-25 15:42:51,687 - INFO - Agent Avg Waiting Time (All Lanes): 121376.1 seconds | Default Avg Waiting Time (All Lanes): 16459.7 seconds
+2025-05-25 15:42:51,687 - INFO - Agent Avg Queue Length (All Lanes): 1554.3 vehicles | Default Avg Queue Length (All Lanes): 859.1 vehicles
+2025-05-25 15:43:07,743 - INFO - Episode 14/50
+2025-05-25 15:43:07,743 - INFO - Agent Reward: 3393.5 | Default Reward: 299.9
+2025-05-25 15:43:07,744 - INFO - Agent Avg Waiting Time (All Lanes): 120781.4 seconds | Default Avg Waiting Time (All Lanes): 17351.3 seconds
+2025-05-25 15:43:07,744 - INFO - Agent Avg Queue Length (All Lanes): 1366.9 vehicles | Default Avg Queue Length (All Lanes): 936.7 vehicles
+2025-05-25 15:43:23,480 - INFO - Episode 15/50
+2025-05-25 15:43:23,480 - INFO - Agent Reward: 2251.4 | Default Reward: 307.0
+2025-05-25 15:43:23,480 - INFO - Agent Avg Waiting Time (All Lanes): 84625.2 seconds | Default Avg Waiting Time (All Lanes): 18117.7 seconds
+2025-05-25 15:43:23,480 - INFO - Agent Avg Queue Length (All Lanes): 629.8 vehicles | Default Avg Queue Length (All Lanes): 945.4 vehicles
+2025-05-25 15:43:39,757 - INFO - Episode 16/50
+2025-05-25 15:43:39,758 - INFO - Agent Reward: 3772.9 | Default Reward: 335.8
+2025-05-25 15:43:39,758 - INFO - Agent Avg Waiting Time (All Lanes): 123811.6 seconds | Default Avg Waiting Time (All Lanes): 18693.0 seconds
+2025-05-25 15:43:39,758 - INFO - Agent Avg Queue Length (All Lanes): 2336.6 vehicles | Default Avg Queue Length (All Lanes): 1028.9 vehicles
+2025-05-25 15:43:59,518 - INFO - Episode 17/50
+2025-05-25 15:43:59,518 - INFO - Agent Reward: 5209.8 | Default Reward: 329.5
+2025-05-25 15:43:59,518 - INFO - Agent Avg Waiting Time (All Lanes): 206417.9 seconds | Default Avg Waiting Time (All Lanes): 19478.8 seconds
+2025-05-25 15:43:59,518 - INFO - Agent Avg Queue Length (All Lanes): 29.6 vehicles | Default Avg Queue Length (All Lanes): 987.5 vehicles
+2025-05-25 15:44:17,291 - INFO - Episode 18/50
+2025-05-25 15:44:17,291 - INFO - Agent Reward: 3282.0 | Default Reward: 398.2
+2025-05-25 15:44:17,291 - INFO - Agent Avg Waiting Time (All Lanes): 124399.0 seconds | Default Avg Waiting Time (All Lanes): 21736.3 seconds
+2025-05-25 15:44:17,291 - INFO - Agent Avg Queue Length (All Lanes): 1029.0 vehicles | Default Avg Queue Length (All Lanes): 1127.0 vehicles
+2025-05-25 15:44:36,210 - INFO - Episode 19/50
+2025-05-25 15:44:36,211 - INFO - Agent Reward: 4179.7 | Default Reward: 362.2
+2025-05-25 15:44:36,211 - INFO - Agent Avg Waiting Time (All Lanes): 148722.3 seconds | Default Avg Waiting Time (All Lanes): 20818.9 seconds
+2025-05-25 15:44:36,211 - INFO - Agent Avg Queue Length (All Lanes): 2159.1 vehicles | Default Avg Queue Length (All Lanes): 1162.0 vehicles
+2025-05-25 15:44:56,342 - INFO - Episode 20/50
+2025-05-25 15:44:56,342 - INFO - Agent Reward: 4472.7 | Default Reward: 364.1
+2025-05-25 15:44:56,342 - INFO - Agent Avg Waiting Time (All Lanes): 204373.1 seconds | Default Avg Waiting Time (All Lanes): 21674.6 seconds
+2025-05-25 15:44:56,342 - INFO - Agent Avg Queue Length (All Lanes): 976.6 vehicles | Default Avg Queue Length (All Lanes): 1345.6 vehicles
+2025-05-25 15:45:17,373 - INFO - Episode 21/50
+2025-05-25 15:45:17,373 - INFO - Agent Reward: 5325.0 | Default Reward: 395.8
+2025-05-25 15:45:17,373 - INFO - Agent Avg Waiting Time (All Lanes): 206934.9 seconds | Default Avg Waiting Time (All Lanes): 20517.3 seconds
+2025-05-25 15:45:17,373 - INFO - Agent Avg Queue Length (All Lanes): 2709.3 vehicles | Default Avg Queue Length (All Lanes): 1189.0 vehicles
+2025-05-25 15:45:39,044 - INFO - Episode 22/50
+2025-05-25 15:45:39,044 - INFO - Agent Reward: 5722.6 | Default Reward: 436.0
+2025-05-25 15:45:39,044 - INFO - Agent Avg Waiting Time (All Lanes): 217160.7 seconds | Default Avg Waiting Time (All Lanes): 22075.2 seconds
+2025-05-25 15:45:39,044 - INFO - Agent Avg Queue Length (All Lanes): 47.4 vehicles | Default Avg Queue Length (All Lanes): 1482.5 vehicles
+2025-05-25 15:45:59,340 - INFO - Episode 23/50
+2025-05-25 15:45:59,340 - INFO - Agent Reward: 4874.5 | Default Reward: 385.6
+2025-05-25 15:45:59,340 - INFO - Agent Avg Waiting Time (All Lanes): 208083.5 seconds | Default Avg Waiting Time (All Lanes): 21434.9 seconds
+2025-05-25 15:45:59,340 - INFO - Agent Avg Queue Length (All Lanes): 1076.1 vehicles | Default Avg Queue Length (All Lanes): 1354.4 vehicles
+2025-05-25 15:46:21,656 - INFO - Episode 24/50
+2025-05-25 15:46:21,657 - INFO - Agent Reward: 5736.3 | Default Reward: 409.2
+2025-05-25 15:46:21,657 - INFO - Agent Avg Waiting Time (All Lanes): 225531.0 seconds | Default Avg Waiting Time (All Lanes): 22857.4 seconds
+2025-05-25 15:46:21,657 - INFO - Agent Avg Queue Length (All Lanes): 43.9 vehicles | Default Avg Queue Length (All Lanes): 1451.3 vehicles
+2025-05-25 15:46:42,575 - INFO - Episode 25/50
+2025-05-25 15:46:42,575 - INFO - Agent Reward: 4703.9 | Default Reward: 433.5
+2025-05-25 15:46:42,575 - INFO - Agent Avg Waiting Time (All Lanes): 209671.1 seconds | Default Avg Waiting Time (All Lanes): 22099.5 seconds
+2025-05-25 15:46:42,575 - INFO - Agent Avg Queue Length (All Lanes): 1076.6 vehicles | Default Avg Queue Length (All Lanes): 1399.2 vehicles
+2025-05-25 15:47:05,112 - INFO - Episode 26/50
+2025-05-25 15:47:05,113 - INFO - Agent Reward: 5322.5 | Default Reward: 482.6
+2025-05-25 15:47:05,113 - INFO - Agent Avg Waiting Time (All Lanes): 240750.8 seconds | Default Avg Waiting Time (All Lanes): 23783.6 seconds
+2025-05-25 15:47:05,113 - INFO - Agent Avg Queue Length (All Lanes): 1240.7 vehicles | Default Avg Queue Length (All Lanes): 1311.0 vehicles
+2025-05-25 15:47:28,417 - INFO - Episode 27/50
+2025-05-25 15:47:28,417 - INFO - Agent Reward: 5918.6 | Default Reward: 476.2
+2025-05-25 15:47:28,417 - INFO - Agent Avg Waiting Time (All Lanes): 225576.6 seconds | Default Avg Waiting Time (All Lanes): 24594.1 seconds
+2025-05-25 15:47:28,417 - INFO - Agent Avg Queue Length (All Lanes): 3176.2 vehicles | Default Avg Queue Length (All Lanes): 1434.3 vehicles
+2025-05-25 15:47:50,484 - INFO - Episode 28/50
+2025-05-25 15:47:50,484 - INFO - Agent Reward: 4992.7 | Default Reward: 441.0
+2025-05-25 15:47:50,484 - INFO - Agent Avg Waiting Time (All Lanes): 223701.1 seconds | Default Avg Waiting Time (All Lanes): 26668.2 seconds
+2025-05-25 15:47:50,485 - INFO - Agent Avg Queue Length (All Lanes): 1303.3 vehicles | Default Avg Queue Length (All Lanes): 1654.4 vehicles
+2025-05-25 15:48:14,483 - INFO - Episode 29/50
+2025-05-25 15:48:14,483 - INFO - Agent Reward: 5770.1 | Default Reward: 422.9
+2025-05-25 15:48:14,483 - INFO - Agent Avg Waiting Time (All Lanes): 244532.8 seconds | Default Avg Waiting Time (All Lanes): 26724.1 seconds
+2025-05-25 15:48:14,483 - INFO - Agent Avg Queue Length (All Lanes): 224.2 vehicles | Default Avg Queue Length (All Lanes): 1656.2 vehicles
+2025-05-25 15:48:39,440 - INFO - Episode 30/50
+2025-05-25 15:48:39,440 - INFO - Agent Reward: 6807.3 | Default Reward: 510.3
+2025-05-25 15:48:39,440 - INFO - Agent Avg Waiting Time (All Lanes): 270734.5 seconds | Default Avg Waiting Time (All Lanes): 24949.4 seconds
+2025-05-25 15:48:39,441 - INFO - Agent Avg Queue Length (All Lanes): 66.4 vehicles | Default Avg Queue Length (All Lanes): 1763.0 vehicles
+2025-05-25 15:49:02,997 - INFO - Episode 31/50
+2025-05-25 15:49:02,997 - INFO - Agent Reward: 5628.4 | Default Reward: 479.4
+2025-05-25 15:49:02,997 - INFO - Agent Avg Waiting Time (All Lanes): 243728.0 seconds | Default Avg Waiting Time (All Lanes): 24464.5 seconds
+2025-05-25 15:49:02,997 - INFO - Agent Avg Queue Length (All Lanes): 46.8 vehicles | Default Avg Queue Length (All Lanes): 1743.9 vehicles
+2025-05-25 15:49:28,810 - INFO - Episode 32/50
+2025-05-25 15:49:28,810 - INFO - Agent Reward: 5840.9 | Default Reward: 538.7
+2025-05-25 15:49:28,810 - INFO - Agent Avg Waiting Time (All Lanes): 298843.1 seconds | Default Avg Waiting Time (All Lanes): 27321.2 seconds
+2025-05-25 15:49:28,811 - INFO - Agent Avg Queue Length (All Lanes): 292.5 vehicles | Default Avg Queue Length (All Lanes): 1648.1 vehicles
+2025-05-25 15:49:54,904 - INFO - Episode 33/50
+2025-05-25 15:49:54,904 - INFO - Agent Reward: 5718.4 | Default Reward: 547.1
+2025-05-25 15:49:54,904 - INFO - Agent Avg Waiting Time (All Lanes): 289162.8 seconds | Default Avg Waiting Time (All Lanes): 26716.1 seconds
+2025-05-25 15:49:54,904 - INFO - Agent Avg Queue Length (All Lanes): 230.6 vehicles | Default Avg Queue Length (All Lanes): 1829.9 vehicles
+2025-05-25 15:50:22,071 - INFO - Episode 34/50
+2025-05-25 15:50:22,071 - INFO - Agent Reward: 6839.8 | Default Reward: 516.4
+2025-05-25 15:50:22,071 - INFO - Agent Avg Waiting Time (All Lanes): 249467.3 seconds | Default Avg Waiting Time (All Lanes): 28900.4 seconds
+2025-05-25 15:50:22,071 - INFO - Agent Avg Queue Length (All Lanes): 4822.4 vehicles | Default Avg Queue Length (All Lanes): 1836.3 vehicles
+2025-05-25 15:50:47,964 - INFO - Episode 35/50
+2025-05-25 15:50:47,964 - INFO - Agent Reward: 6222.9 | Default Reward: 567.7
+2025-05-25 15:50:47,964 - INFO - Agent Avg Waiting Time (All Lanes): 256084.6 seconds | Default Avg Waiting Time (All Lanes): 29657.3 seconds
+2025-05-25 15:50:47,964 - INFO - Agent Avg Queue Length (All Lanes): 2033.9 vehicles | Default Avg Queue Length (All Lanes): 1870.9 vehicles
+2025-05-25 15:51:14,255 - INFO - Episode 36/50
+2025-05-25 15:51:14,255 - INFO - Agent Reward: 5863.9 | Default Reward: 545.5
+2025-05-25 15:51:14,255 - INFO - Agent Avg Waiting Time (All Lanes): 252644.4 seconds | Default Avg Waiting Time (All Lanes): 31204.6 seconds
+2025-05-25 15:51:14,255 - INFO - Agent Avg Queue Length (All Lanes): 1865.2 vehicles | Default Avg Queue Length (All Lanes): 1871.7 vehicles
+2025-05-25 15:51:41,741 - INFO - Episode 37/50
+2025-05-25 15:51:41,741 - INFO - Agent Reward: 6461.1 | Default Reward: 620.8
+2025-05-25 15:51:41,741 - INFO - Agent Avg Waiting Time (All Lanes): 291452.8 seconds | Default Avg Waiting Time (All Lanes): 31940.1 seconds
+2025-05-25 15:51:41,741 - INFO - Agent Avg Queue Length (All Lanes): 1096.0 vehicles | Default Avg Queue Length (All Lanes): 1983.0 vehicles
+2025-05-25 15:52:08,223 - INFO - Episode 38/50
+2025-05-25 15:52:08,223 - INFO - Agent Reward: 6287.5 | Default Reward: 594.8
+2025-05-25 15:52:08,223 - INFO - Agent Avg Waiting Time (All Lanes): 265313.7 seconds | Default Avg Waiting Time (All Lanes): 33200.1 seconds
+2025-05-25 15:52:08,223 - INFO - Agent Avg Queue Length (All Lanes): 1850.6 vehicles | Default Avg Queue Length (All Lanes): 2117.2 vehicles
+2025-05-25 15:52:35,663 - INFO - Episode 39/50
+2025-05-25 15:52:35,663 - INFO - Agent Reward: 7297.1 | Default Reward: 551.8
+2025-05-25 15:52:35,663 - INFO - Agent Avg Waiting Time (All Lanes): 310323.5 seconds | Default Avg Waiting Time (All Lanes): 27980.5 seconds
+2025-05-25 15:52:35,663 - INFO - Agent Avg Queue Length (All Lanes): 150.6 vehicles | Default Avg Queue Length (All Lanes): 2075.3 vehicles
+2025-05-25 15:53:05,427 - INFO - Episode 40/50
+2025-05-25 15:53:05,428 - INFO - Agent Reward: 7342.5 | Default Reward: 613.5
+2025-05-25 15:53:05,428 - INFO - Agent Avg Waiting Time (All Lanes): 314411.8 seconds | Default Avg Waiting Time (All Lanes): 32838.5 seconds
+2025-05-25 15:53:05,428 - INFO - Agent Avg Queue Length (All Lanes): 353.6 vehicles | Default Avg Queue Length (All Lanes): 2165.5 vehicles
+2025-05-25 15:53:34,756 - INFO - Episode 41/50
+2025-05-25 15:53:34,756 - INFO - Agent Reward: 7081.0 | Default Reward: 626.4
+2025-05-25 15:53:34,756 - INFO - Agent Avg Waiting Time (All Lanes): 297863.1 seconds | Default Avg Waiting Time (All Lanes): 32860.1 seconds
+2025-05-25 15:53:34,756 - INFO - Agent Avg Queue Length (All Lanes): 2750.1 vehicles | Default Avg Queue Length (All Lanes): 2182.1 vehicles
+2025-05-25 15:54:02,471 - INFO - Episode 42/50
+2025-05-25 15:54:02,471 - INFO - Agent Reward: 6276.7 | Default Reward: 625.5
+2025-05-25 15:54:02,471 - INFO - Agent Avg Waiting Time (All Lanes): 299819.3 seconds | Default Avg Waiting Time (All Lanes): 34633.0 seconds
+2025-05-25 15:54:02,471 - INFO - Agent Avg Queue Length (All Lanes): 282.7 vehicles | Default Avg Queue Length (All Lanes): 2150.1 vehicles
+2025-05-25 15:54:32,636 - INFO - Episode 43/50
+2025-05-25 15:54:32,636 - INFO - Agent Reward: 7368.3 | Default Reward: 614.4
+2025-05-25 15:54:32,636 - INFO - Agent Avg Waiting Time (All Lanes): 321739.4 seconds | Default Avg Waiting Time (All Lanes): 33747.4 seconds
+2025-05-25 15:54:32,636 - INFO - Agent Avg Queue Length (All Lanes): 329.0 vehicles | Default Avg Queue Length (All Lanes): 2278.5 vehicles
+2025-05-25 15:55:02,601 - INFO - Episode 44/50
+2025-05-25 15:55:02,601 - INFO - Agent Reward: 7513.6 | Default Reward: 701.2
+2025-05-25 15:55:02,601 - INFO - Agent Avg Waiting Time (All Lanes): 322559.5 seconds | Default Avg Waiting Time (All Lanes): 33233.1 seconds
+2025-05-25 15:55:02,601 - INFO - Agent Avg Queue Length (All Lanes): 429.9 vehicles | Default Avg Queue Length (All Lanes): 2331.0 vehicles
+2025-05-25 15:55:33,498 - INFO - Episode 45/50
+2025-05-25 15:55:33,498 - INFO - Agent Reward: 8028.4 | Default Reward: 680.9
+2025-05-25 15:55:33,498 - INFO - Agent Avg Waiting Time (All Lanes): 295849.8 seconds | Default Avg Waiting Time (All Lanes): 35564.3 seconds
+2025-05-25 15:55:33,498 - INFO - Agent Avg Queue Length (All Lanes): 5729.2 vehicles | Default Avg Queue Length (All Lanes): 2535.8 vehicles
+2025-05-25 15:56:06,326 - INFO - Episode 46/50
+2025-05-25 15:56:06,326 - INFO - Agent Reward: 7601.0 | Default Reward: 783.3
+2025-05-25 15:56:06,326 - INFO - Agent Avg Waiting Time (All Lanes): 329657.9 seconds | Default Avg Waiting Time (All Lanes): 36102.0 seconds
+2025-05-25 15:56:06,326 - INFO - Agent Avg Queue Length (All Lanes): 331.1 vehicles | Default Avg Queue Length (All Lanes): 2549.7 vehicles
+2025-05-25 15:56:41,104 - INFO - Episode 47/50
+2025-05-25 15:56:41,104 - INFO - Agent Reward: 7896.4 | Default Reward: 714.5
+2025-05-25 15:56:41,104 - INFO - Agent Avg Waiting Time (All Lanes): 345879.6 seconds | Default Avg Waiting Time (All Lanes): 36553.8 seconds
+2025-05-25 15:56:41,104 - INFO - Agent Avg Queue Length (All Lanes): 2538.2 vehicles | Default Avg Queue Length (All Lanes): 2361.6 vehicles
+2025-05-25 15:57:12,895 - INFO - Episode 48/50
+2025-05-25 15:57:12,895 - INFO - Agent Reward: 7255.6 | Default Reward: 777.2
+2025-05-25 15:57:12,895 - INFO - Agent Avg Waiting Time (All Lanes): 317398.7 seconds | Default Avg Waiting Time (All Lanes): 39540.9 seconds
+2025-05-25 15:57:12,895 - INFO - Agent Avg Queue Length (All Lanes): 2363.4 vehicles | Default Avg Queue Length (All Lanes): 2324.6 vehicles
+2025-05-25 15:57:45,627 - INFO - Episode 49/50
+2025-05-25 15:57:45,627 - INFO - Agent Reward: 7417.6 | Default Reward: 828.9
+2025-05-25 15:57:45,627 - INFO - Agent Avg Waiting Time (All Lanes): 348851.6 seconds | Default Avg Waiting Time (All Lanes): 40120.3 seconds
+2025-05-25 15:57:45,627 - INFO - Agent Avg Queue Length (All Lanes): 633.5 vehicles | Default Avg Queue Length (All Lanes): 2737.1 vehicles
+2025-05-25 15:58:18,860 - INFO - Episode 50/50
+2025-05-25 15:58:18,860 - INFO - Agent Reward: 7587.1 | Default Reward: 693.3
+2025-05-25 15:58:18,860 - INFO - Agent Avg Waiting Time (All Lanes): 355899.9 seconds | Default Avg Waiting Time (All Lanes): 36142.8 seconds
+2025-05-25 15:58:18,860 - INFO - Agent Avg Queue Length (All Lanes): 542.0 vehicles | Default Avg Queue Length (All Lanes): 2761.2 vehicles
+2025-05-25 15:58:18,861 - INFO - 
+=== Final Results ===
+2025-05-25 15:58:18,861 - INFO - Agent Average Reward: 4936.4
+2025-05-25 15:58:18,861 - INFO - Default Average Reward: 439.5
+2025-05-25 15:58:18,861 - INFO - Reward Improvement: 1023.3%
+2025-05-25 15:58:18,861 - INFO - Agent Average Waiting Time (All Lanes): 205648.1 seconds
+2025-05-25 15:58:18,861 - INFO - Default Average Waiting Time (All Lanes): 23931.4 seconds
+2025-05-25 15:58:18,861 - INFO - Waiting Time Improvement: -759.3%
+2025-05-25 15:58:18,861 - INFO - Agent Average Queue Length (All Lanes): 1166.8 vehicles
+2025-05-25 15:58:18,861 - INFO - Default Average Queue Length (All Lanes): 1503.9 vehicles
+2025-05-25 15:58:18,861 - INFO - Queue Length Improvement: 22.4%
+2025-05-25 15:58:18,861 - ERROR - Testing failed: 'agent_throughput'
+2025-05-25 15:58:18,868 - INFO - Environment closed successfully
+2025-05-25 15:58:50,061 - INFO - Environment initialized successfully
+2025-05-25 15:58:51,047 - INFO - Agent initialized successfully
+2025-05-25 15:58:51,055 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 15:58:51,055 - INFO - === Testing Started ===
+2025-05-25 15:59:02,200 - INFO - Episode 1/50
+2025-05-25 15:59:02,201 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 15:59:02,201 - INFO - Agent Avg Waiting Time (All Lanes): 50599.2 seconds | Default Avg Waiting Time (All Lanes): 9918.7 seconds
+2025-05-25 15:59:02,201 - INFO - Agent Avg Queue Length (All Lanes): 660.6 vehicles | Default Avg Queue Length (All Lanes): 526.5 vehicles
+2025-05-25 15:59:09,620 - INFO - Episode 2/50
+2025-05-25 15:59:09,620 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 15:59:09,620 - INFO - Agent Avg Waiting Time (All Lanes): 591.1 seconds | Default Avg Waiting Time (All Lanes): 10486.2 seconds
+2025-05-25 15:59:09,620 - INFO - Agent Avg Queue Length (All Lanes): 70.6 vehicles | Default Avg Queue Length (All Lanes): 573.3 vehicles
+2025-05-25 15:59:21,686 - INFO - Episode 3/50
+2025-05-25 15:59:21,686 - INFO - Agent Reward: 1579.3 | Default Reward: 164.5
+2025-05-25 15:59:21,687 - INFO - Agent Avg Waiting Time (All Lanes): 60861.7 seconds | Default Avg Waiting Time (All Lanes): 11387.7 seconds
+2025-05-25 15:59:21,687 - INFO - Agent Avg Queue Length (All Lanes): 560.5 vehicles | Default Avg Queue Length (All Lanes): 612.5 vehicles
+2025-05-25 15:59:33,677 - INFO - Episode 4/50
+2025-05-25 15:59:33,677 - INFO - Agent Reward: 1950.2 | Default Reward: 171.9
+2025-05-25 15:59:33,677 - INFO - Agent Avg Waiting Time (All Lanes): 69459.4 seconds | Default Avg Waiting Time (All Lanes): 11180.5 seconds
+2025-05-25 15:59:33,677 - INFO - Agent Avg Queue Length (All Lanes): 675.1 vehicles | Default Avg Queue Length (All Lanes): 678.2 vehicles
+2025-05-25 15:59:47,402 - INFO - Episode 5/50
+2025-05-25 15:59:47,402 - INFO - Agent Reward: 2716.5 | Default Reward: 150.1
+2025-05-25 15:59:47,402 - INFO - Agent Avg Waiting Time (All Lanes): 102837.0 seconds | Default Avg Waiting Time (All Lanes): 11199.5 seconds
+2025-05-25 15:59:47,402 - INFO - Agent Avg Queue Length (All Lanes): 1286.6 vehicles | Default Avg Queue Length (All Lanes): 689.5 vehicles
+2025-05-25 16:00:00,029 - INFO - Episode 6/50
+2025-05-25 16:00:00,029 - INFO - Agent Reward: 2144.8 | Default Reward: 196.2
+2025-05-25 16:00:00,029 - INFO - Agent Avg Waiting Time (All Lanes): 76935.3 seconds | Default Avg Waiting Time (All Lanes): 11800.5 seconds
+2025-05-25 16:00:00,029 - INFO - Agent Avg Queue Length (All Lanes): 784.2 vehicles | Default Avg Queue Length (All Lanes): 722.9 vehicles
+2025-05-25 16:00:13,712 - INFO - Episode 7/50
+2025-05-25 16:00:13,712 - INFO - Agent Reward: 2759.5 | Default Reward: 157.0
+2025-05-25 16:00:13,712 - INFO - Agent Avg Waiting Time (All Lanes): 104552.1 seconds | Default Avg Waiting Time (All Lanes): 11885.2 seconds
+2025-05-25 16:00:13,712 - INFO - Agent Avg Queue Length (All Lanes): 15.4 vehicles | Default Avg Queue Length (All Lanes): 661.0 vehicles
+2025-05-25 16:00:26,120 - INFO - Episode 8/50
+2025-05-25 16:00:26,120 - INFO - Agent Reward: 1761.0 | Default Reward: 188.0
+2025-05-25 16:00:26,120 - INFO - Agent Avg Waiting Time (All Lanes): 53306.4 seconds | Default Avg Waiting Time (All Lanes): 13694.1 seconds
+2025-05-25 16:00:26,120 - INFO - Agent Avg Queue Length (All Lanes): 701.4 vehicles | Default Avg Queue Length (All Lanes): 754.5 vehicles
+2025-05-25 16:00:40,004 - INFO - Episode 9/50
+2025-05-25 16:00:40,004 - INFO - Agent Reward: 1864.3 | Default Reward: 231.5
+2025-05-25 16:00:40,004 - INFO - Agent Avg Waiting Time (All Lanes): 73679.0 seconds | Default Avg Waiting Time (All Lanes): 14372.6 seconds
+2025-05-25 16:00:40,004 - INFO - Agent Avg Queue Length (All Lanes): 875.6 vehicles | Default Avg Queue Length (All Lanes): 843.6 vehicles
+2025-05-25 16:00:54,040 - INFO - Episode 10/50
+2025-05-25 16:00:54,041 - INFO - Agent Reward: 2556.7 | Default Reward: 243.8
+2025-05-25 16:00:54,041 - INFO - Agent Avg Waiting Time (All Lanes): 92850.4 seconds | Default Avg Waiting Time (All Lanes): 15374.4 seconds
+2025-05-25 16:00:54,041 - INFO - Agent Avg Queue Length (All Lanes): 917.5 vehicles | Default Avg Queue Length (All Lanes): 783.8 vehicles
+2025-05-25 16:01:09,735 - INFO - Episode 11/50
+2025-05-25 16:01:09,735 - INFO - Agent Reward: 3158.0 | Default Reward: 268.6
+2025-05-25 16:01:09,735 - INFO - Agent Avg Waiting Time (All Lanes): 113200.1 seconds | Default Avg Waiting Time (All Lanes): 16053.9 seconds
+2025-05-25 16:01:09,735 - INFO - Agent Avg Queue Length (All Lanes): 1280.1 vehicles | Default Avg Queue Length (All Lanes): 840.9 vehicles
+2025-05-25 16:01:23,939 - INFO - Episode 12/50
+2025-05-25 16:01:23,940 - INFO - Agent Reward: 2124.6 | Default Reward: 211.6
+2025-05-25 16:01:23,940 - INFO - Agent Avg Waiting Time (All Lanes): 69396.3 seconds | Default Avg Waiting Time (All Lanes): 16462.3 seconds
+2025-05-25 16:01:23,940 - INFO - Agent Avg Queue Length (All Lanes): 795.8 vehicles | Default Avg Queue Length (All Lanes): 1067.7 vehicles
+2025-05-25 16:01:38,923 - INFO - Episode 13/50
+2025-05-25 16:01:38,923 - INFO - Agent Reward: 3382.2 | Default Reward: 244.6
+2025-05-25 16:01:38,923 - INFO - Agent Avg Waiting Time (All Lanes): 121376.1 seconds | Default Avg Waiting Time (All Lanes): 16459.7 seconds
+2025-05-25 16:01:38,923 - INFO - Agent Avg Queue Length (All Lanes): 1554.3 vehicles | Default Avg Queue Length (All Lanes): 859.1 vehicles
+2025-05-25 16:01:55,040 - INFO - Episode 14/50
+2025-05-25 16:01:55,040 - INFO - Agent Reward: 3393.5 | Default Reward: 299.9
+2025-05-25 16:01:55,040 - INFO - Agent Avg Waiting Time (All Lanes): 120781.4 seconds | Default Avg Waiting Time (All Lanes): 17351.3 seconds
+2025-05-25 16:01:55,040 - INFO - Agent Avg Queue Length (All Lanes): 1366.9 vehicles | Default Avg Queue Length (All Lanes): 936.7 vehicles
+2025-05-25 16:02:09,545 - INFO - Episode 15/50
+2025-05-25 16:02:09,546 - INFO - Agent Reward: 2251.4 | Default Reward: 307.0
+2025-05-25 16:02:09,546 - INFO - Agent Avg Waiting Time (All Lanes): 84625.2 seconds | Default Avg Waiting Time (All Lanes): 18117.7 seconds
+2025-05-25 16:02:09,546 - INFO - Agent Avg Queue Length (All Lanes): 629.8 vehicles | Default Avg Queue Length (All Lanes): 945.4 vehicles
+2025-05-25 16:02:26,239 - INFO - Episode 16/50
+2025-05-25 16:02:26,239 - INFO - Agent Reward: 3772.9 | Default Reward: 335.8
+2025-05-25 16:02:26,239 - INFO - Agent Avg Waiting Time (All Lanes): 123811.6 seconds | Default Avg Waiting Time (All Lanes): 18693.0 seconds
+2025-05-25 16:02:26,239 - INFO - Agent Avg Queue Length (All Lanes): 2336.6 vehicles | Default Avg Queue Length (All Lanes): 1028.9 vehicles
+2025-05-25 16:02:45,272 - INFO - Episode 17/50
+2025-05-25 16:02:45,272 - INFO - Agent Reward: 5209.8 | Default Reward: 329.5
+2025-05-25 16:02:45,272 - INFO - Agent Avg Waiting Time (All Lanes): 206417.9 seconds | Default Avg Waiting Time (All Lanes): 19478.8 seconds
+2025-05-25 16:02:45,272 - INFO - Agent Avg Queue Length (All Lanes): 29.6 vehicles | Default Avg Queue Length (All Lanes): 987.5 vehicles
+2025-05-25 16:03:03,095 - INFO - Episode 18/50
+2025-05-25 16:03:03,095 - INFO - Agent Reward: 3282.0 | Default Reward: 398.2
+2025-05-25 16:03:03,095 - INFO - Agent Avg Waiting Time (All Lanes): 124399.0 seconds | Default Avg Waiting Time (All Lanes): 21736.3 seconds
+2025-05-25 16:03:03,095 - INFO - Agent Avg Queue Length (All Lanes): 1029.0 vehicles | Default Avg Queue Length (All Lanes): 1127.0 vehicles
+2025-05-25 16:03:20,994 - INFO - Episode 19/50
+2025-05-25 16:03:20,994 - INFO - Agent Reward: 4179.7 | Default Reward: 362.2
+2025-05-25 16:03:20,994 - INFO - Agent Avg Waiting Time (All Lanes): 148722.3 seconds | Default Avg Waiting Time (All Lanes): 20818.9 seconds
+2025-05-25 16:03:20,994 - INFO - Agent Avg Queue Length (All Lanes): 2159.1 vehicles | Default Avg Queue Length (All Lanes): 1162.0 vehicles
+2025-05-25 16:03:40,954 - INFO - Episode 20/50
+2025-05-25 16:03:40,954 - INFO - Agent Reward: 4472.7 | Default Reward: 364.1
+2025-05-25 16:03:40,954 - INFO - Agent Avg Waiting Time (All Lanes): 204373.1 seconds | Default Avg Waiting Time (All Lanes): 21674.6 seconds
+2025-05-25 16:03:40,954 - INFO - Agent Avg Queue Length (All Lanes): 976.6 vehicles | Default Avg Queue Length (All Lanes): 1345.6 vehicles
+2025-05-25 16:04:02,355 - INFO - Episode 21/50
+2025-05-25 16:04:02,355 - INFO - Agent Reward: 5325.0 | Default Reward: 395.8
+2025-05-25 16:04:02,355 - INFO - Agent Avg Waiting Time (All Lanes): 206934.9 seconds | Default Avg Waiting Time (All Lanes): 20517.3 seconds
+2025-05-25 16:04:02,355 - INFO - Agent Avg Queue Length (All Lanes): 2709.3 vehicles | Default Avg Queue Length (All Lanes): 1189.0 vehicles
+2025-05-25 16:04:23,134 - INFO - Episode 22/50
+2025-05-25 16:04:23,134 - INFO - Agent Reward: 5722.6 | Default Reward: 436.0
+2025-05-25 16:04:23,134 - INFO - Agent Avg Waiting Time (All Lanes): 217160.7 seconds | Default Avg Waiting Time (All Lanes): 22075.2 seconds
+2025-05-25 16:04:23,134 - INFO - Agent Avg Queue Length (All Lanes): 47.4 vehicles | Default Avg Queue Length (All Lanes): 1482.5 vehicles
+2025-05-25 16:04:42,941 - INFO - Episode 23/50
+2025-05-25 16:04:42,941 - INFO - Agent Reward: 4874.5 | Default Reward: 385.6
+2025-05-25 16:04:42,941 - INFO - Agent Avg Waiting Time (All Lanes): 208083.5 seconds | Default Avg Waiting Time (All Lanes): 21434.9 seconds
+2025-05-25 16:04:42,941 - INFO - Agent Avg Queue Length (All Lanes): 1076.1 vehicles | Default Avg Queue Length (All Lanes): 1354.4 vehicles
+2025-05-25 16:05:04,828 - INFO - Episode 24/50
+2025-05-25 16:05:04,828 - INFO - Agent Reward: 5736.3 | Default Reward: 409.2
+2025-05-25 16:05:04,828 - INFO - Agent Avg Waiting Time (All Lanes): 225531.0 seconds | Default Avg Waiting Time (All Lanes): 22857.4 seconds
+2025-05-25 16:05:04,828 - INFO - Agent Avg Queue Length (All Lanes): 43.9 vehicles | Default Avg Queue Length (All Lanes): 1451.3 vehicles
+2025-05-25 16:05:25,778 - INFO - Episode 25/50
+2025-05-25 16:05:25,778 - INFO - Agent Reward: 4703.9 | Default Reward: 433.5
+2025-05-25 16:05:25,778 - INFO - Agent Avg Waiting Time (All Lanes): 209671.1 seconds | Default Avg Waiting Time (All Lanes): 22099.5 seconds
+2025-05-25 16:05:25,778 - INFO - Agent Avg Queue Length (All Lanes): 1076.6 vehicles | Default Avg Queue Length (All Lanes): 1399.2 vehicles
+2025-05-25 16:05:48,481 - INFO - Episode 26/50
+2025-05-25 16:05:48,481 - INFO - Agent Reward: 5322.5 | Default Reward: 482.6
+2025-05-25 16:05:48,481 - INFO - Agent Avg Waiting Time (All Lanes): 240750.8 seconds | Default Avg Waiting Time (All Lanes): 23783.6 seconds
+2025-05-25 16:05:48,481 - INFO - Agent Avg Queue Length (All Lanes): 1240.7 vehicles | Default Avg Queue Length (All Lanes): 1311.0 vehicles
+2025-05-25 16:06:11,586 - INFO - Episode 27/50
+2025-05-25 16:06:11,586 - INFO - Agent Reward: 5918.6 | Default Reward: 476.2
+2025-05-25 16:06:11,586 - INFO - Agent Avg Waiting Time (All Lanes): 225576.6 seconds | Default Avg Waiting Time (All Lanes): 24594.1 seconds
+2025-05-25 16:06:11,586 - INFO - Agent Avg Queue Length (All Lanes): 3176.2 vehicles | Default Avg Queue Length (All Lanes): 1434.3 vehicles
+2025-05-25 16:06:34,257 - INFO - Episode 28/50
+2025-05-25 16:06:34,257 - INFO - Agent Reward: 4992.7 | Default Reward: 441.0
+2025-05-25 16:06:34,257 - INFO - Agent Avg Waiting Time (All Lanes): 223701.1 seconds | Default Avg Waiting Time (All Lanes): 26668.2 seconds
+2025-05-25 16:06:34,257 - INFO - Agent Avg Queue Length (All Lanes): 1303.3 vehicles | Default Avg Queue Length (All Lanes): 1654.4 vehicles
+2025-05-25 16:06:58,216 - INFO - Episode 29/50
+2025-05-25 16:06:58,216 - INFO - Agent Reward: 5770.1 | Default Reward: 422.9
+2025-05-25 16:06:58,216 - INFO - Agent Avg Waiting Time (All Lanes): 244532.8 seconds | Default Avg Waiting Time (All Lanes): 26724.1 seconds
+2025-05-25 16:06:58,216 - INFO - Agent Avg Queue Length (All Lanes): 224.2 vehicles | Default Avg Queue Length (All Lanes): 1656.2 vehicles
+2025-05-25 16:07:22,390 - INFO - Episode 30/50
+2025-05-25 16:07:22,390 - INFO - Agent Reward: 6807.3 | Default Reward: 510.3
+2025-05-25 16:07:22,390 - INFO - Agent Avg Waiting Time (All Lanes): 270734.5 seconds | Default Avg Waiting Time (All Lanes): 24949.4 seconds
+2025-05-25 16:07:22,390 - INFO - Agent Avg Queue Length (All Lanes): 66.4 vehicles | Default Avg Queue Length (All Lanes): 1763.0 vehicles
+2025-05-25 16:07:45,285 - INFO - Episode 31/50
+2025-05-25 16:07:45,285 - INFO - Agent Reward: 5628.4 | Default Reward: 479.4
+2025-05-25 16:07:45,285 - INFO - Agent Avg Waiting Time (All Lanes): 243728.0 seconds | Default Avg Waiting Time (All Lanes): 24464.5 seconds
+2025-05-25 16:07:45,285 - INFO - Agent Avg Queue Length (All Lanes): 46.8 vehicles | Default Avg Queue Length (All Lanes): 1743.9 vehicles
+2025-05-25 16:08:11,572 - INFO - Episode 32/50
+2025-05-25 16:08:11,572 - INFO - Agent Reward: 5840.9 | Default Reward: 538.7
+2025-05-25 16:08:11,572 - INFO - Agent Avg Waiting Time (All Lanes): 298843.1 seconds | Default Avg Waiting Time (All Lanes): 27321.2 seconds
+2025-05-25 16:08:11,572 - INFO - Agent Avg Queue Length (All Lanes): 292.5 vehicles | Default Avg Queue Length (All Lanes): 1648.1 vehicles
+2025-05-25 16:08:37,263 - INFO - Episode 33/50
+2025-05-25 16:08:37,263 - INFO - Agent Reward: 5718.4 | Default Reward: 547.1
+2025-05-25 16:08:37,263 - INFO - Agent Avg Waiting Time (All Lanes): 289162.8 seconds | Default Avg Waiting Time (All Lanes): 26716.1 seconds
+2025-05-25 16:08:37,263 - INFO - Agent Avg Queue Length (All Lanes): 230.6 vehicles | Default Avg Queue Length (All Lanes): 1829.9 vehicles
+2025-05-25 16:09:03,869 - INFO - Episode 34/50
+2025-05-25 16:09:03,869 - INFO - Agent Reward: 6839.8 | Default Reward: 516.4
+2025-05-25 16:09:03,869 - INFO - Agent Avg Waiting Time (All Lanes): 249467.3 seconds | Default Avg Waiting Time (All Lanes): 28900.4 seconds
+2025-05-25 16:09:03,869 - INFO - Agent Avg Queue Length (All Lanes): 4822.4 vehicles | Default Avg Queue Length (All Lanes): 1836.3 vehicles
+2025-05-25 16:09:30,279 - INFO - Episode 35/50
+2025-05-25 16:09:30,279 - INFO - Agent Reward: 6222.9 | Default Reward: 567.7
+2025-05-25 16:09:30,279 - INFO - Agent Avg Waiting Time (All Lanes): 256084.6 seconds | Default Avg Waiting Time (All Lanes): 29657.3 seconds
+2025-05-25 16:09:30,279 - INFO - Agent Avg Queue Length (All Lanes): 2033.9 vehicles | Default Avg Queue Length (All Lanes): 1870.9 vehicles
+2025-05-25 16:09:57,454 - INFO - Episode 36/50
+2025-05-25 16:09:57,455 - INFO - Agent Reward: 5863.9 | Default Reward: 545.5
+2025-05-25 16:09:57,455 - INFO - Agent Avg Waiting Time (All Lanes): 252644.4 seconds | Default Avg Waiting Time (All Lanes): 31204.6 seconds
+2025-05-25 16:09:57,455 - INFO - Agent Avg Queue Length (All Lanes): 1865.2 vehicles | Default Avg Queue Length (All Lanes): 1871.7 vehicles
+2025-05-25 16:10:25,540 - INFO - Episode 37/50
+2025-05-25 16:10:25,540 - INFO - Agent Reward: 6461.1 | Default Reward: 620.8
+2025-05-25 16:10:25,540 - INFO - Agent Avg Waiting Time (All Lanes): 291452.8 seconds | Default Avg Waiting Time (All Lanes): 31940.1 seconds
+2025-05-25 16:10:25,540 - INFO - Agent Avg Queue Length (All Lanes): 1096.0 vehicles | Default Avg Queue Length (All Lanes): 1983.0 vehicles
+2025-05-25 16:10:52,982 - INFO - Episode 38/50
+2025-05-25 16:10:52,982 - INFO - Agent Reward: 6287.5 | Default Reward: 594.8
+2025-05-25 16:10:52,982 - INFO - Agent Avg Waiting Time (All Lanes): 265313.7 seconds | Default Avg Waiting Time (All Lanes): 33200.1 seconds
+2025-05-25 16:10:52,982 - INFO - Agent Avg Queue Length (All Lanes): 1850.6 vehicles | Default Avg Queue Length (All Lanes): 2117.2 vehicles
+2025-05-25 16:11:22,719 - INFO - Episode 39/50
+2025-05-25 16:11:22,719 - INFO - Agent Reward: 7297.1 | Default Reward: 551.8
+2025-05-25 16:11:22,719 - INFO - Agent Avg Waiting Time (All Lanes): 310323.5 seconds | Default Avg Waiting Time (All Lanes): 27980.5 seconds
+2025-05-25 16:11:22,719 - INFO - Agent Avg Queue Length (All Lanes): 150.6 vehicles | Default Avg Queue Length (All Lanes): 2075.3 vehicles
+2025-05-25 16:11:55,504 - INFO - Episode 40/50
+2025-05-25 16:11:55,504 - INFO - Agent Reward: 7342.5 | Default Reward: 613.5
+2025-05-25 16:11:55,504 - INFO - Agent Avg Waiting Time (All Lanes): 314411.8 seconds | Default Avg Waiting Time (All Lanes): 32838.5 seconds
+2025-05-25 16:11:55,504 - INFO - Agent Avg Queue Length (All Lanes): 353.6 vehicles | Default Avg Queue Length (All Lanes): 2165.5 vehicles
+2025-05-25 16:12:31,071 - INFO - Episode 41/50
+2025-05-25 16:12:31,071 - INFO - Agent Reward: 7081.0 | Default Reward: 626.4
+2025-05-25 16:12:31,071 - INFO - Agent Avg Waiting Time (All Lanes): 297863.1 seconds | Default Avg Waiting Time (All Lanes): 32860.1 seconds
+2025-05-25 16:12:31,071 - INFO - Agent Avg Queue Length (All Lanes): 2750.1 vehicles | Default Avg Queue Length (All Lanes): 2182.1 vehicles
+2025-05-25 16:13:00,109 - INFO - Episode 42/50
+2025-05-25 16:13:00,109 - INFO - Agent Reward: 6276.7 | Default Reward: 625.5
+2025-05-25 16:13:00,109 - INFO - Agent Avg Waiting Time (All Lanes): 299819.3 seconds | Default Avg Waiting Time (All Lanes): 34633.0 seconds
+2025-05-25 16:13:00,109 - INFO - Agent Avg Queue Length (All Lanes): 282.7 vehicles | Default Avg Queue Length (All Lanes): 2150.1 vehicles
+2025-05-25 16:13:31,093 - INFO - Episode 43/50
+2025-05-25 16:13:31,093 - INFO - Agent Reward: 7368.3 | Default Reward: 614.4
+2025-05-25 16:13:31,093 - INFO - Agent Avg Waiting Time (All Lanes): 321739.4 seconds | Default Avg Waiting Time (All Lanes): 33747.4 seconds
+2025-05-25 16:13:31,093 - INFO - Agent Avg Queue Length (All Lanes): 329.0 vehicles | Default Avg Queue Length (All Lanes): 2278.5 vehicles
+2025-05-25 16:14:02,172 - INFO - Episode 44/50
+2025-05-25 16:14:02,172 - INFO - Agent Reward: 7513.6 | Default Reward: 701.2
+2025-05-25 16:14:02,172 - INFO - Agent Avg Waiting Time (All Lanes): 322559.5 seconds | Default Avg Waiting Time (All Lanes): 33233.1 seconds
+2025-05-25 16:14:02,172 - INFO - Agent Avg Queue Length (All Lanes): 429.9 vehicles | Default Avg Queue Length (All Lanes): 2331.0 vehicles
+2025-05-25 16:14:35,081 - INFO - Episode 45/50
+2025-05-25 16:14:35,082 - INFO - Agent Reward: 8028.4 | Default Reward: 680.9
+2025-05-25 16:14:35,082 - INFO - Agent Avg Waiting Time (All Lanes): 295849.8 seconds | Default Avg Waiting Time (All Lanes): 35564.3 seconds
+2025-05-25 16:14:35,082 - INFO - Agent Avg Queue Length (All Lanes): 5729.2 vehicles | Default Avg Queue Length (All Lanes): 2535.8 vehicles
+2025-05-25 16:15:07,296 - INFO - Episode 46/50
+2025-05-25 16:15:07,296 - INFO - Agent Reward: 7601.0 | Default Reward: 783.3
+2025-05-25 16:15:07,296 - INFO - Agent Avg Waiting Time (All Lanes): 329657.9 seconds | Default Avg Waiting Time (All Lanes): 36102.0 seconds
+2025-05-25 16:15:07,296 - INFO - Agent Avg Queue Length (All Lanes): 331.1 vehicles | Default Avg Queue Length (All Lanes): 2549.7 vehicles
+2025-05-25 16:15:41,011 - INFO - Episode 47/50
+2025-05-25 16:15:41,011 - INFO - Agent Reward: 7896.4 | Default Reward: 714.5
+2025-05-25 16:15:41,011 - INFO - Agent Avg Waiting Time (All Lanes): 345879.6 seconds | Default Avg Waiting Time (All Lanes): 36553.8 seconds
+2025-05-25 16:15:41,011 - INFO - Agent Avg Queue Length (All Lanes): 2538.2 vehicles | Default Avg Queue Length (All Lanes): 2361.6 vehicles
+2025-05-25 16:16:13,251 - INFO - Episode 48/50
+2025-05-25 16:16:13,251 - INFO - Agent Reward: 7255.6 | Default Reward: 777.2
+2025-05-25 16:16:13,251 - INFO - Agent Avg Waiting Time (All Lanes): 317398.7 seconds | Default Avg Waiting Time (All Lanes): 39540.9 seconds
+2025-05-25 16:16:13,251 - INFO - Agent Avg Queue Length (All Lanes): 2363.4 vehicles | Default Avg Queue Length (All Lanes): 2324.6 vehicles
+2025-05-25 16:16:45,789 - INFO - Episode 49/50
+2025-05-25 16:16:45,790 - INFO - Agent Reward: 7417.6 | Default Reward: 828.9
+2025-05-25 16:16:45,790 - INFO - Agent Avg Waiting Time (All Lanes): 348851.6 seconds | Default Avg Waiting Time (All Lanes): 40120.3 seconds
+2025-05-25 16:16:45,790 - INFO - Agent Avg Queue Length (All Lanes): 633.5 vehicles | Default Avg Queue Length (All Lanes): 2737.1 vehicles
+2025-05-25 16:17:19,119 - INFO - Episode 50/50
+2025-05-25 16:17:19,119 - INFO - Agent Reward: 7587.1 | Default Reward: 693.3
+2025-05-25 16:17:19,119 - INFO - Agent Avg Waiting Time (All Lanes): 355899.9 seconds | Default Avg Waiting Time (All Lanes): 36142.8 seconds
+2025-05-25 16:17:19,119 - INFO - Agent Avg Queue Length (All Lanes): 542.0 vehicles | Default Avg Queue Length (All Lanes): 2761.2 vehicles
+2025-05-25 16:17:19,119 - INFO - 
+=== Final Results ===
+2025-05-25 16:17:19,119 - INFO - Agent Average Reward: 4936.4
+2025-05-25 16:17:19,119 - INFO - Default Average Reward: 439.5
+2025-05-25 16:17:19,119 - INFO - Reward Improvement: 1023.3%
+2025-05-25 16:17:19,119 - INFO - Agent Average Waiting Time (All Lanes): 205648.1 seconds
+2025-05-25 16:17:19,119 - INFO - Default Average Waiting Time (All Lanes): 23931.4 seconds
+2025-05-25 16:17:19,119 - INFO - Waiting Time Improvement: -759.3%
+2025-05-25 16:17:19,119 - INFO - Agent Average Queue Length (All Lanes): 1166.8 vehicles
+2025-05-25 16:17:19,119 - INFO - Default Average Queue Length (All Lanes): 1503.9 vehicles
+2025-05-25 16:17:19,123 - INFO - Results saved to 'test_results.csv'
+2025-05-25 16:17:19,130 - INFO - Environment closed successfully
+2025-05-25 16:25:33,574 - INFO - Environment initialized successfully
+2025-05-25 16:25:34,376 - INFO - Agent initialized successfully
+2025-05-25 16:25:34,382 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:25:34,382 - INFO - === Testing Started ===
+2025-05-25 16:25:41,775 - INFO - Episode 1/50
+2025-05-25 16:25:41,775 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 16:25:41,776 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 16:25:41,776 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 16:25:47,571 - INFO - Episode 2/50
+2025-05-25 16:25:47,571 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 16:25:47,571 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 16:25:47,571 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 16:25:55,243 - INFO - Episode 3/50
+2025-05-25 16:25:55,243 - INFO - Agent Reward: 1579.3 | Default Reward: 164.5
+2025-05-25 16:25:55,243 - INFO - Agent Avg Waiting Time (All Lanes): 66528.9 seconds | Default Avg Waiting Time (All Lanes): 19719.2 seconds
+2025-05-25 16:25:55,243 - INFO - Agent Avg Queue Length (All Lanes): 38.6 vehicles | Default Avg Queue Length (All Lanes): 23.0 vehicles
+2025-05-25 16:26:03,156 - INFO - Episode 4/50
+2025-05-25 16:26:03,156 - INFO - Agent Reward: 1950.2 | Default Reward: 171.9
+2025-05-25 16:26:03,156 - INFO - Agent Avg Waiting Time (All Lanes): 76524.4 seconds | Default Avg Waiting Time (All Lanes): 20285.9 seconds
+2025-05-25 16:26:03,156 - INFO - Agent Avg Queue Length (All Lanes): 40.8 vehicles | Default Avg Queue Length (All Lanes): 23.7 vehicles
+2025-05-25 16:26:12,110 - INFO - Episode 5/50
+2025-05-25 16:26:12,110 - INFO - Agent Reward: 2716.5 | Default Reward: 150.1
+2025-05-25 16:26:12,110 - INFO - Agent Avg Waiting Time (All Lanes): 116765.3 seconds | Default Avg Waiting Time (All Lanes): 21083.7 seconds
+2025-05-25 16:26:12,110 - INFO - Agent Avg Queue Length (All Lanes): 54.7 vehicles | Default Avg Queue Length (All Lanes): 24.4 vehicles
+2025-05-25 16:26:20,498 - INFO - Episode 6/50
+2025-05-25 16:26:20,498 - INFO - Agent Reward: 2144.8 | Default Reward: 196.2
+2025-05-25 16:26:20,498 - INFO - Agent Avg Waiting Time (All Lanes): 84985.9 seconds | Default Avg Waiting Time (All Lanes): 22314.7 seconds
+2025-05-25 16:26:20,498 - INFO - Agent Avg Queue Length (All Lanes): 46.8 vehicles | Default Avg Queue Length (All Lanes): 26.0 vehicles
+2025-05-25 16:26:29,472 - INFO - Episode 7/50
+2025-05-25 16:26:29,472 - INFO - Agent Reward: 2759.5 | Default Reward: 157.0
+2025-05-25 16:26:29,472 - INFO - Agent Avg Waiting Time (All Lanes): 129185.9 seconds | Default Avg Waiting Time (All Lanes): 21151.0 seconds
+2025-05-25 16:26:29,472 - INFO - Agent Avg Queue Length (All Lanes): 59.2 vehicles | Default Avg Queue Length (All Lanes): 24.5 vehicles
+2025-05-25 16:26:37,976 - INFO - Episode 8/50
+2025-05-25 16:26:37,976 - INFO - Agent Reward: 1761.0 | Default Reward: 188.0
+2025-05-25 16:26:37,976 - INFO - Agent Avg Waiting Time (All Lanes): 60832.1 seconds | Default Avg Waiting Time (All Lanes): 24515.4 seconds
+2025-05-25 16:26:37,976 - INFO - Agent Avg Queue Length (All Lanes): 39.1 vehicles | Default Avg Queue Length (All Lanes): 28.8 vehicles
+2025-05-25 16:26:46,912 - INFO - Episode 9/50
+2025-05-25 16:26:46,912 - INFO - Agent Reward: 1864.3 | Default Reward: 231.5
+2025-05-25 16:26:46,912 - INFO - Agent Avg Waiting Time (All Lanes): 82790.2 seconds | Default Avg Waiting Time (All Lanes): 26225.0 seconds
+2025-05-25 16:26:46,912 - INFO - Agent Avg Queue Length (All Lanes): 49.2 vehicles | Default Avg Queue Length (All Lanes): 30.6 vehicles
+2025-05-25 16:26:56,266 - INFO - Episode 10/50
+2025-05-25 16:26:56,266 - INFO - Agent Reward: 2556.7 | Default Reward: 243.8
+2025-05-25 16:26:56,266 - INFO - Agent Avg Waiting Time (All Lanes): 102347.0 seconds | Default Avg Waiting Time (All Lanes): 26638.2 seconds
+2025-05-25 16:26:56,266 - INFO - Agent Avg Queue Length (All Lanes): 54.6 vehicles | Default Avg Queue Length (All Lanes): 31.3 vehicles
+2025-05-25 16:27:06,699 - INFO - Episode 11/50
+2025-05-25 16:27:06,699 - INFO - Agent Reward: 3158.0 | Default Reward: 268.6
+2025-05-25 16:27:06,699 - INFO - Agent Avg Waiting Time (All Lanes): 126757.2 seconds | Default Avg Waiting Time (All Lanes): 27688.6 seconds
+2025-05-25 16:27:06,699 - INFO - Agent Avg Queue Length (All Lanes): 65.9 vehicles | Default Avg Queue Length (All Lanes): 32.6 vehicles
+2025-05-25 16:27:15,939 - INFO - Episode 12/50
+2025-05-25 16:27:15,939 - INFO - Agent Reward: 2124.6 | Default Reward: 211.6
+2025-05-25 16:27:15,939 - INFO - Agent Avg Waiting Time (All Lanes): 77667.6 seconds | Default Avg Waiting Time (All Lanes): 30471.5 seconds
+2025-05-25 16:27:15,939 - INFO - Agent Avg Queue Length (All Lanes): 47.0 vehicles | Default Avg Queue Length (All Lanes): 34.9 vehicles
+2025-05-25 16:27:26,925 - INFO - Episode 13/50
+2025-05-25 16:27:26,925 - INFO - Agent Reward: 3382.2 | Default Reward: 244.6
+2025-05-25 16:27:26,925 - INFO - Agent Avg Waiting Time (All Lanes): 137937.3 seconds | Default Avg Waiting Time (All Lanes): 28354.8 seconds
+2025-05-25 16:27:26,925 - INFO - Agent Avg Queue Length (All Lanes): 69.4 vehicles | Default Avg Queue Length (All Lanes): 33.2 vehicles
+2025-05-25 16:27:38,291 - INFO - Episode 14/50
+2025-05-25 16:27:38,291 - INFO - Agent Reward: 3393.5 | Default Reward: 299.9
+2025-05-25 16:27:38,291 - INFO - Agent Avg Waiting Time (All Lanes): 135159.9 seconds | Default Avg Waiting Time (All Lanes): 30891.5 seconds
+2025-05-25 16:27:38,291 - INFO - Agent Avg Queue Length (All Lanes): 70.0 vehicles | Default Avg Queue Length (All Lanes): 36.0 vehicles
+2025-05-25 16:27:48,335 - INFO - Episode 15/50
+2025-05-25 16:27:48,335 - INFO - Agent Reward: 2251.4 | Default Reward: 307.0
+2025-05-25 16:27:48,335 - INFO - Agent Avg Waiting Time (All Lanes): 90750.8 seconds | Default Avg Waiting Time (All Lanes): 31788.9 seconds
+2025-05-25 16:27:48,335 - INFO - Agent Avg Queue Length (All Lanes): 54.8 vehicles | Default Avg Queue Length (All Lanes): 37.0 vehicles
+2025-05-25 16:27:59,853 - INFO - Episode 16/50
+2025-05-25 16:27:59,853 - INFO - Agent Reward: 3772.9 | Default Reward: 335.8
+2025-05-25 16:27:59,853 - INFO - Agent Avg Waiting Time (All Lanes): 148808.5 seconds | Default Avg Waiting Time (All Lanes): 32965.6 seconds
+2025-05-25 16:27:59,853 - INFO - Agent Avg Queue Length (All Lanes): 77.8 vehicles | Default Avg Queue Length (All Lanes): 38.5 vehicles
+2025-05-25 16:28:13,190 - INFO - Episode 17/50
+2025-05-25 16:28:13,190 - INFO - Agent Reward: 5209.8 | Default Reward: 329.5
+2025-05-25 16:28:13,190 - INFO - Agent Avg Waiting Time (All Lanes): 260069.8 seconds | Default Avg Waiting Time (All Lanes): 34073.5 seconds
+2025-05-25 16:28:13,190 - INFO - Agent Avg Queue Length (All Lanes): 107.6 vehicles | Default Avg Queue Length (All Lanes): 40.0 vehicles
+2025-05-25 16:28:25,773 - INFO - Episode 18/50
+2025-05-25 16:28:25,773 - INFO - Agent Reward: 3282.0 | Default Reward: 398.2
+2025-05-25 16:28:25,773 - INFO - Agent Avg Waiting Time (All Lanes): 134422.3 seconds | Default Avg Waiting Time (All Lanes): 37171.9 seconds
+2025-05-25 16:28:25,773 - INFO - Agent Avg Queue Length (All Lanes): 74.6 vehicles | Default Avg Queue Length (All Lanes): 43.5 vehicles
+2025-05-25 16:28:38,703 - INFO - Episode 19/50
+2025-05-25 16:28:38,703 - INFO - Agent Reward: 4179.7 | Default Reward: 362.2
+2025-05-25 16:28:38,703 - INFO - Agent Avg Waiting Time (All Lanes): 172729.4 seconds | Default Avg Waiting Time (All Lanes): 37157.7 seconds
+2025-05-25 16:28:38,703 - INFO - Agent Avg Queue Length (All Lanes): 87.6 vehicles | Default Avg Queue Length (All Lanes): 42.9 vehicles
+2025-05-25 16:28:52,589 - INFO - Episode 20/50
+2025-05-25 16:28:52,589 - INFO - Agent Reward: 4472.7 | Default Reward: 364.1
+2025-05-25 16:28:52,589 - INFO - Agent Avg Waiting Time (All Lanes): 213389.7 seconds | Default Avg Waiting Time (All Lanes): 39921.7 seconds
+2025-05-25 16:28:52,589 - INFO - Agent Avg Queue Length (All Lanes): 98.8 vehicles | Default Avg Queue Length (All Lanes): 46.0 vehicles
+2025-05-25 16:29:06,993 - INFO - Episode 21/50
+2025-05-25 16:29:06,993 - INFO - Agent Reward: 5325.0 | Default Reward: 395.8
+2025-05-25 16:29:06,993 - INFO - Agent Avg Waiting Time (All Lanes): 236176.6 seconds | Default Avg Waiting Time (All Lanes): 37253.1 seconds
+2025-05-25 16:29:06,993 - INFO - Agent Avg Queue Length (All Lanes): 105.9 vehicles | Default Avg Queue Length (All Lanes): 44.2 vehicles
+2025-05-25 16:29:22,055 - INFO - Episode 22/50
+2025-05-25 16:29:22,055 - INFO - Agent Reward: 5722.6 | Default Reward: 436.0
+2025-05-25 16:29:22,055 - INFO - Agent Avg Waiting Time (All Lanes): 285383.5 seconds | Default Avg Waiting Time (All Lanes): 41469.7 seconds
+2025-05-25 16:29:22,055 - INFO - Agent Avg Queue Length (All Lanes): 119.1 vehicles | Default Avg Queue Length (All Lanes): 49.4 vehicles
+2025-05-25 16:29:36,320 - INFO - Episode 23/50
+2025-05-25 16:29:36,320 - INFO - Agent Reward: 4874.5 | Default Reward: 385.6
+2025-05-25 16:29:36,321 - INFO - Agent Avg Waiting Time (All Lanes): 218172.9 seconds | Default Avg Waiting Time (All Lanes): 40769.5 seconds
+2025-05-25 16:29:36,321 - INFO - Agent Avg Queue Length (All Lanes): 100.5 vehicles | Default Avg Queue Length (All Lanes): 47.5 vehicles
+2025-05-25 16:29:51,954 - INFO - Episode 24/50
+2025-05-25 16:29:51,954 - INFO - Agent Reward: 5736.3 | Default Reward: 409.2
+2025-05-25 16:29:51,955 - INFO - Agent Avg Waiting Time (All Lanes): 289458.1 seconds | Default Avg Waiting Time (All Lanes): 43054.1 seconds
+2025-05-25 16:29:51,955 - INFO - Agent Avg Queue Length (All Lanes): 121.4 vehicles | Default Avg Queue Length (All Lanes): 49.6 vehicles
+2025-05-25 16:30:06,837 - INFO - Episode 25/50
+2025-05-25 16:30:06,837 - INFO - Agent Reward: 4703.9 | Default Reward: 433.5
+2025-05-25 16:30:06,837 - INFO - Agent Avg Waiting Time (All Lanes): 220097.2 seconds | Default Avg Waiting Time (All Lanes): 42592.4 seconds
+2025-05-25 16:30:06,837 - INFO - Agent Avg Queue Length (All Lanes): 103.1 vehicles | Default Avg Queue Length (All Lanes): 50.1 vehicles
+2025-05-25 16:30:22,218 - INFO - Episode 26/50
+2025-05-25 16:30:22,218 - INFO - Agent Reward: 5322.5 | Default Reward: 482.6
+2025-05-25 16:30:22,218 - INFO - Agent Avg Waiting Time (All Lanes): 252436.9 seconds | Default Avg Waiting Time (All Lanes): 42459.2 seconds
+2025-05-25 16:30:22,218 - INFO - Agent Avg Queue Length (All Lanes): 114.5 vehicles | Default Avg Queue Length (All Lanes): 50.4 vehicles
+2025-05-25 16:30:38,823 - INFO - Episode 27/50
+2025-05-25 16:30:38,824 - INFO - Agent Reward: 5918.6 | Default Reward: 476.2
+2025-05-25 16:30:38,824 - INFO - Agent Avg Waiting Time (All Lanes): 260066.6 seconds | Default Avg Waiting Time (All Lanes): 45378.5 seconds
+2025-05-25 16:30:38,824 - INFO - Agent Avg Queue Length (All Lanes): 119.7 vehicles | Default Avg Queue Length (All Lanes): 53.0 vehicles
+2025-05-25 16:30:54,751 - INFO - Episode 28/50
+2025-05-25 16:30:54,751 - INFO - Agent Reward: 4992.7 | Default Reward: 441.0
+2025-05-25 16:30:54,751 - INFO - Agent Avg Waiting Time (All Lanes): 236142.2 seconds | Default Avg Waiting Time (All Lanes): 50325.5 seconds
+2025-05-25 16:30:54,751 - INFO - Agent Avg Queue Length (All Lanes): 110.7 vehicles | Default Avg Queue Length (All Lanes): 57.4 vehicles
+2025-05-25 16:31:11,489 - INFO - Episode 29/50
+2025-05-25 16:31:11,489 - INFO - Agent Reward: 5770.1 | Default Reward: 422.9
+2025-05-25 16:31:11,489 - INFO - Agent Avg Waiting Time (All Lanes): 269678.3 seconds | Default Avg Waiting Time (All Lanes): 49709.6 seconds
+2025-05-25 16:31:11,489 - INFO - Agent Avg Queue Length (All Lanes): 118.3 vehicles | Default Avg Queue Length (All Lanes): 57.5 vehicles
+2025-05-25 16:31:29,055 - INFO - Episode 30/50
+2025-05-25 16:31:29,055 - INFO - Agent Reward: 6807.3 | Default Reward: 510.3
+2025-05-25 16:31:29,055 - INFO - Agent Avg Waiting Time (All Lanes): 359880.3 seconds | Default Avg Waiting Time (All Lanes): 50297.6 seconds
+2025-05-25 16:31:29,055 - INFO - Agent Avg Queue Length (All Lanes): 143.8 vehicles | Default Avg Queue Length (All Lanes): 59.6 vehicles
+2025-05-25 16:31:45,751 - INFO - Episode 31/50
+2025-05-25 16:31:45,751 - INFO - Agent Reward: 5628.4 | Default Reward: 479.4
+2025-05-25 16:31:45,751 - INFO - Agent Avg Waiting Time (All Lanes): 269460.5 seconds | Default Avg Waiting Time (All Lanes): 48931.4 seconds
+2025-05-25 16:31:45,751 - INFO - Agent Avg Queue Length (All Lanes): 116.6 vehicles | Default Avg Queue Length (All Lanes): 58.6 vehicles
+2025-05-25 16:32:04,133 - INFO - Episode 32/50
+2025-05-25 16:32:04,133 - INFO - Agent Reward: 5840.9 | Default Reward: 538.7
+2025-05-25 16:32:04,133 - INFO - Agent Avg Waiting Time (All Lanes): 363695.1 seconds | Default Avg Waiting Time (All Lanes): 51070.0 seconds
+2025-05-25 16:32:04,133 - INFO - Agent Avg Queue Length (All Lanes): 150.5 vehicles | Default Avg Queue Length (All Lanes): 59.4 vehicles
+2025-05-25 16:32:22,617 - INFO - Episode 33/50
+2025-05-25 16:32:22,617 - INFO - Agent Reward: 5718.4 | Default Reward: 547.1
+2025-05-25 16:32:22,618 - INFO - Agent Avg Waiting Time (All Lanes): 349100.1 seconds | Default Avg Waiting Time (All Lanes): 53430.7 seconds
+2025-05-25 16:32:22,618 - INFO - Agent Avg Queue Length (All Lanes): 146.1 vehicles | Default Avg Queue Length (All Lanes): 61.8 vehicles
+2025-05-25 16:32:41,727 - INFO - Episode 34/50
+2025-05-25 16:32:41,727 - INFO - Agent Reward: 6839.8 | Default Reward: 516.4
+2025-05-25 16:32:41,727 - INFO - Agent Avg Waiting Time (All Lanes): 303162.2 seconds | Default Avg Waiting Time (All Lanes): 54938.0 seconds
+2025-05-25 16:32:41,727 - INFO - Agent Avg Queue Length (All Lanes): 138.2 vehicles | Default Avg Queue Length (All Lanes): 64.2 vehicles
+2025-05-25 16:33:00,062 - INFO - Episode 35/50
+2025-05-25 16:33:00,063 - INFO - Agent Reward: 6222.9 | Default Reward: 567.7
+2025-05-25 16:33:00,063 - INFO - Agent Avg Waiting Time (All Lanes): 276704.2 seconds | Default Avg Waiting Time (All Lanes): 56752.1 seconds
+2025-05-25 16:33:00,063 - INFO - Agent Avg Queue Length (All Lanes): 129.1 vehicles | Default Avg Queue Length (All Lanes): 66.7 vehicles
+2025-05-25 16:33:18,752 - INFO - Episode 36/50
+2025-05-25 16:33:18,753 - INFO - Agent Reward: 5863.9 | Default Reward: 545.5
+2025-05-25 16:33:18,753 - INFO - Agent Avg Waiting Time (All Lanes): 271384.4 seconds | Default Avg Waiting Time (All Lanes): 58728.0 seconds
+2025-05-25 16:33:18,753 - INFO - Agent Avg Queue Length (All Lanes): 130.3 vehicles | Default Avg Queue Length (All Lanes): 69.1 vehicles
+2025-05-25 16:33:38,412 - INFO - Episode 37/50
+2025-05-25 16:33:38,413 - INFO - Agent Reward: 6461.1 | Default Reward: 620.8
+2025-05-25 16:33:38,413 - INFO - Agent Avg Waiting Time (All Lanes): 331083.3 seconds | Default Avg Waiting Time (All Lanes): 59793.3 seconds
+2025-05-25 16:33:38,413 - INFO - Agent Avg Queue Length (All Lanes): 150.1 vehicles | Default Avg Queue Length (All Lanes): 69.3 vehicles
+2025-05-25 16:33:57,210 - INFO - Episode 38/50
+2025-05-25 16:33:57,210 - INFO - Agent Reward: 6287.5 | Default Reward: 594.8
+2025-05-25 16:33:57,210 - INFO - Agent Avg Waiting Time (All Lanes): 283764.3 seconds | Default Avg Waiting Time (All Lanes): 62786.5 seconds
+2025-05-25 16:33:57,210 - INFO - Agent Avg Queue Length (All Lanes): 132.8 vehicles | Default Avg Queue Length (All Lanes): 72.7 vehicles
+2025-05-25 16:34:16,924 - INFO - Episode 39/50
+2025-05-25 16:34:16,924 - INFO - Agent Reward: 7297.1 | Default Reward: 551.8
+2025-05-25 16:34:16,924 - INFO - Agent Avg Waiting Time (All Lanes): 402710.8 seconds | Default Avg Waiting Time (All Lanes): 58130.3 seconds
+2025-05-25 16:34:16,924 - INFO - Agent Avg Queue Length (All Lanes): 158.2 vehicles | Default Avg Queue Length (All Lanes): 69.1 vehicles
+2025-05-25 16:34:38,011 - INFO - Episode 40/50
+2025-05-25 16:34:38,011 - INFO - Agent Reward: 7342.5 | Default Reward: 613.5
+2025-05-25 16:34:38,011 - INFO - Agent Avg Waiting Time (All Lanes): 411200.6 seconds | Default Avg Waiting Time (All Lanes): 63967.6 seconds
+2025-05-25 16:34:38,011 - INFO - Agent Avg Queue Length (All Lanes): 163.6 vehicles | Default Avg Queue Length (All Lanes): 75.6 vehicles
+2025-05-25 16:34:58,865 - INFO - Episode 41/50
+2025-05-25 16:34:58,865 - INFO - Agent Reward: 7081.0 | Default Reward: 626.4
+2025-05-25 16:34:58,865 - INFO - Agent Avg Waiting Time (All Lanes): 326783.0 seconds | Default Avg Waiting Time (All Lanes): 63147.5 seconds
+2025-05-25 16:34:58,865 - INFO - Agent Avg Queue Length (All Lanes): 149.4 vehicles | Default Avg Queue Length (All Lanes): 74.5 vehicles
+2025-05-25 16:35:18,438 - INFO - Episode 42/50
+2025-05-25 16:35:18,438 - INFO - Agent Reward: 6276.7 | Default Reward: 625.5
+2025-05-25 16:35:18,438 - INFO - Agent Avg Waiting Time (All Lanes): 323558.6 seconds | Default Avg Waiting Time (All Lanes): 64757.2 seconds
+2025-05-25 16:35:18,438 - INFO - Agent Avg Queue Length (All Lanes): 138.1 vehicles | Default Avg Queue Length (All Lanes): 75.1 vehicles
+2025-05-25 16:35:38,694 - INFO - Episode 43/50
+2025-05-25 16:35:38,695 - INFO - Agent Reward: 7368.3 | Default Reward: 614.4
+2025-05-25 16:35:38,695 - INFO - Agent Avg Waiting Time (All Lanes): 421798.1 seconds | Default Avg Waiting Time (All Lanes): 65555.2 seconds
+2025-05-25 16:35:38,695 - INFO - Agent Avg Queue Length (All Lanes): 167.4 vehicles | Default Avg Queue Length (All Lanes): 77.8 vehicles
+2025-05-25 16:35:59,627 - INFO - Episode 44/50
+2025-05-25 16:35:59,627 - INFO - Agent Reward: 7513.6 | Default Reward: 701.2
+2025-05-25 16:35:59,627 - INFO - Agent Avg Waiting Time (All Lanes): 435825.1 seconds | Default Avg Waiting Time (All Lanes): 66460.8 seconds
+2025-05-25 16:35:59,627 - INFO - Agent Avg Queue Length (All Lanes): 169.8 vehicles | Default Avg Queue Length (All Lanes): 79.5 vehicles
+2025-05-25 16:36:21,316 - INFO - Episode 45/50
+2025-05-25 16:36:21,316 - INFO - Agent Reward: 8028.4 | Default Reward: 680.9
+2025-05-25 16:36:21,316 - INFO - Agent Avg Waiting Time (All Lanes): 359616.1 seconds | Default Avg Waiting Time (All Lanes): 70052.4 seconds
+2025-05-25 16:36:21,316 - INFO - Agent Avg Queue Length (All Lanes): 162.1 vehicles | Default Avg Queue Length (All Lanes): 81.7 vehicles
+2025-05-25 16:36:42,538 - INFO - Episode 46/50
+2025-05-25 16:36:42,539 - INFO - Agent Reward: 7601.0 | Default Reward: 783.3
+2025-05-25 16:36:42,539 - INFO - Agent Avg Waiting Time (All Lanes): 438186.6 seconds | Default Avg Waiting Time (All Lanes): 72245.6 seconds
+2025-05-25 16:36:42,539 - INFO - Agent Avg Queue Length (All Lanes): 170.2 vehicles | Default Avg Queue Length (All Lanes): 84.2 vehicles
+2025-05-25 16:37:04,969 - INFO - Episode 47/50
+2025-05-25 16:37:04,969 - INFO - Agent Reward: 7896.4 | Default Reward: 714.5
+2025-05-25 16:37:04,969 - INFO - Agent Avg Waiting Time (All Lanes): 396166.6 seconds | Default Avg Waiting Time (All Lanes): 70089.3 seconds
+2025-05-25 16:37:04,970 - INFO - Agent Avg Queue Length (All Lanes): 179.2 vehicles | Default Avg Queue Length (All Lanes): 83.4 vehicles
+2025-05-25 16:37:26,488 - INFO - Episode 48/50
+2025-05-25 16:37:26,488 - INFO - Agent Reward: 7255.6 | Default Reward: 777.2
+2025-05-25 16:37:26,488 - INFO - Agent Avg Waiting Time (All Lanes): 341133.5 seconds | Default Avg Waiting Time (All Lanes): 72221.6 seconds
+2025-05-25 16:37:26,488 - INFO - Agent Avg Queue Length (All Lanes): 155.7 vehicles | Default Avg Queue Length (All Lanes): 86.0 vehicles
+2025-05-25 16:37:48,687 - INFO - Episode 49/50
+2025-05-25 16:37:48,688 - INFO - Agent Reward: 7417.6 | Default Reward: 828.9
+2025-05-25 16:37:48,688 - INFO - Agent Avg Waiting Time (All Lanes): 453599.8 seconds | Default Avg Waiting Time (All Lanes): 76857.7 seconds
+2025-05-25 16:37:48,688 - INFO - Agent Avg Queue Length (All Lanes): 176.0 vehicles | Default Avg Queue Length (All Lanes): 89.3 vehicles
+2025-05-25 16:38:11,053 - INFO - Episode 50/50
+2025-05-25 16:38:11,053 - INFO - Agent Reward: 7587.1 | Default Reward: 693.3
+2025-05-25 16:38:11,053 - INFO - Agent Avg Waiting Time (All Lanes): 454929.5 seconds | Default Avg Waiting Time (All Lanes): 73895.2 seconds
+2025-05-25 16:38:11,053 - INFO - Agent Avg Queue Length (All Lanes): 176.2 vehicles | Default Avg Queue Length (All Lanes): 87.6 vehicles
+2025-05-25 16:38:11,054 - INFO - 
+=== Final Results ===
+2025-05-25 16:38:11,054 - INFO - Agent Average Reward: 4936.4
+2025-05-25 16:38:11,054 - INFO - Default Average Reward: 439.5
+2025-05-25 16:38:11,054 - INFO - Reward Improvement: 1023.3%
+2025-05-25 16:38:11,054 - INFO - Agent Average Waiting Time (All Lanes): 242360.9 seconds
+2025-05-25 16:38:11,054 - INFO - Default Average Waiting Time (All Lanes): 45097.2 seconds
+2025-05-25 16:38:11,054 - INFO - Waiting Time Improvement: -437.4%
+2025-05-25 16:38:11,054 - INFO - Agent Average Queue Length (All Lanes): 107.9 vehicles
+2025-05-25 16:38:11,054 - INFO - Default Average Queue Length (All Lanes): 52.9 vehicles
+2025-05-25 16:38:11,054 - INFO - Queue Length Improvement: -104.0%
+2025-05-25 16:38:11,056 - INFO - Results saved to 'test_results.csv'
+2025-05-25 16:38:11,062 - INFO - Environment closed successfully
+2025-05-25 16:41:54,206 - INFO - Environment initialized successfully
+2025-05-25 16:41:54,968 - INFO - Agent initialized successfully
+2025-05-25 16:41:54,975 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:41:54,975 - INFO - === Testing Started ===
+2025-05-25 16:42:04,289 - INFO - Episode 1/50
+2025-05-25 16:42:04,289 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 16:42:04,289 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 16:42:04,289 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 16:42:13,693 - INFO - Episode 2/50
+2025-05-25 16:42:13,693 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 16:42:13,693 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 16:42:13,693 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 16:42:18,033 - ERROR - Error closing environment: Connection closed by SUMO.
+2025-05-25 16:43:36,967 - INFO - Environment initialized successfully
+2025-05-25 16:43:37,812 - INFO - Agent initialized successfully
+2025-05-25 16:43:37,818 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:43:37,819 - INFO - === Testing Started ===
+2025-05-25 16:43:45,389 - INFO - Episode 1/50
+2025-05-25 16:43:45,389 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 16:43:45,389 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 16:43:45,389 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 16:43:51,363 - INFO - Episode 2/50
+2025-05-25 16:43:51,363 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 16:43:51,363 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 16:43:51,363 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 16:43:52,796 - ERROR - Error closing environment: 82
+2025-05-25 16:45:06,517 - INFO - Environment initialized successfully
+2025-05-25 16:45:07,274 - INFO - Agent initialized successfully
+2025-05-25 16:45:07,280 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:45:07,280 - INFO - === Testing Started ===
+2025-05-25 16:45:14,849 - INFO - Episode 1/50
+2025-05-25 16:45:14,849 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 16:45:14,849 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 16:45:14,849 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 16:45:14,849 - INFO - Agent state : [1.600000e+00 2.320970e+02 8.500000e+00 1.140000e+00 1.835070e+02
+ 5.700000e+00 3.820000e+00 1.118368e+03 1.910000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.3    0.8   91.687  4.     0.76  58.787  4.     0.16
+  2.898  0.8    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:45:20,593 - INFO - Episode 2/50
+2025-05-25 16:45:20,593 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 16:45:20,593 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 16:45:20,593 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 16:45:20,594 - INFO - Agent state : [ 0.54  19.33   3.     0.     0.     0.1    0.04   0.243  0.2    0.1
+  1.912  0.5    1.     0.     1.     0.     0.   ]  | Default state: [ 0.     0.     0.4    0.74  81.91   3.7    1.06  85.667  5.3    0.28
+ 11.287  1.4    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:45:28,689 - INFO - Episode 3/50
+2025-05-25 16:45:28,689 - INFO - Agent Reward: 1579.3 | Default Reward: 164.5
+2025-05-25 16:45:28,690 - INFO - Agent Avg Waiting Time (All Lanes): 66528.9 seconds | Default Avg Waiting Time (All Lanes): 19719.2 seconds
+2025-05-25 16:45:28,690 - INFO - Agent Avg Queue Length (All Lanes): 38.6 vehicles | Default Avg Queue Length (All Lanes): 23.0 vehicles
+2025-05-25 16:45:28,690 - INFO - Agent state : [3.400000e-01 1.286200e+01 2.000000e+00 1.180000e+00 1.922170e+02
+ 5.900000e+00 4.660000e+00 1.371182e+03 2.350000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.3    0.78  84.148  3.9    0.9   71.582  4.6    0.24
+  7.935  1.2    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:45:36,541 - INFO - Episode 4/50
+2025-05-25 16:45:36,541 - INFO - Agent Reward: 1950.2 | Default Reward: 171.9
+2025-05-25 16:45:36,541 - INFO - Agent Avg Waiting Time (All Lanes): 76524.4 seconds | Default Avg Waiting Time (All Lanes): 20285.9 seconds
+2025-05-25 16:45:36,541 - INFO - Agent Avg Queue Length (All Lanes): 40.8 vehicles | Default Avg Queue Length (All Lanes): 23.7 vehicles
+2025-05-25 16:45:36,542 - INFO - Agent state : [1.920000e+00 3.028350e+02 9.600000e+00 1.000000e+00 1.596700e+02
+ 5.000000e+00 5.080000e+00 1.483713e+03 2.550000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.1    0.76  83.572  3.8    1.12  83.548  5.9    0.12
+  3.78   0.7    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:45:45,350 - INFO - Episode 5/50
+2025-05-25 16:45:45,350 - INFO - Agent Reward: 2716.5 | Default Reward: 150.1
+2025-05-25 16:45:45,350 - INFO - Agent Avg Waiting Time (All Lanes): 116765.3 seconds | Default Avg Waiting Time (All Lanes): 21083.7 seconds
+2025-05-25 16:45:45,351 - INFO - Agent Avg Queue Length (All Lanes): 54.7 vehicles | Default Avg Queue Length (All Lanes): 24.4 vehicles
+2025-05-25 16:45:45,351 - INFO - Agent state : [2.880000e+00 5.080150e+02 1.460000e+01 1.220000e+00 2.368250e+02
+ 6.100000e+00 5.740000e+00 1.966682e+03 2.870000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.3    0.7   72.335  3.5    0.94  66.648  4.9    0.26
+ 10.227  1.4    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:45:54,093 - INFO - Episode 6/50
+2025-05-25 16:45:54,093 - INFO - Agent Reward: 2144.8 | Default Reward: 196.2
+2025-05-25 16:45:54,093 - INFO - Agent Avg Waiting Time (All Lanes): 84985.9 seconds | Default Avg Waiting Time (All Lanes): 22314.7 seconds
+2025-05-25 16:45:54,093 - INFO - Agent Avg Queue Length (All Lanes): 46.8 vehicles | Default Avg Queue Length (All Lanes): 26.0 vehicles
+2025-05-25 16:45:54,094 - INFO - Agent state : [2.460000e+00 3.392150e+02 1.280000e+01 1.300000e+00 1.973080e+02
+ 6.500000e+00 5.240000e+00 1.603778e+03 2.620000e+01 0.000000e+00
+ 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.3    0.9   99.027  4.5    1.02  81.012  5.4    0.36
+ 15.033  1.8    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:46:02,983 - INFO - Episode 7/50
+2025-05-25 16:46:02,984 - INFO - Agent Reward: 2759.5 | Default Reward: 157.0
+2025-05-25 16:46:02,984 - INFO - Agent Avg Waiting Time (All Lanes): 129185.9 seconds | Default Avg Waiting Time (All Lanes): 21151.0 seconds
+2025-05-25 16:46:02,984 - INFO - Agent Avg Queue Length (All Lanes): 59.2 vehicles | Default Avg Queue Length (All Lanes): 24.5 vehicles
+2025-05-25 16:46:02,984 - INFO - Agent state : [0.000000e+00 0.000000e+00 1.000000e-01 1.660000e+00 4.447720e+02
+ 8.400000e+00 5.700000e+00 1.767372e+03 2.880000e+01 2.000000e+00
+ 5.426480e+02 1.010000e+01 8.890000e-01 1.000000e+00 0.000000e+00
+ 0.000000e+00 0.000000e+00]  | Default state: [ 0.     0.     0.1    0.66  83.308  3.3    0.96  65.227  5.     0.26
+  7.65   1.4    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:46:11,041 - INFO - Episode 8/50
+2025-05-25 16:46:11,041 - INFO - Agent Reward: 1761.0 | Default Reward: 188.0
+2025-05-25 16:46:11,041 - INFO - Agent Avg Waiting Time (All Lanes): 60832.1 seconds | Default Avg Waiting Time (All Lanes): 24515.4 seconds
+2025-05-25 16:46:11,041 - INFO - Agent Avg Queue Length (All Lanes): 39.1 vehicles | Default Avg Queue Length (All Lanes): 28.8 vehicles
+2025-05-25 16:46:11,041 - INFO - Agent state : [2.560000e+00 3.325570e+02 1.290000e+01 1.060000e+00 1.393670e+02
+ 5.300000e+00 4.960000e+00 1.284715e+03 2.490000e+01 0.000000e+00
+ 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [  0.      0.      0.2     0.78   67.065   4.      1.4   108.148   7.2
+   0.34   11.512   1.7     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:46:19,989 - INFO - Episode 9/50
+2025-05-25 16:46:19,989 - INFO - Agent Reward: 1864.3 | Default Reward: 231.5
+2025-05-25 16:46:19,989 - INFO - Agent Avg Waiting Time (All Lanes): 82790.2 seconds | Default Avg Waiting Time (All Lanes): 26225.0 seconds
+2025-05-25 16:46:19,989 - INFO - Agent Avg Queue Length (All Lanes): 49.2 vehicles | Default Avg Queue Length (All Lanes): 30.6 vehicles
+2025-05-25 16:46:19,990 - INFO - Agent state : [5.200000e-01 9.763000e+00 3.000000e+00 1.520000e+00 2.022630e+02
+ 7.600000e+00 5.920000e+00 1.648273e+03 2.990000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [  0.      0.      0.4     1.28  127.503   6.4     1.28   93.375   6.9
+   0.28    9.283   1.5     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:46:29,049 - INFO - Episode 10/50
+2025-05-25 16:46:29,049 - INFO - Agent Reward: 2556.7 | Default Reward: 243.8
+2025-05-25 16:46:29,049 - INFO - Agent Avg Waiting Time (All Lanes): 102347.0 seconds | Default Avg Waiting Time (All Lanes): 26638.2 seconds
+2025-05-25 16:46:29,049 - INFO - Agent Avg Queue Length (All Lanes): 54.6 vehicles | Default Avg Queue Length (All Lanes): 31.3 vehicles
+2025-05-25 16:46:29,049 - INFO - Agent state : [2.700000e+00 3.958450e+02 1.370000e+01 1.660000e+00 2.967370e+02
+ 8.400000e+00 6.260000e+00 1.858763e+03 3.140000e+01 0.000000e+00
+ 0.000000e+00 2.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [  0.      0.      0.2     1.14  140.535   5.7     1.28   93.307   7.
+   0.3     8.652   1.6     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:46:39,118 - INFO - Episode 11/50
+2025-05-25 16:46:39,118 - INFO - Agent Reward: 3158.0 | Default Reward: 268.6
+2025-05-25 16:46:39,118 - INFO - Agent Avg Waiting Time (All Lanes): 126757.2 seconds | Default Avg Waiting Time (All Lanes): 27688.6 seconds
+2025-05-25 16:46:39,118 - INFO - Agent Avg Queue Length (All Lanes): 65.9 vehicles | Default Avg Queue Length (All Lanes): 32.6 vehicles
+2025-05-25 16:46:39,118 - INFO - Agent state : [3.340000e+00 5.629750e+02 1.710000e+01 1.860000e+00 3.094570e+02
+ 9.300000e+00 7.360000e+00 2.279343e+03 3.700000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [  0.      0.      0.4     1.22  134.885   6.2     1.46  121.422   7.7
+   0.36   10.877   1.8     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:46:48,626 - INFO - Episode 12/50
+2025-05-25 16:46:48,626 - INFO - Agent Reward: 2124.6 | Default Reward: 211.6
+2025-05-25 16:46:48,626 - INFO - Agent Avg Waiting Time (All Lanes): 77667.6 seconds | Default Avg Waiting Time (All Lanes): 30471.5 seconds
+2025-05-25 16:46:48,626 - INFO - Agent Avg Queue Length (All Lanes): 47.0 vehicles | Default Avg Queue Length (All Lanes): 34.9 vehicles
+2025-05-25 16:46:48,626 - INFO - Agent state : [2.80000e+00 3.90640e+02 1.45000e+01 1.28000e+00 1.81477e+02 6.60000e+00
+ 5.68000e+00 1.54761e+03 2.85000e+01 0.00000e+00 0.00000e+00 1.00000e-01
+ 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 1.00000e+00]  | Default state: [ 0.     0.     0.4    0.94  95.395  4.8    1.46  97.19   7.4    0.48
+ 17.65   2.5    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:46:59,402 - INFO - Episode 13/50
+2025-05-25 16:46:59,403 - INFO - Agent Reward: 3382.2 | Default Reward: 244.6
+2025-05-25 16:46:59,403 - INFO - Agent Avg Waiting Time (All Lanes): 137937.3 seconds | Default Avg Waiting Time (All Lanes): 28354.8 seconds
+2025-05-25 16:46:59,403 - INFO - Agent Avg Queue Length (All Lanes): 69.4 vehicles | Default Avg Queue Length (All Lanes): 33.2 vehicles
+2025-05-25 16:46:59,403 - INFO - Agent state : [3.880000e+00 6.486170e+02 1.940000e+01 2.020000e+00 4.076680e+02
+ 1.020000e+01 7.260000e+00 2.319403e+03 3.660000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [0.00000e+00 0.00000e+00 1.00000e-01 1.06000e+00 1.17752e+02 5.30000e+00
+ 1.54000e+00 1.12235e+02 7.90000e+00 3.20000e-01 1.31970e+01 1.60000e+00
+ 3.33000e-01 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00] 
+2025-05-25 16:47:10,920 - INFO - Episode 14/50
+2025-05-25 16:47:10,921 - INFO - Agent Reward: 3393.5 | Default Reward: 299.9
+2025-05-25 16:47:10,921 - INFO - Agent Avg Waiting Time (All Lanes): 135159.9 seconds | Default Avg Waiting Time (All Lanes): 30891.5 seconds
+2025-05-25 16:47:10,921 - INFO - Agent Avg Queue Length (All Lanes): 70.0 vehicles | Default Avg Queue Length (All Lanes): 36.0 vehicles
+2025-05-25 16:47:10,921 - INFO - Agent state : [3.620000e+00 5.847930e+02 1.830000e+01 2.160000e+00 3.830920e+02
+ 1.090000e+01 7.860000e+00 2.418803e+03 3.940000e+01 0.000000e+00
+ 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [0.00000e+00 0.00000e+00 1.00000e-01 1.40000e+00 1.76342e+02 7.30000e+00
+ 1.52000e+00 1.05540e+02 7.70000e+00 4.60000e-01 1.63270e+01 2.40000e+00
+ 3.33000e-01 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00] 
+2025-05-25 16:47:20,830 - INFO - Episode 15/50
+2025-05-25 16:47:20,830 - INFO - Agent Reward: 2251.4 | Default Reward: 307.0
+2025-05-25 16:47:20,830 - INFO - Agent Avg Waiting Time (All Lanes): 90750.8 seconds | Default Avg Waiting Time (All Lanes): 31788.9 seconds
+2025-05-25 16:47:20,830 - INFO - Agent Avg Queue Length (All Lanes): 54.8 vehicles | Default Avg Queue Length (All Lanes): 37.0 vehicles
+2025-05-25 16:47:20,830 - INFO - Agent state : [1.100000e+00 5.715000e+01 5.500000e+00 1.780000e+00 2.954870e+02
+ 8.900000e+00 6.800000e+00 1.893992e+03 3.450000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [  0.      0.      0.3     1.34  168.187   6.7     1.68  122.77    8.4
+   0.38   14.338   1.9     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:47:34,845 - INFO - Episode 16/50
+2025-05-25 16:47:34,845 - INFO - Agent Reward: 3772.9 | Default Reward: 335.8
+2025-05-25 16:47:34,845 - INFO - Agent Avg Waiting Time (All Lanes): 148808.5 seconds | Default Avg Waiting Time (All Lanes): 32965.6 seconds
+2025-05-25 16:47:34,845 - INFO - Agent Avg Queue Length (All Lanes): 77.8 vehicles | Default Avg Queue Length (All Lanes): 38.5 vehicles
+2025-05-25 16:47:34,846 - INFO - Agent state : [4.48000e+00 8.52060e+02 2.25000e+01 3.38000e+00 9.43232e+02 1.70000e+01
+ 7.54000e+00 1.96989e+03 3.81000e+01 0.00000e+00 0.00000e+00 2.00000e-01
+ 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 1.00000e+00]  | Default state: [  0.      0.      0.6     1.34  160.533   6.7     2.24  158.578  11.6
+   0.46   14.73    2.3     0.333   1.      0.      0.      0.   ] 
+2025-05-25 16:47:36,329 - INFO - Environment closed successfully
+2025-05-25 16:47:41,816 - INFO - Environment initialized successfully
+2025-05-25 16:47:42,550 - INFO - Agent initialized successfully
+2025-05-25 16:47:42,556 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:47:42,556 - INFO - === Testing Started ===
+2025-05-25 16:47:51,356 - INFO - Episode 1/50
+2025-05-25 16:47:51,356 - INFO - Agent Reward: 1537.2 | Default Reward: 154.1
+2025-05-25 16:47:51,356 - INFO - Agent Avg Waiting Time (All Lanes): 57473.3 seconds | Default Avg Waiting Time (All Lanes): 16709.1 seconds
+2025-05-25 16:47:51,356 - INFO - Agent Avg Queue Length (All Lanes): 34.0 vehicles | Default Avg Queue Length (All Lanes): 19.5 vehicles
+2025-05-25 16:47:51,357 - INFO - Agent state : [1.600000e+00 2.320970e+02 8.500000e+00 1.140000e+00 1.835070e+02
+ 5.700000e+00 3.820000e+00 1.118368e+03 1.910000e+01 0.000000e+00
+ 0.000000e+00 1.000000e-01 1.000000e+00 0.000000e+00 0.000000e+00
+ 0.000000e+00 1.000000e+00]  | Default state: [ 0.     0.     0.3    0.8   91.687  4.     0.76  58.787  4.     0.16
+  2.898  0.8    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:48:00,470 - INFO - Episode 2/50
+2025-05-25 16:48:00,470 - INFO - Agent Reward: 21.8 | Default Reward: 179.9
+2025-05-25 16:48:00,470 - INFO - Agent Avg Waiting Time (All Lanes): 1564.8 seconds | Default Avg Waiting Time (All Lanes): 18613.1 seconds
+2025-05-25 16:48:00,470 - INFO - Agent Avg Queue Length (All Lanes): 6.0 vehicles | Default Avg Queue Length (All Lanes): 22.0 vehicles
+2025-05-25 16:48:00,470 - INFO - Agent state : [ 0.54  19.33   3.     0.     0.     0.1    0.04   0.243  0.2    0.1
+  1.912  0.5    1.     0.     1.     0.     0.   ]  | Default state: [ 0.     0.     0.4    0.74  81.91   3.7    1.06  85.667  5.3    0.28
+ 11.287  1.4    0.333  1.     0.     0.     0.   ] 
+2025-05-25 16:48:09,688 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-25 16:49:29,453 - INFO - Environment initialized successfully
+2025-05-25 16:49:30,226 - INFO - Agent initialized successfully
+2025-05-25 16:49:30,232 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:49:30,232 - INFO - === Testing Started ===
+2025-05-25 16:49:52,261 - INFO - Episode 1/50
+2025-05-25 16:49:52,261 - INFO - Agent Reward: 7296.4 | Default Reward: 719.7
+2025-05-25 16:49:52,261 - INFO - Agent Avg Waiting Time (All Lanes): 396357.2 seconds | Default Avg Waiting Time (All Lanes): 76360.6 seconds
+2025-05-25 16:49:52,262 - INFO - Agent Avg Queue Length (All Lanes): 162.4 vehicles | Default Avg Queue Length (All Lanes): 89.0 vehicles
+2025-05-25 16:49:52,262 - INFO - Agent state : [1.820000e+00 1.637770e+02 9.900000e+00 3.900000e+00 1.218340e+03
+ 1.950000e+01 1.174000e+01 5.099785e+03 5.870000e+01 3.900000e+00
+ 1.216002e+03 1.950000e+01 8.890000e-01 1.000000e+00 0.000000e+00
+ 0.000000e+00 0.000000e+00]  | Default state: [0.00000e+00 0.00000e+00 6.00000e-01 2.82000e+00 3.23658e+02 1.44000e+01
+ 4.56000e+00 3.46068e+02 2.29000e+01 1.26000e+00 4.56700e+01 6.50000e+00
+ 3.33000e-01 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00] 
+2025-05-25 16:50:15,055 - INFO - Episode 2/50
+2025-05-25 16:50:15,055 - INFO - Agent Reward: 7344.6 | Default Reward: 759.6
+2025-05-25 16:50:15,055 - INFO - Agent Avg Waiting Time (All Lanes): 396547.5 seconds | Default Avg Waiting Time (All Lanes): 76827.7 seconds
+2025-05-25 16:50:15,055 - INFO - Agent Avg Queue Length (All Lanes): 162.8 vehicles | Default Avg Queue Length (All Lanes): 90.2 vehicles
+2025-05-25 16:50:15,055 - INFO - Agent state : [2.460000e+00 2.313780e+02 1.300000e+01 3.920000e+00 1.264653e+03
+ 1.960000e+01 1.170000e+01 5.015782e+03 5.850000e+01 3.880000e+00
+ 1.404012e+03 1.940000e+01 8.890000e-01 1.000000e+00 0.000000e+00
+ 0.000000e+00 0.000000e+00]  | Default state: [0.00000e+00 0.00000e+00 7.00000e-01 3.52000e+00 3.78945e+02 1.77000e+01
+ 4.42000e+00 3.36898e+02 2.28000e+01 1.12000e+00 3.92330e+01 5.70000e+00
+ 3.33000e-01 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00] 
+2025-05-25 16:50:15,165 - INFO - Environment closed successfully
+2025-05-25 16:50:44,241 - INFO - Environment initialized successfully
+2025-05-25 16:50:44,980 - INFO - Agent initialized successfully
+2025-05-25 16:50:44,986 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 16:50:44,986 - INFO - === Testing Started ===
+2025-05-25 16:50:59,451 - INFO - Episode 1/50
+2025-05-25 16:50:59,452 - INFO - Agent Reward: 4979.7 | Default Reward: 424.7
+2025-05-25 16:50:59,452 - INFO - Agent Avg Waiting Time (All Lanes): 223647.8 seconds | Default Avg Waiting Time (All Lanes): 40973.5 seconds
+2025-05-25 16:50:59,452 - INFO - Agent Avg Queue Length (All Lanes): 106.2 vehicles | Default Avg Queue Length (All Lanes): 48.7 vehicles
+2025-05-25 16:51:14,522 - INFO - Episode 2/50
+2025-05-25 16:51:14,522 - INFO - Agent Reward: 6123.2 | Default Reward: 391.5
+2025-05-25 16:51:14,522 - INFO - Agent Avg Waiting Time (All Lanes): 313368.8 seconds | Default Avg Waiting Time (All Lanes): 42142.8 seconds
+2025-05-25 16:51:14,522 - INFO - Agent Avg Queue Length (All Lanes): 128.0 vehicles | Default Avg Queue Length (All Lanes): 49.6 vehicles
+2025-05-25 16:51:30,803 - INFO - Episode 3/50
+2025-05-25 16:51:30,803 - INFO - Agent Reward: 5923.0 | Default Reward: 431.3
+2025-05-25 16:51:30,803 - INFO - Agent Avg Waiting Time (All Lanes): 257679.8 seconds | Default Avg Waiting Time (All Lanes): 43611.7 seconds
+2025-05-25 16:51:30,803 - INFO - Agent Avg Queue Length (All Lanes): 119.7 vehicles | Default Avg Queue Length (All Lanes): 51.3 vehicles
+2025-05-25 16:51:46,950 - INFO - Episode 4/50
+2025-05-25 16:51:46,950 - INFO - Agent Reward: 5121.3 | Default Reward: 421.9
+2025-05-25 16:51:46,950 - INFO - Agent Avg Waiting Time (All Lanes): 330569.0 seconds | Default Avg Waiting Time (All Lanes): 44067.0 seconds
+2025-05-25 16:51:46,950 - INFO - Agent Avg Queue Length (All Lanes): 134.8 vehicles | Default Avg Queue Length (All Lanes): 51.4 vehicles
+2025-05-25 16:52:02,171 - INFO - Episode 5/50
+2025-05-25 16:52:02,171 - INFO - Agent Reward: 5304.0 | Default Reward: 382.4
+2025-05-25 16:52:02,171 - INFO - Agent Avg Waiting Time (All Lanes): 243930.7 seconds | Default Avg Waiting Time (All Lanes): 41946.3 seconds
+2025-05-25 16:52:02,171 - INFO - Agent Avg Queue Length (All Lanes): 110.9 vehicles | Default Avg Queue Length (All Lanes): 50.0 vehicles
+2025-05-25 16:52:18,008 - INFO - Episode 6/50
+2025-05-25 16:52:18,008 - INFO - Agent Reward: 5712.4 | Default Reward: 408.0
+2025-05-25 16:52:18,008 - INFO - Agent Avg Waiting Time (All Lanes): 254768.7 seconds | Default Avg Waiting Time (All Lanes): 42155.6 seconds
+2025-05-25 16:52:18,008 - INFO - Agent Avg Queue Length (All Lanes): 121.4 vehicles | Default Avg Queue Length (All Lanes): 50.4 vehicles
+2025-05-25 16:52:33,146 - INFO - Episode 7/50
+2025-05-25 16:52:33,147 - INFO - Agent Reward: 5889.4 | Default Reward: 388.0
+2025-05-25 16:52:33,147 - INFO - Agent Avg Waiting Time (All Lanes): 303459.7 seconds | Default Avg Waiting Time (All Lanes): 40351.0 seconds
+2025-05-25 16:52:33,147 - INFO - Agent Avg Queue Length (All Lanes): 124.0 vehicles | Default Avg Queue Length (All Lanes): 47.5 vehicles
+2025-05-25 16:52:46,635 - INFO - Episode 8/50
+2025-05-25 16:52:46,635 - INFO - Agent Reward: 3745.3 | Default Reward: 429.8
+2025-05-25 16:52:46,635 - INFO - Agent Avg Waiting Time (All Lanes): 154247.9 seconds | Default Avg Waiting Time (All Lanes): 42485.6 seconds
+2025-05-25 16:52:46,635 - INFO - Agent Avg Queue Length (All Lanes): 87.6 vehicles | Default Avg Queue Length (All Lanes): 49.9 vehicles
+2025-05-25 16:53:02,022 - INFO - Episode 9/50
+2025-05-25 16:53:02,022 - INFO - Agent Reward: 5476.1 | Default Reward: 375.8
+2025-05-25 16:53:02,022 - INFO - Agent Avg Waiting Time (All Lanes): 263172.9 seconds | Default Avg Waiting Time (All Lanes): 43821.5 seconds
+2025-05-25 16:53:02,022 - INFO - Agent Avg Queue Length (All Lanes): 113.8 vehicles | Default Avg Queue Length (All Lanes): 51.6 vehicles
+2025-05-25 16:53:17,973 - INFO - Episode 10/50
+2025-05-25 16:53:17,973 - INFO - Agent Reward: 5045.0 | Default Reward: 423.6
+2025-05-25 16:53:17,973 - INFO - Agent Avg Waiting Time (All Lanes): 286294.0 seconds | Default Avg Waiting Time (All Lanes): 41184.7 seconds
+2025-05-25 16:53:17,973 - INFO - Agent Avg Queue Length (All Lanes): 124.9 vehicles | Default Avg Queue Length (All Lanes): 48.9 vehicles
+2025-05-25 16:53:33,626 - INFO - Episode 11/50
+2025-05-25 16:53:33,627 - INFO - Agent Reward: 4982.6 | Default Reward: 437.5
+2025-05-25 16:53:33,627 - INFO - Agent Avg Waiting Time (All Lanes): 229219.8 seconds | Default Avg Waiting Time (All Lanes): 42538.8 seconds
+2025-05-25 16:53:33,627 - INFO - Agent Avg Queue Length (All Lanes): 106.3 vehicles | Default Avg Queue Length (All Lanes): 50.7 vehicles
+2025-05-25 16:53:49,912 - INFO - Episode 12/50
+2025-05-25 16:53:49,912 - INFO - Agent Reward: 5426.4 | Default Reward: 441.0
+2025-05-25 16:53:49,912 - INFO - Agent Avg Waiting Time (All Lanes): 252076.2 seconds | Default Avg Waiting Time (All Lanes): 44185.0 seconds
+2025-05-25 16:53:49,912 - INFO - Agent Avg Queue Length (All Lanes): 113.8 vehicles | Default Avg Queue Length (All Lanes): 51.6 vehicles
+2025-05-25 16:54:05,473 - INFO - Episode 13/50
+2025-05-25 16:54:05,473 - INFO - Agent Reward: 6151.3 | Default Reward: 393.6
+2025-05-25 16:54:05,473 - INFO - Agent Avg Waiting Time (All Lanes): 313785.1 seconds | Default Avg Waiting Time (All Lanes): 42395.3 seconds
+2025-05-25 16:54:05,474 - INFO - Agent Avg Queue Length (All Lanes): 127.6 vehicles | Default Avg Queue Length (All Lanes): 49.8 vehicles
+2025-05-25 16:54:20,789 - INFO - Episode 14/50
+2025-05-25 16:54:20,789 - INFO - Agent Reward: 5151.5 | Default Reward: 433.5
+2025-05-25 16:54:20,789 - INFO - Agent Avg Waiting Time (All Lanes): 239382.8 seconds | Default Avg Waiting Time (All Lanes): 42345.3 seconds
+2025-05-25 16:54:20,789 - INFO - Agent Avg Queue Length (All Lanes): 109.1 vehicles | Default Avg Queue Length (All Lanes): 49.7 vehicles
+2025-05-25 16:54:37,851 - INFO - Episode 15/50
+2025-05-25 16:54:37,851 - INFO - Agent Reward: 6391.5 | Default Reward: 404.1
+2025-05-25 16:54:37,851 - INFO - Agent Avg Waiting Time (All Lanes): 332076.0 seconds | Default Avg Waiting Time (All Lanes): 41849.5 seconds
+2025-05-25 16:54:37,851 - INFO - Agent Avg Queue Length (All Lanes): 133.8 vehicles | Default Avg Queue Length (All Lanes): 49.2 vehicles
+2025-05-25 16:54:52,561 - INFO - Episode 16/50
+2025-05-25 16:54:52,561 - INFO - Agent Reward: 4665.9 | Default Reward: 436.7
+2025-05-25 16:54:52,561 - INFO - Agent Avg Waiting Time (All Lanes): 188515.6 seconds | Default Avg Waiting Time (All Lanes): 41693.0 seconds
+2025-05-25 16:54:52,561 - INFO - Agent Avg Queue Length (All Lanes): 93.6 vehicles | Default Avg Queue Length (All Lanes): 49.4 vehicles
+2025-05-25 16:55:08,928 - INFO - Episode 17/50
+2025-05-25 16:55:08,928 - INFO - Agent Reward: 4978.7 | Default Reward: 388.0
+2025-05-25 16:55:08,929 - INFO - Agent Avg Waiting Time (All Lanes): 303130.5 seconds | Default Avg Waiting Time (All Lanes): 43508.3 seconds
+2025-05-25 16:55:08,929 - INFO - Agent Avg Queue Length (All Lanes): 127.6 vehicles | Default Avg Queue Length (All Lanes): 50.9 vehicles
+2025-05-25 16:55:23,779 - INFO - Episode 18/50
+2025-05-25 16:55:23,779 - INFO - Agent Reward: 4741.2 | Default Reward: 517.4
+2025-05-25 16:55:23,779 - INFO - Agent Avg Waiting Time (All Lanes): 215151.9 seconds | Default Avg Waiting Time (All Lanes): 45666.0 seconds
+2025-05-25 16:55:23,779 - INFO - Agent Avg Queue Length (All Lanes): 101.2 vehicles | Default Avg Queue Length (All Lanes): 53.4 vehicles
+2025-05-25 16:55:40,663 - INFO - Episode 19/50
+2025-05-25 16:55:40,663 - INFO - Agent Reward: 5834.6 | Default Reward: 442.8
+2025-05-25 16:55:40,663 - INFO - Agent Avg Waiting Time (All Lanes): 259713.1 seconds | Default Avg Waiting Time (All Lanes): 43243.2 seconds
+2025-05-25 16:55:40,663 - INFO - Agent Avg Queue Length (All Lanes): 121.8 vehicles | Default Avg Queue Length (All Lanes): 50.7 vehicles
+2025-05-25 16:55:56,935 - INFO - Episode 20/50
+2025-05-25 16:55:56,935 - INFO - Agent Reward: 5551.0 | Default Reward: 426.6
+2025-05-25 16:55:56,935 - INFO - Agent Avg Waiting Time (All Lanes): 276874.7 seconds | Default Avg Waiting Time (All Lanes): 46384.0 seconds
+2025-05-25 16:55:56,935 - INFO - Agent Avg Queue Length (All Lanes): 116.1 vehicles | Default Avg Queue Length (All Lanes): 53.7 vehicles
+2025-05-25 16:56:12,850 - INFO - Episode 21/50
+2025-05-25 16:56:12,850 - INFO - Agent Reward: 5822.0 | Default Reward: 485.0
+2025-05-25 16:56:12,850 - INFO - Agent Avg Waiting Time (All Lanes): 257985.0 seconds | Default Avg Waiting Time (All Lanes): 43523.9 seconds
+2025-05-25 16:56:12,850 - INFO - Agent Avg Queue Length (All Lanes): 118.4 vehicles | Default Avg Queue Length (All Lanes): 51.1 vehicles
+2025-05-25 16:56:29,158 - INFO - Episode 22/50
+2025-05-25 16:56:29,158 - INFO - Agent Reward: 6303.7 | Default Reward: 440.0
+2025-05-25 16:56:29,158 - INFO - Agent Avg Waiting Time (All Lanes): 322751.1 seconds | Default Avg Waiting Time (All Lanes): 43902.6 seconds
+2025-05-25 16:56:29,158 - INFO - Agent Avg Queue Length (All Lanes): 131.6 vehicles | Default Avg Queue Length (All Lanes): 52.7 vehicles
+2025-05-25 16:56:44,510 - INFO - Episode 23/50
+2025-05-25 16:56:44,510 - INFO - Agent Reward: 5310.4 | Default Reward: 412.6
+2025-05-25 16:56:44,510 - INFO - Agent Avg Waiting Time (All Lanes): 236878.2 seconds | Default Avg Waiting Time (All Lanes): 42061.6 seconds
+2025-05-25 16:56:44,510 - INFO - Agent Avg Queue Length (All Lanes): 109.5 vehicles | Default Avg Queue Length (All Lanes): 49.9 vehicles
+2025-05-25 16:56:59,524 - INFO - Episode 24/50
+2025-05-25 16:56:59,524 - INFO - Agent Reward: 5021.6 | Default Reward: 424.0
+2025-05-25 16:56:59,524 - INFO - Agent Avg Waiting Time (All Lanes): 230591.2 seconds | Default Avg Waiting Time (All Lanes): 44560.3 seconds
+2025-05-25 16:56:59,524 - INFO - Agent Avg Queue Length (All Lanes): 108.6 vehicles | Default Avg Queue Length (All Lanes): 51.2 vehicles
+2025-05-25 16:57:14,104 - INFO - Episode 25/50
+2025-05-25 16:57:14,104 - INFO - Agent Reward: 4800.7 | Default Reward: 433.5
+2025-05-25 16:57:14,104 - INFO - Agent Avg Waiting Time (All Lanes): 223559.9 seconds | Default Avg Waiting Time (All Lanes): 42592.4 seconds
+2025-05-25 16:57:14,104 - INFO - Agent Avg Queue Length (All Lanes): 104.4 vehicles | Default Avg Queue Length (All Lanes): 50.1 vehicles
+2025-05-25 16:57:31,898 - INFO - Episode 26/50
+2025-05-25 16:57:31,899 - INFO - Agent Reward: 7147.1 | Default Reward: 431.1
+2025-05-25 16:57:31,899 - INFO - Agent Avg Waiting Time (All Lanes): 336655.1 seconds | Default Avg Waiting Time (All Lanes): 40514.2 seconds
+2025-05-25 16:57:31,899 - INFO - Agent Avg Queue Length (All Lanes): 144.1 vehicles | Default Avg Queue Length (All Lanes): 48.1 vehicles
+2025-05-25 16:57:46,437 - INFO - Episode 27/50
+2025-05-25 16:57:46,437 - INFO - Agent Reward: 5140.5 | Default Reward: 428.8
+2025-05-25 16:57:46,437 - INFO - Agent Avg Waiting Time (All Lanes): 244257.5 seconds | Default Avg Waiting Time (All Lanes): 42875.6 seconds
+2025-05-25 16:57:46,437 - INFO - Agent Avg Queue Length (All Lanes): 107.3 vehicles | Default Avg Queue Length (All Lanes): 50.1 vehicles
+2025-05-25 16:58:01,272 - INFO - Episode 28/50
+2025-05-25 16:58:01,272 - INFO - Agent Reward: 5143.1 | Default Reward: 424.6
+2025-05-25 16:58:01,272 - INFO - Agent Avg Waiting Time (All Lanes): 246546.8 seconds | Default Avg Waiting Time (All Lanes): 47516.8 seconds
+2025-05-25 16:58:01,272 - INFO - Agent Avg Queue Length (All Lanes): 108.2 vehicles | Default Avg Queue Length (All Lanes): 54.0 vehicles
+2025-05-25 16:58:16,304 - INFO - Episode 29/50
+2025-05-25 16:58:16,304 - INFO - Agent Reward: 5036.5 | Default Reward: 399.1
+2025-05-25 16:58:16,304 - INFO - Agent Avg Waiting Time (All Lanes): 229695.0 seconds | Default Avg Waiting Time (All Lanes): 44257.6 seconds
+2025-05-25 16:58:16,304 - INFO - Agent Avg Queue Length (All Lanes): 107.7 vehicles | Default Avg Queue Length (All Lanes): 51.6 vehicles
+2025-05-25 16:58:30,981 - INFO - Episode 30/50
+2025-05-25 16:58:30,981 - INFO - Agent Reward: 4909.1 | Default Reward: 429.7
+2025-05-25 16:58:30,981 - INFO - Agent Avg Waiting Time (All Lanes): 232087.2 seconds | Default Avg Waiting Time (All Lanes): 41983.3 seconds
+2025-05-25 16:58:30,981 - INFO - Agent Avg Queue Length (All Lanes): 106.7 vehicles | Default Avg Queue Length (All Lanes): 50.2 vehicles
+2025-05-25 16:58:45,924 - INFO - Episode 31/50
+2025-05-25 16:58:45,925 - INFO - Agent Reward: 4999.7 | Default Reward: 444.0
+2025-05-25 16:58:45,925 - INFO - Agent Avg Waiting Time (All Lanes): 218184.2 seconds | Default Avg Waiting Time (All Lanes): 44758.3 seconds
+2025-05-25 16:58:45,925 - INFO - Agent Avg Queue Length (All Lanes): 102.8 vehicles | Default Avg Queue Length (All Lanes): 52.7 vehicles
+2025-05-25 16:59:00,278 - INFO - Episode 32/50
+2025-05-25 16:59:00,278 - INFO - Agent Reward: 4970.5 | Default Reward: 427.5
+2025-05-25 16:59:00,278 - INFO - Agent Avg Waiting Time (All Lanes): 230573.1 seconds | Default Avg Waiting Time (All Lanes): 41991.9 seconds
+2025-05-25 16:59:00,279 - INFO - Agent Avg Queue Length (All Lanes): 104.3 vehicles | Default Avg Queue Length (All Lanes): 49.3 vehicles
+2025-05-25 16:59:15,692 - INFO - Episode 33/50
+2025-05-25 16:59:15,692 - INFO - Agent Reward: 5101.9 | Default Reward: 467.7
+2025-05-25 16:59:15,692 - INFO - Agent Avg Waiting Time (All Lanes): 230107.4 seconds | Default Avg Waiting Time (All Lanes): 46528.5 seconds
+2025-05-25 16:59:15,692 - INFO - Agent Avg Queue Length (All Lanes): 108.4 vehicles | Default Avg Queue Length (All Lanes): 53.7 vehicles
+2025-05-25 16:59:31,467 - INFO - Episode 34/50
+2025-05-25 16:59:31,467 - INFO - Agent Reward: 5768.4 | Default Reward: 446.5
+2025-05-25 16:59:31,467 - INFO - Agent Avg Waiting Time (All Lanes): 246530.0 seconds | Default Avg Waiting Time (All Lanes): 44130.5 seconds
+2025-05-25 16:59:31,467 - INFO - Agent Avg Queue Length (All Lanes): 113.8 vehicles | Default Avg Queue Length (All Lanes): 51.9 vehicles
+2025-05-25 16:59:46,420 - INFO - Episode 35/50
+2025-05-25 16:59:46,420 - INFO - Agent Reward: 5043.1 | Default Reward: 443.7
+2025-05-25 16:59:46,420 - INFO - Agent Avg Waiting Time (All Lanes): 230470.0 seconds | Default Avg Waiting Time (All Lanes): 43381.7 seconds
+2025-05-25 16:59:46,420 - INFO - Agent Avg Queue Length (All Lanes): 106.9 vehicles | Default Avg Queue Length (All Lanes): 51.2 vehicles
+2025-05-25 17:00:01,356 - INFO - Episode 36/50
+2025-05-25 17:00:01,356 - INFO - Agent Reward: 4968.6 | Default Reward: 392.5
+2025-05-25 17:00:01,356 - INFO - Agent Avg Waiting Time (All Lanes): 218856.0 seconds | Default Avg Waiting Time (All Lanes): 44381.7 seconds
+2025-05-25 17:00:01,357 - INFO - Agent Avg Queue Length (All Lanes): 102.3 vehicles | Default Avg Queue Length (All Lanes): 52.2 vehicles
+2025-05-25 17:00:16,065 - INFO - Episode 37/50
+2025-05-25 17:00:16,066 - INFO - Agent Reward: 4675.6 | Default Reward: 444.3
+2025-05-25 17:00:16,066 - INFO - Agent Avg Waiting Time (All Lanes): 203020.3 seconds | Default Avg Waiting Time (All Lanes): 44803.5 seconds
+2025-05-25 17:00:16,066 - INFO - Agent Avg Queue Length (All Lanes): 103.3 vehicles | Default Avg Queue Length (All Lanes): 51.6 vehicles
+2025-05-25 17:00:30,881 - INFO - Episode 38/50
+2025-05-25 17:00:30,881 - INFO - Agent Reward: 5091.4 | Default Reward: 439.9
+2025-05-25 17:00:30,881 - INFO - Agent Avg Waiting Time (All Lanes): 227838.2 seconds | Default Avg Waiting Time (All Lanes): 43758.4 seconds
+2025-05-25 17:00:30,881 - INFO - Agent Avg Queue Length (All Lanes): 107.1 vehicles | Default Avg Queue Length (All Lanes): 50.4 vehicles
+2025-05-25 17:00:47,990 - INFO - Episode 39/50
+2025-05-25 17:00:47,990 - INFO - Agent Reward: 6397.1 | Default Reward: 420.4
+2025-05-25 17:00:47,990 - INFO - Agent Avg Waiting Time (All Lanes): 282136.5 seconds | Default Avg Waiting Time (All Lanes): 42894.0 seconds
+2025-05-25 17:00:47,990 - INFO - Agent Avg Queue Length (All Lanes): 130.8 vehicles | Default Avg Queue Length (All Lanes): 50.7 vehicles
+2025-05-25 17:01:01,877 - INFO - Episode 40/50
+2025-05-25 17:01:01,877 - INFO - Agent Reward: 3858.4 | Default Reward: 433.4
+2025-05-25 17:01:01,877 - INFO - Agent Avg Waiting Time (All Lanes): 156326.7 seconds | Default Avg Waiting Time (All Lanes): 45152.3 seconds
+2025-05-25 17:01:01,877 - INFO - Agent Avg Queue Length (All Lanes): 88.2 vehicles | Default Avg Queue Length (All Lanes): 52.6 vehicles
+2025-05-25 17:01:16,510 - INFO - Episode 41/50
+2025-05-25 17:01:16,510 - INFO - Agent Reward: 5118.5 | Default Reward: 412.9
+2025-05-25 17:01:16,510 - INFO - Agent Avg Waiting Time (All Lanes): 244517.9 seconds | Default Avg Waiting Time (All Lanes): 41463.7 seconds
+2025-05-25 17:01:16,510 - INFO - Agent Avg Queue Length (All Lanes): 107.0 vehicles | Default Avg Queue Length (All Lanes): 48.8 vehicles
+2025-05-25 17:01:34,310 - INFO - Episode 42/50
+2025-05-25 17:01:34,310 - INFO - Agent Reward: 6293.0 | Default Reward: 464.1
+2025-05-25 17:01:34,310 - INFO - Agent Avg Waiting Time (All Lanes): 329235.6 seconds | Default Avg Waiting Time (All Lanes): 47199.1 seconds
+2025-05-25 17:01:34,310 - INFO - Agent Avg Queue Length (All Lanes): 131.8 vehicles | Default Avg Queue Length (All Lanes): 54.5 vehicles
+2025-05-25 17:01:57,022 - INFO - Episode 43/50
+2025-05-25 17:01:57,023 - INFO - Agent Reward: 5387.4 | Default Reward: 423.2
+2025-05-25 17:01:57,023 - INFO - Agent Avg Waiting Time (All Lanes): 224490.3 seconds | Default Avg Waiting Time (All Lanes): 44944.0 seconds
+2025-05-25 17:01:57,023 - INFO - Agent Avg Queue Length (All Lanes): 112.2 vehicles | Default Avg Queue Length (All Lanes): 52.7 vehicles
+2025-05-25 17:02:17,274 - INFO - Episode 44/50
+2025-05-25 17:02:17,274 - INFO - Agent Reward: 4530.3 | Default Reward: 395.2
+2025-05-25 17:02:17,274 - INFO - Agent Avg Waiting Time (All Lanes): 192083.7 seconds | Default Avg Waiting Time (All Lanes): 42366.5 seconds
+2025-05-25 17:02:17,274 - INFO - Agent Avg Queue Length (All Lanes): 97.4 vehicles | Default Avg Queue Length (All Lanes): 50.0 vehicles
+2025-05-25 17:02:36,452 - INFO - Episode 45/50
+2025-05-25 17:02:36,453 - INFO - Agent Reward: 3770.4 | Default Reward: 433.9
+2025-05-25 17:02:36,453 - INFO - Agent Avg Waiting Time (All Lanes): 152489.7 seconds | Default Avg Waiting Time (All Lanes): 43244.2 seconds
+2025-05-25 17:02:36,453 - INFO - Agent Avg Queue Length (All Lanes): 82.7 vehicles | Default Avg Queue Length (All Lanes): 50.9 vehicles
+2025-05-25 17:02:57,411 - INFO - Episode 46/50
+2025-05-25 17:02:57,411 - INFO - Agent Reward: 4933.1 | Default Reward: 383.6
+2025-05-25 17:02:57,411 - INFO - Agent Avg Waiting Time (All Lanes): 227077.1 seconds | Default Avg Waiting Time (All Lanes): 42384.1 seconds
+2025-05-25 17:02:57,411 - INFO - Agent Avg Queue Length (All Lanes): 104.9 vehicles | Default Avg Queue Length (All Lanes): 49.5 vehicles
+2025-05-25 17:03:19,249 - INFO - Episode 47/50
+2025-05-25 17:03:19,249 - INFO - Agent Reward: 5050.8 | Default Reward: 451.7
+2025-05-25 17:03:19,249 - INFO - Agent Avg Waiting Time (All Lanes): 234226.5 seconds | Default Avg Waiting Time (All Lanes): 42230.2 seconds
+2025-05-25 17:03:19,249 - INFO - Agent Avg Queue Length (All Lanes): 108.7 vehicles | Default Avg Queue Length (All Lanes): 49.4 vehicles
+2025-05-25 17:03:40,621 - INFO - Episode 48/50
+2025-05-25 17:03:40,621 - INFO - Agent Reward: 4914.6 | Default Reward: 457.8
+2025-05-25 17:03:40,621 - INFO - Agent Avg Waiting Time (All Lanes): 238891.0 seconds | Default Avg Waiting Time (All Lanes): 41461.4 seconds
+2025-05-25 17:03:40,621 - INFO - Agent Avg Queue Length (All Lanes): 108.6 vehicles | Default Avg Queue Length (All Lanes): 48.7 vehicles
+2025-05-25 17:04:02,216 - INFO - Episode 49/50
+2025-05-25 17:04:02,216 - INFO - Agent Reward: 5051.8 | Default Reward: 427.9
+2025-05-25 17:04:02,216 - INFO - Agent Avg Waiting Time (All Lanes): 238326.3 seconds | Default Avg Waiting Time (All Lanes): 44490.6 seconds
+2025-05-25 17:04:02,216 - INFO - Agent Avg Queue Length (All Lanes): 110.5 vehicles | Default Avg Queue Length (All Lanes): 52.3 vehicles
+2025-05-25 17:04:22,717 - INFO - Episode 50/50
+2025-05-25 17:04:22,717 - INFO - Agent Reward: 4171.4 | Default Reward: 432.4
+2025-05-25 17:04:22,717 - INFO - Agent Avg Waiting Time (All Lanes): 199384.4 seconds | Default Avg Waiting Time (All Lanes): 40631.1 seconds
+2025-05-25 17:04:22,717 - INFO - Agent Avg Queue Length (All Lanes): 94.3 vehicles | Default Avg Queue Length (All Lanes): 48.5 vehicles
+2025-05-25 17:04:22,717 - INFO - 
+=== Final Results ===
+2025-05-25 17:04:22,717 - INFO - Agent Average Reward: 5238.5
+2025-05-25 17:04:22,717 - INFO - Default Average Reward: 427.0
+2025-05-25 17:04:22,717 - INFO - Reward Improvement: 1126.9%
+2025-05-25 17:04:22,717 - INFO - Agent Average Waiting Time (All Lanes): 246536.7 seconds
+2025-05-25 17:04:22,717 - INFO - Default Average Waiting Time (All Lanes): 43250.6 seconds
+2025-05-25 17:04:22,717 - INFO - Waiting Time Improvement: -470.0%
+2025-05-25 17:04:22,717 - INFO - Agent Average Queue Length (All Lanes): 111.9 vehicles
+2025-05-25 17:04:22,717 - INFO - Default Average Queue Length (All Lanes): 50.8 vehicles
+2025-05-25 17:04:22,717 - INFO - Queue Length Improvement: -120.3%
+2025-05-25 17:04:22,733 - INFO - Results saved to 'test_results.csv'
+2025-05-25 17:04:22,742 - INFO - Environment closed successfully

@@ -1,0 +1,902 @@
+2025-05-25 20:59:37,437 - INFO - Environment initialized successfully
+2025-05-25 20:59:39,329 - INFO - Agent initialized successfully
+2025-05-25 20:59:39,340 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 20:59:39,340 - INFO - === Agent Testing Started ===
+2025-05-25 20:59:40,373 - ERROR - Episode failed: 'TrafficEnv' object has no attribute 'GREEN_PHASES'
+2025-05-25 20:59:40,374 - ERROR - Testing failed: 'TrafficEnv' object has no attribute 'GREEN_PHASES'
+2025-05-25 20:59:40,384 - INFO - Environment closed successfully
+2025-05-25 21:01:18,218 - INFO - Environment initialized successfully
+2025-05-25 21:01:18,978 - INFO - Agent initialized successfully
+2025-05-25 21:01:18,985 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 21:01:18,985 - INFO - === Agent Testing Started ===
+2025-05-25 21:01:34,695 - INFO - Episode 1/10
+2025-05-25 21:01:34,695 - INFO - Agent Reward: 7296.4
+2025-05-25 21:01:34,695 - INFO - Agent Avg Waiting Time (All Lanes): 396357.2 seconds
+2025-05-25 21:01:34,695 - INFO - Agent Avg Queue Length (All Lanes): 162.4 vehicles
+2025-05-25 21:01:34,695 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:01:34,695 - INFO - Agent Avg Wait Active: 10144.9s
+2025-05-25 21:01:34,695 - INFO - Agent Avg Queue Active: 13.7
+2025-05-25 21:01:34,695 - INFO - Agent Avg Wait Inactive: 1575284.0s
+2025-05-25 21:01:34,695 - INFO - Agent Avg Queue Inactive: 635.8
+2025-05-25 21:01:53,625 - INFO - Episode 2/10
+2025-05-25 21:01:53,625 - INFO - Agent Reward: 7745.0
+2025-05-25 21:01:53,625 - INFO - Agent Avg Waiting Time (All Lanes): 453358.9 seconds
+2025-05-25 21:01:53,625 - INFO - Agent Avg Queue Length (All Lanes): 175.1 vehicles
+2025-05-25 21:01:53,625 - INFO - Agent Avg Throughput: 0.011 vehicles/step
+2025-05-25 21:01:53,625 - INFO - Agent Avg Wait Active: 14359.2s
+2025-05-25 21:01:53,625 - INFO - Agent Avg Queue Active: 17.8
+2025-05-25 21:01:53,625 - INFO - Agent Avg Wait Inactive: 1799076.6s
+2025-05-25 21:01:53,625 - INFO - Agent Avg Queue Inactive: 682.8
+2025-05-25 21:02:10,665 - INFO - Episode 3/10
+2025-05-25 21:02:10,665 - INFO - Agent Reward: 7683.0
+2025-05-25 21:02:10,665 - INFO - Agent Avg Waiting Time (All Lanes): 466424.3 seconds
+2025-05-25 21:02:10,665 - INFO - Agent Avg Queue Length (All Lanes): 178.7 vehicles
+2025-05-25 21:02:10,665 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:02:10,665 - INFO - Agent Avg Wait Active: 26807.3s
+2025-05-25 21:02:10,665 - INFO - Agent Avg Queue Active: 26.6
+2025-05-25 21:02:10,665 - INFO - Agent Avg Wait Inactive: 1838890.0s
+2025-05-25 21:02:10,665 - INFO - Agent Avg Queue Inactive: 688.3
+2025-05-25 21:02:25,933 - INFO - Episode 4/10
+2025-05-25 21:02:25,933 - INFO - Agent Reward: 7709.9
+2025-05-25 21:02:25,933 - INFO - Agent Avg Waiting Time (All Lanes): 462024.4 seconds
+2025-05-25 21:02:25,933 - INFO - Agent Avg Queue Length (All Lanes): 177.1 vehicles
+2025-05-25 21:02:25,933 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:02:25,933 - INFO - Agent Avg Wait Active: 20487.2s
+2025-05-25 21:02:25,933 - INFO - Agent Avg Queue Active: 23.6
+2025-05-25 21:02:25,933 - INFO - Agent Avg Wait Inactive: 1827610.2s
+2025-05-25 21:02:25,933 - INFO - Agent Avg Queue Inactive: 684.9
+2025-05-25 21:02:41,451 - INFO - Episode 5/10
+2025-05-25 21:02:41,451 - INFO - Agent Reward: 7921.7
+2025-05-25 21:02:41,451 - INFO - Agent Avg Waiting Time (All Lanes): 479234.4 seconds
+2025-05-25 21:02:41,451 - INFO - Agent Avg Queue Length (All Lanes): 181.0 vehicles
+2025-05-25 21:02:41,451 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:02:41,451 - INFO - Agent Avg Wait Active: 19341.0s
+2025-05-25 21:02:41,451 - INFO - Agent Avg Queue Active: 22.2
+2025-05-25 21:02:41,451 - INFO - Agent Avg Wait Inactive: 1897596.4s
+2025-05-25 21:02:41,451 - INFO - Agent Avg Queue Inactive: 701.7
+2025-05-25 21:02:57,266 - INFO - Episode 6/10
+2025-05-25 21:02:57,266 - INFO - Agent Reward: 6625.5
+2025-05-25 21:02:57,266 - INFO - Agent Avg Waiting Time (All Lanes): 352946.2 seconds
+2025-05-25 21:02:57,266 - INFO - Agent Avg Queue Length (All Lanes): 157.7 vehicles
+2025-05-25 21:02:57,266 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:02:57,266 - INFO - Agent Avg Wait Active: 23583.8s
+2025-05-25 21:02:57,266 - INFO - Agent Avg Queue Active: 21.0
+2025-05-25 21:02:57,266 - INFO - Agent Avg Wait Inactive: 1388200.9s
+2025-05-25 21:02:57,266 - INFO - Agent Avg Queue Inactive: 609.9
+2025-05-25 21:03:11,601 - INFO - Episode 7/10
+2025-05-25 21:03:11,602 - INFO - Agent Reward: 6920.8
+2025-05-25 21:03:11,602 - INFO - Agent Avg Waiting Time (All Lanes): 351703.8 seconds
+2025-05-25 21:03:11,602 - INFO - Agent Avg Queue Length (All Lanes): 151.1 vehicles
+2025-05-25 21:03:11,602 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:03:11,602 - INFO - Agent Avg Wait Active: 11225.8s
+2025-05-25 21:03:11,602 - INFO - Agent Avg Queue Active: 14.9
+2025-05-25 21:03:11,602 - INFO - Agent Avg Wait Inactive: 1395589.2s
+2025-05-25 21:03:11,602 - INFO - Agent Avg Queue Inactive: 589.3
+2025-05-25 21:03:31,114 - INFO - Episode 8/10
+2025-05-25 21:03:31,115 - INFO - Agent Reward: 6029.6
+2025-05-25 21:03:31,115 - INFO - Agent Avg Waiting Time (All Lanes): 366376.8 seconds
+2025-05-25 21:03:31,115 - INFO - Agent Avg Queue Length (All Lanes): 188.7 vehicles
+2025-05-25 21:03:31,115 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:03:31,115 - INFO - Agent Avg Wait Active: 29946.8s
+2025-05-25 21:03:31,115 - INFO - Agent Avg Queue Active: 29.9
+2025-05-25 21:03:31,115 - INFO - Agent Avg Wait Inactive: 1435560.4s
+2025-05-25 21:03:31,115 - INFO - Agent Avg Queue Inactive: 724.9
+2025-05-25 21:03:46,469 - INFO - Episode 9/10
+2025-05-25 21:03:46,469 - INFO - Agent Reward: 7197.5
+2025-05-25 21:03:46,469 - INFO - Agent Avg Waiting Time (All Lanes): 366343.3 seconds
+2025-05-25 21:03:46,469 - INFO - Agent Avg Queue Length (All Lanes): 161.5 vehicles
+2025-05-25 21:03:46,469 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:03:46,469 - INFO - Agent Avg Wait Active: 20258.0s
+2025-05-25 21:03:46,469 - INFO - Agent Avg Queue Active: 17.8
+2025-05-25 21:03:46,469 - INFO - Agent Avg Wait Inactive: 1445115.0s
+2025-05-25 21:03:46,469 - INFO - Agent Avg Queue Inactive: 628.2
+2025-05-25 21:04:01,861 - INFO - Episode 10/10
+2025-05-25 21:04:01,862 - INFO - Agent Reward: 7792.1
+2025-05-25 21:04:01,862 - INFO - Agent Avg Waiting Time (All Lanes): 481533.4 seconds
+2025-05-25 21:04:01,862 - INFO - Agent Avg Queue Length (All Lanes): 184.3 vehicles
+2025-05-25 21:04:01,862 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:04:01,862 - INFO - Agent Avg Wait Active: 34663.2s
+2025-05-25 21:04:01,862 - INFO - Agent Avg Queue Active: 32.9
+2025-05-25 21:04:01,862 - INFO - Agent Avg Wait Inactive: 1891470.3s
+2025-05-25 21:04:01,862 - INFO - Agent Avg Queue Inactive: 704.2
+2025-05-25 21:04:01,862 - INFO - 
+=== Final Agent Results ===
+2025-05-25 21:04:01,862 - INFO - Average Reward: 7292.2
+2025-05-25 21:04:01,862 - INFO - Average Waiting Time (All Lanes): 417630.3 seconds
+2025-05-25 21:04:01,862 - INFO - Average Queue Length (All Lanes): 171.8 vehicles
+2025-05-25 21:04:01,862 - INFO - Average Throughput: 0.001 vehicles/step
+2025-05-25 21:04:01,862 - INFO - Average Wait Active: 21081.7 seconds
+2025-05-25 21:04:01,862 - INFO - Average Queue Active: 22.1 vehicles
+2025-05-25 21:04:01,862 - INFO - Average Wait Inactive: 1649439.3 seconds
+2025-05-25 21:04:01,862 - INFO - Average Queue Inactive: 665.0 vehicles
+2025-05-25 21:04:01,864 - INFO - Results saved to 'agent_test_results.csv'
+2025-05-25 21:04:02,541 - INFO - Plots saved to 'agent_metrics.png'
+2025-05-25 21:04:02,549 - INFO - Environment closed successfully
+2025-05-25 21:05:23,922 - INFO - Environment initialized successfully
+2025-05-25 21:05:24,799 - INFO - Agent initialized successfully
+2025-05-25 21:05:24,806 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-25 21:05:24,806 - INFO - === Agent Testing Started ===
+2025-05-25 21:05:34,609 - INFO - Episode 1/50
+2025-05-25 21:05:34,609 - INFO - Agent Reward: 4979.7
+2025-05-25 21:05:34,609 - INFO - Agent Avg Waiting Time (All Lanes): 223647.8 seconds
+2025-05-25 21:05:34,609 - INFO - Agent Avg Queue Length (All Lanes): 106.2 vehicles
+2025-05-25 21:05:34,609 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:05:34,609 - INFO - Agent Avg Wait Active: 0.2s
+2025-05-25 21:05:34,609 - INFO - Agent Avg Queue Active: 0.1
+2025-05-25 21:05:34,610 - INFO - Agent Avg Wait Inactive: 894591.1s
+2025-05-25 21:05:34,610 - INFO - Agent Avg Queue Inactive: 424.6
+2025-05-25 21:05:45,199 - INFO - Episode 2/50
+2025-05-25 21:05:45,200 - INFO - Agent Reward: 5712.4
+2025-05-25 21:05:45,200 - INFO - Agent Avg Waiting Time (All Lanes): 254768.7 seconds
+2025-05-25 21:05:45,200 - INFO - Agent Avg Queue Length (All Lanes): 121.4 vehicles
+2025-05-25 21:05:45,200 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:05:45,200 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:05:45,200 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:05:45,200 - INFO - Agent Avg Wait Inactive: 1019074.6s
+2025-05-25 21:05:45,200 - INFO - Agent Avg Queue Inactive: 485.5
+2025-05-25 21:05:54,658 - INFO - Episode 3/50
+2025-05-25 21:05:54,658 - INFO - Agent Reward: 4982.6
+2025-05-25 21:05:54,658 - INFO - Agent Avg Waiting Time (All Lanes): 229219.8 seconds
+2025-05-25 21:05:54,659 - INFO - Agent Avg Queue Length (All Lanes): 106.3 vehicles
+2025-05-25 21:05:54,659 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:05:54,659 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:05:54,659 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:05:54,659 - INFO - Agent Avg Wait Inactive: 916879.1s
+2025-05-25 21:05:54,659 - INFO - Agent Avg Queue Inactive: 425.2
+2025-05-25 21:06:03,527 - INFO - Episode 4/50
+2025-05-25 21:06:03,527 - INFO - Agent Reward: 4665.9
+2025-05-25 21:06:03,527 - INFO - Agent Avg Waiting Time (All Lanes): 188515.6 seconds
+2025-05-25 21:06:03,527 - INFO - Agent Avg Queue Length (All Lanes): 93.6 vehicles
+2025-05-25 21:06:03,527 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:03,527 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:06:03,527 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:06:03,528 - INFO - Agent Avg Wait Inactive: 754062.5s
+2025-05-25 21:06:03,528 - INFO - Agent Avg Queue Inactive: 374.3
+2025-05-25 21:06:14,638 - INFO - Episode 5/50
+2025-05-25 21:06:14,638 - INFO - Agent Reward: 5822.0
+2025-05-25 21:06:14,638 - INFO - Agent Avg Waiting Time (All Lanes): 257985.0 seconds
+2025-05-25 21:06:14,638 - INFO - Agent Avg Queue Length (All Lanes): 118.4 vehicles
+2025-05-25 21:06:14,638 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:14,638 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:06:14,638 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:06:14,638 - INFO - Agent Avg Wait Inactive: 1031940.0s
+2025-05-25 21:06:14,638 - INFO - Agent Avg Queue Inactive: 473.6
+2025-05-25 21:06:28,275 - INFO - Episode 6/50
+2025-05-25 21:06:28,275 - INFO - Agent Reward: 7147.1
+2025-05-25 21:06:28,275 - INFO - Agent Avg Waiting Time (All Lanes): 336655.1 seconds
+2025-05-25 21:06:28,275 - INFO - Agent Avg Queue Length (All Lanes): 144.1 vehicles
+2025-05-25 21:06:28,275 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:28,275 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:06:28,275 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:06:28,275 - INFO - Agent Avg Wait Inactive: 1346620.2s
+2025-05-25 21:06:28,275 - INFO - Agent Avg Queue Inactive: 576.4
+2025-05-25 21:06:38,596 - INFO - Episode 7/50
+2025-05-25 21:06:38,596 - INFO - Agent Reward: 4999.7
+2025-05-25 21:06:38,596 - INFO - Agent Avg Waiting Time (All Lanes): 218184.2 seconds
+2025-05-25 21:06:38,596 - INFO - Agent Avg Queue Length (All Lanes): 102.8 vehicles
+2025-05-25 21:06:38,596 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:38,596 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:06:38,596 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:06:38,596 - INFO - Agent Avg Wait Inactive: 872736.8s
+2025-05-25 21:06:38,596 - INFO - Agent Avg Queue Inactive: 411.3
+2025-05-25 21:06:49,449 - INFO - Episode 8/50
+2025-05-25 21:06:49,449 - INFO - Agent Reward: 4968.6
+2025-05-25 21:06:49,449 - INFO - Agent Avg Waiting Time (All Lanes): 218856.0 seconds
+2025-05-25 21:06:49,449 - INFO - Agent Avg Queue Length (All Lanes): 102.3 vehicles
+2025-05-25 21:06:49,449 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:49,449 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:06:49,450 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:06:49,450 - INFO - Agent Avg Wait Inactive: 875423.9s
+2025-05-25 21:06:49,450 - INFO - Agent Avg Queue Inactive: 409.4
+2025-05-25 21:06:59,236 - INFO - Episode 9/50
+2025-05-25 21:06:59,236 - INFO - Agent Reward: 5118.5
+2025-05-25 21:06:59,236 - INFO - Agent Avg Waiting Time (All Lanes): 244517.9 seconds
+2025-05-25 21:06:59,236 - INFO - Agent Avg Queue Length (All Lanes): 107.0 vehicles
+2025-05-25 21:06:59,236 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:06:59,236 - INFO - Agent Avg Wait Active: 288.1s
+2025-05-25 21:06:59,236 - INFO - Agent Avg Queue Active: 1.0
+2025-05-25 21:06:59,236 - INFO - Agent Avg Wait Inactive: 977783.6s
+2025-05-25 21:06:59,236 - INFO - Agent Avg Queue Inactive: 427.0
+2025-05-25 21:07:08,783 - INFO - Episode 10/50
+2025-05-25 21:07:08,783 - INFO - Agent Reward: 4933.1
+2025-05-25 21:07:08,783 - INFO - Agent Avg Waiting Time (All Lanes): 227077.1 seconds
+2025-05-25 21:07:08,783 - INFO - Agent Avg Queue Length (All Lanes): 104.9 vehicles
+2025-05-25 21:07:08,783 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:07:08,783 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:07:08,783 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:07:08,783 - INFO - Agent Avg Wait Inactive: 908308.4s
+2025-05-25 21:07:08,783 - INFO - Agent Avg Queue Inactive: 419.4
+2025-05-25 21:07:18,894 - INFO - Episode 11/50
+2025-05-25 21:07:18,894 - INFO - Agent Reward: 5180.8
+2025-05-25 21:07:18,894 - INFO - Agent Avg Waiting Time (All Lanes): 226301.9 seconds
+2025-05-25 21:07:18,894 - INFO - Agent Avg Queue Length (All Lanes): 108.0 vehicles
+2025-05-25 21:07:18,894 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:07:18,894 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:07:18,894 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:07:18,894 - INFO - Agent Avg Wait Inactive: 905207.6s
+2025-05-25 21:07:18,894 - INFO - Agent Avg Queue Inactive: 431.8
+2025-05-25 21:07:29,706 - INFO - Episode 12/50
+2025-05-25 21:07:29,706 - INFO - Agent Reward: 5642.4
+2025-05-25 21:07:29,706 - INFO - Agent Avg Waiting Time (All Lanes): 275667.2 seconds
+2025-05-25 21:07:29,706 - INFO - Agent Avg Queue Length (All Lanes): 123.8 vehicles
+2025-05-25 21:07:29,706 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:07:29,706 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:07:29,706 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:07:29,706 - INFO - Agent Avg Wait Inactive: 1102668.8s
+2025-05-25 21:07:29,706 - INFO - Agent Avg Queue Inactive: 495.3
+2025-05-25 21:07:40,167 - INFO - Episode 13/50
+2025-05-25 21:07:40,168 - INFO - Agent Reward: 5995.4
+2025-05-25 21:07:40,168 - INFO - Agent Avg Waiting Time (All Lanes): 304746.6 seconds
+2025-05-25 21:07:40,168 - INFO - Agent Avg Queue Length (All Lanes): 125.5 vehicles
+2025-05-25 21:07:40,168 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:07:40,168 - INFO - Agent Avg Wait Active: 17.7s
+2025-05-25 21:07:40,168 - INFO - Agent Avg Queue Active: 0.2
+2025-05-25 21:07:40,168 - INFO - Agent Avg Wait Inactive: 1218968.7s
+2025-05-25 21:07:40,168 - INFO - Agent Avg Queue Inactive: 501.7
+2025-05-25 21:07:51,556 - INFO - Episode 14/50
+2025-05-25 21:07:51,556 - INFO - Agent Reward: 5154.5
+2025-05-25 21:07:51,556 - INFO - Agent Avg Waiting Time (All Lanes): 307695.6 seconds
+2025-05-25 21:07:51,556 - INFO - Agent Avg Queue Length (All Lanes): 132.6 vehicles
+2025-05-25 21:07:51,556 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:07:51,556 - INFO - Agent Avg Wait Active: 1256.2s
+2025-05-25 21:07:51,557 - INFO - Agent Avg Queue Active: 2.4
+2025-05-25 21:07:51,557 - INFO - Agent Avg Wait Inactive: 1229526.0s
+2025-05-25 21:07:51,557 - INFO - Agent Avg Queue Inactive: 527.9
+2025-05-25 21:08:01,038 - INFO - Episode 15/50
+2025-05-25 21:08:01,038 - INFO - Agent Reward: 5140.7
+2025-05-25 21:08:01,038 - INFO - Agent Avg Waiting Time (All Lanes): 241948.9 seconds
+2025-05-25 21:08:01,038 - INFO - Agent Avg Queue Length (All Lanes): 107.6 vehicles
+2025-05-25 21:08:01,038 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:08:01,038 - INFO - Agent Avg Wait Active: 262.8s
+2025-05-25 21:08:01,038 - INFO - Agent Avg Queue Active: 0.9
+2025-05-25 21:08:01,038 - INFO - Agent Avg Wait Inactive: 967532.9s
+2025-05-25 21:08:01,038 - INFO - Agent Avg Queue Inactive: 429.6
+2025-05-25 21:08:10,279 - INFO - Episode 16/50
+2025-05-25 21:08:10,280 - INFO - Agent Reward: 4612.2
+2025-05-25 21:08:10,280 - INFO - Agent Avg Waiting Time (All Lanes): 200613.4 seconds
+2025-05-25 21:08:10,280 - INFO - Agent Avg Queue Length (All Lanes): 100.5 vehicles
+2025-05-25 21:08:10,280 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:08:10,280 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:08:10,280 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:08:10,280 - INFO - Agent Avg Wait Inactive: 802453.6s
+2025-05-25 21:08:10,280 - INFO - Agent Avg Queue Inactive: 402.0
+2025-05-25 21:08:21,274 - INFO - Episode 17/50
+2025-05-25 21:08:21,274 - INFO - Agent Reward: 4938.6
+2025-05-25 21:08:21,274 - INFO - Agent Avg Waiting Time (All Lanes): 312850.9 seconds
+2025-05-25 21:08:21,274 - INFO - Agent Avg Queue Length (All Lanes): 130.4 vehicles
+2025-05-25 21:08:21,274 - INFO - Agent Avg Throughput: 0.011 vehicles/step
+2025-05-25 21:08:21,274 - INFO - Agent Avg Wait Active: 944.5s
+2025-05-25 21:08:21,274 - INFO - Agent Avg Queue Active: 2.3
+2025-05-25 21:08:21,274 - INFO - Agent Avg Wait Inactive: 1250459.0s
+2025-05-25 21:08:21,274 - INFO - Agent Avg Queue Inactive: 519.3
+2025-05-25 21:08:31,029 - INFO - Episode 18/50
+2025-05-25 21:08:31,029 - INFO - Agent Reward: 5180.0
+2025-05-25 21:08:31,029 - INFO - Agent Avg Waiting Time (All Lanes): 239448.3 seconds
+2025-05-25 21:08:31,029 - INFO - Agent Avg Queue Length (All Lanes): 108.8 vehicles
+2025-05-25 21:08:31,029 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:08:31,029 - INFO - Agent Avg Wait Active: 0.2s
+2025-05-25 21:08:31,029 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:08:31,029 - INFO - Agent Avg Wait Inactive: 957793.1s
+2025-05-25 21:08:31,029 - INFO - Agent Avg Queue Inactive: 435.1
+2025-05-25 21:08:39,623 - INFO - Episode 19/50
+2025-05-25 21:08:39,623 - INFO - Agent Reward: 4369.8
+2025-05-25 21:08:39,623 - INFO - Agent Avg Waiting Time (All Lanes): 185382.9 seconds
+2025-05-25 21:08:39,623 - INFO - Agent Avg Queue Length (All Lanes): 94.5 vehicles
+2025-05-25 21:08:39,623 - INFO - Agent Avg Throughput: 0.010 vehicles/step
+2025-05-25 21:08:39,623 - INFO - Agent Avg Wait Active: 3.5s
+2025-05-25 21:08:39,623 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:08:39,623 - INFO - Agent Avg Wait Inactive: 741528.1s
+2025-05-25 21:08:39,623 - INFO - Agent Avg Queue Inactive: 377.9
+2025-05-25 21:08:49,342 - INFO - Episode 20/50
+2025-05-25 21:08:49,342 - INFO - Agent Reward: 4963.5
+2025-05-25 21:08:49,342 - INFO - Agent Avg Waiting Time (All Lanes): 227855.1 seconds
+2025-05-25 21:08:49,342 - INFO - Agent Avg Queue Length (All Lanes): 105.4 vehicles
+2025-05-25 21:08:49,342 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:08:49,342 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:08:49,343 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:08:49,343 - INFO - Agent Avg Wait Inactive: 911420.2s
+2025-05-25 21:08:49,343 - INFO - Agent Avg Queue Inactive: 421.7
+2025-05-25 21:08:59,288 - INFO - Episode 21/50
+2025-05-25 21:08:59,288 - INFO - Agent Reward: 5116.5
+2025-05-25 21:08:59,288 - INFO - Agent Avg Waiting Time (All Lanes): 229685.0 seconds
+2025-05-25 21:08:59,288 - INFO - Agent Avg Queue Length (All Lanes): 106.2 vehicles
+2025-05-25 21:08:59,288 - INFO - Agent Avg Throughput: 0.011 vehicles/step
+2025-05-25 21:08:59,288 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:08:59,288 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:08:59,288 - INFO - Agent Avg Wait Inactive: 918739.9s
+2025-05-25 21:08:59,288 - INFO - Agent Avg Queue Inactive: 424.7
+2025-05-25 21:09:10,058 - INFO - Episode 22/50
+2025-05-25 21:09:10,058 - INFO - Agent Reward: 6213.8
+2025-05-25 21:09:10,058 - INFO - Agent Avg Waiting Time (All Lanes): 323263.0 seconds
+2025-05-25 21:09:10,058 - INFO - Agent Avg Queue Length (All Lanes): 132.6 vehicles
+2025-05-25 21:09:10,058 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:09:10,058 - INFO - Agent Avg Wait Active: 1220.2s
+2025-05-25 21:09:10,058 - INFO - Agent Avg Queue Active: 2.4
+2025-05-25 21:09:10,058 - INFO - Agent Avg Wait Inactive: 1291831.7s
+2025-05-25 21:09:10,058 - INFO - Agent Avg Queue Inactive: 527.9
+2025-05-25 21:09:18,843 - INFO - Episode 23/50
+2025-05-25 21:09:18,843 - INFO - Agent Reward: 4127.7
+2025-05-25 21:09:18,843 - INFO - Agent Avg Waiting Time (All Lanes): 178163.0 seconds
+2025-05-25 21:09:18,843 - INFO - Agent Avg Queue Length (All Lanes): 94.2 vehicles
+2025-05-25 21:09:18,843 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:09:18,843 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:09:18,843 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:09:18,843 - INFO - Agent Avg Wait Inactive: 712651.8s
+2025-05-25 21:09:18,843 - INFO - Agent Avg Queue Inactive: 376.7
+2025-05-25 21:09:29,006 - INFO - Episode 24/50
+2025-05-25 21:09:29,006 - INFO - Agent Reward: 5165.9
+2025-05-25 21:09:29,006 - INFO - Agent Avg Waiting Time (All Lanes): 235064.3 seconds
+2025-05-25 21:09:29,006 - INFO - Agent Avg Queue Length (All Lanes): 108.5 vehicles
+2025-05-25 21:09:29,006 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:09:29,006 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:09:29,006 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:09:29,006 - INFO - Agent Avg Wait Inactive: 940257.3s
+2025-05-25 21:09:29,006 - INFO - Agent Avg Queue Inactive: 434.1
+2025-05-25 21:09:38,592 - INFO - Episode 25/50
+2025-05-25 21:09:38,592 - INFO - Agent Reward: 4817.4
+2025-05-25 21:09:38,593 - INFO - Agent Avg Waiting Time (All Lanes): 224870.3 seconds
+2025-05-25 21:09:38,593 - INFO - Agent Avg Queue Length (All Lanes): 105.3 vehicles
+2025-05-25 21:09:38,593 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:09:38,593 - INFO - Agent Avg Wait Active: 0.1s
+2025-05-25 21:09:38,593 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:09:38,593 - INFO - Agent Avg Wait Inactive: 899481.2s
+2025-05-25 21:09:38,593 - INFO - Agent Avg Queue Inactive: 421.3
+2025-05-25 21:09:49,720 - INFO - Episode 26/50
+2025-05-25 21:09:49,720 - INFO - Agent Reward: 6026.7
+2025-05-25 21:09:49,720 - INFO - Agent Avg Waiting Time (All Lanes): 267321.3 seconds
+2025-05-25 21:09:49,720 - INFO - Agent Avg Queue Length (All Lanes): 120.2 vehicles
+2025-05-25 21:09:49,720 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:09:49,721 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:09:49,721 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:09:49,721 - INFO - Agent Avg Wait Inactive: 1069285.4s
+2025-05-25 21:09:49,721 - INFO - Agent Avg Queue Inactive: 480.9
+2025-05-25 21:10:00,524 - INFO - Episode 27/50
+2025-05-25 21:10:00,525 - INFO - Agent Reward: 6165.4
+2025-05-25 21:10:00,525 - INFO - Agent Avg Waiting Time (All Lanes): 316817.5 seconds
+2025-05-25 21:10:00,525 - INFO - Agent Avg Queue Length (All Lanes): 129.1 vehicles
+2025-05-25 21:10:00,525 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:00,525 - INFO - Agent Avg Wait Active: 63.1s
+2025-05-25 21:10:00,525 - INFO - Agent Avg Queue Active: 0.4
+2025-05-25 21:10:00,525 - INFO - Agent Avg Wait Inactive: 1267207.0s
+2025-05-25 21:10:00,525 - INFO - Agent Avg Queue Inactive: 515.9
+2025-05-25 21:10:10,642 - INFO - Episode 28/50
+2025-05-25 21:10:10,642 - INFO - Agent Reward: 5912.4
+2025-05-25 21:10:10,642 - INFO - Agent Avg Waiting Time (All Lanes): 299256.5 seconds
+2025-05-25 21:10:10,642 - INFO - Agent Avg Queue Length (All Lanes): 124.7 vehicles
+2025-05-25 21:10:10,642 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:10,642 - INFO - Agent Avg Wait Active: 2.3s
+2025-05-25 21:10:10,642 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:10:10,642 - INFO - Agent Avg Wait Inactive: 1197023.8s
+2025-05-25 21:10:10,642 - INFO - Agent Avg Queue Inactive: 498.9
+2025-05-25 21:10:23,994 - INFO - Episode 29/50
+2025-05-25 21:10:23,994 - INFO - Agent Reward: 7114.5
+2025-05-25 21:10:23,994 - INFO - Agent Avg Waiting Time (All Lanes): 320821.2 seconds
+2025-05-25 21:10:23,994 - INFO - Agent Avg Queue Length (All Lanes): 141.0 vehicles
+2025-05-25 21:10:23,994 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:23,994 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:10:23,994 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:10:23,994 - INFO - Agent Avg Wait Inactive: 1283284.7s
+2025-05-25 21:10:23,994 - INFO - Agent Avg Queue Inactive: 563.8
+2025-05-25 21:10:34,562 - INFO - Episode 30/50
+2025-05-25 21:10:34,562 - INFO - Agent Reward: 5467.5
+2025-05-25 21:10:34,563 - INFO - Agent Avg Waiting Time (All Lanes): 240483.3 seconds
+2025-05-25 21:10:34,563 - INFO - Agent Avg Queue Length (All Lanes): 114.5 vehicles
+2025-05-25 21:10:34,563 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:34,563 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:10:34,563 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:10:34,563 - INFO - Agent Avg Wait Inactive: 961933.1s
+2025-05-25 21:10:34,563 - INFO - Agent Avg Queue Inactive: 457.9
+2025-05-25 21:10:45,348 - INFO - Episode 31/50
+2025-05-25 21:10:45,348 - INFO - Agent Reward: 4710.7
+2025-05-25 21:10:45,348 - INFO - Agent Avg Waiting Time (All Lanes): 310613.8 seconds
+2025-05-25 21:10:45,348 - INFO - Agent Avg Queue Length (All Lanes): 129.0 vehicles
+2025-05-25 21:10:45,348 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:45,348 - INFO - Agent Avg Wait Active: 1210.1s
+2025-05-25 21:10:45,348 - INFO - Agent Avg Queue Active: 1.9
+2025-05-25 21:10:45,348 - INFO - Agent Avg Wait Inactive: 1241245.1s
+2025-05-25 21:10:45,348 - INFO - Agent Avg Queue Inactive: 514.1
+2025-05-25 21:10:55,233 - INFO - Episode 32/50
+2025-05-25 21:10:55,233 - INFO - Agent Reward: 4994.4
+2025-05-25 21:10:55,233 - INFO - Agent Avg Waiting Time (All Lanes): 233991.1 seconds
+2025-05-25 21:10:55,233 - INFO - Agent Avg Queue Length (All Lanes): 106.4 vehicles
+2025-05-25 21:10:55,233 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:10:55,233 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:10:55,233 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:10:55,233 - INFO - Agent Avg Wait Inactive: 935964.4s
+2025-05-25 21:10:55,233 - INFO - Agent Avg Queue Inactive: 425.5
+2025-05-25 21:11:06,415 - INFO - Episode 33/50
+2025-05-25 21:11:06,415 - INFO - Agent Reward: 5701.3
+2025-05-25 21:11:06,415 - INFO - Agent Avg Waiting Time (All Lanes): 254275.9 seconds
+2025-05-25 21:11:06,416 - INFO - Agent Avg Queue Length (All Lanes): 116.4 vehicles
+2025-05-25 21:11:06,416 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:11:06,416 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:11:06,416 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:11:06,416 - INFO - Agent Avg Wait Inactive: 1017103.6s
+2025-05-25 21:11:06,416 - INFO - Agent Avg Queue Inactive: 465.8
+2025-05-25 21:11:15,130 - INFO - Episode 34/50
+2025-05-25 21:11:15,130 - INFO - Agent Reward: 4036.2
+2025-05-25 21:11:15,130 - INFO - Agent Avg Waiting Time (All Lanes): 159358.3 seconds
+2025-05-25 21:11:15,130 - INFO - Agent Avg Queue Length (All Lanes): 87.8 vehicles
+2025-05-25 21:11:15,130 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:11:15,130 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:11:15,130 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:11:15,130 - INFO - Agent Avg Wait Inactive: 637433.2s
+2025-05-25 21:11:15,130 - INFO - Agent Avg Queue Inactive: 351.3
+2025-05-25 21:11:26,687 - INFO - Episode 35/50
+2025-05-25 21:11:26,687 - INFO - Agent Reward: 6386.2
+2025-05-25 21:11:26,687 - INFO - Agent Avg Waiting Time (All Lanes): 332598.2 seconds
+2025-05-25 21:11:26,687 - INFO - Agent Avg Queue Length (All Lanes): 135.4 vehicles
+2025-05-25 21:11:26,687 - INFO - Agent Avg Throughput: 0.011 vehicles/step
+2025-05-25 21:11:26,687 - INFO - Agent Avg Wait Active: 1032.2s
+2025-05-25 21:11:26,687 - INFO - Agent Avg Queue Active: 2.8
+2025-05-25 21:11:26,687 - INFO - Agent Avg Wait Inactive: 1329360.5s
+2025-05-25 21:11:26,687 - INFO - Agent Avg Queue Inactive: 538.8
+2025-05-25 21:11:36,717 - INFO - Episode 36/50
+2025-05-25 21:11:36,717 - INFO - Agent Reward: 5352.5
+2025-05-25 21:11:36,717 - INFO - Agent Avg Waiting Time (All Lanes): 251713.9 seconds
+2025-05-25 21:11:36,717 - INFO - Agent Avg Queue Length (All Lanes): 109.7 vehicles
+2025-05-25 21:11:36,717 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:11:36,717 - INFO - Agent Avg Wait Active: 34.4s
+2025-05-25 21:11:36,717 - INFO - Agent Avg Queue Active: 0.2
+2025-05-25 21:11:36,717 - INFO - Agent Avg Wait Inactive: 1006821.3s
+2025-05-25 21:11:36,717 - INFO - Agent Avg Queue Inactive: 438.6
+2025-05-25 21:11:49,103 - INFO - Episode 37/50
+2025-05-25 21:11:49,103 - INFO - Agent Reward: 6004.3
+2025-05-25 21:11:49,103 - INFO - Agent Avg Waiting Time (All Lanes): 271191.5 seconds
+2025-05-25 21:11:49,103 - INFO - Agent Avg Queue Length (All Lanes): 122.1 vehicles
+2025-05-25 21:11:49,103 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:11:49,103 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:11:49,103 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:11:49,103 - INFO - Agent Avg Wait Inactive: 1084766.1s
+2025-05-25 21:11:49,103 - INFO - Agent Avg Queue Inactive: 488.3
+2025-05-25 21:11:59,927 - INFO - Episode 38/50
+2025-05-25 21:11:59,927 - INFO - Agent Reward: 5172.5
+2025-05-25 21:11:59,927 - INFO - Agent Avg Waiting Time (All Lanes): 251700.0 seconds
+2025-05-25 21:11:59,927 - INFO - Agent Avg Queue Length (All Lanes): 115.2 vehicles
+2025-05-25 21:11:59,927 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:11:59,927 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:11:59,927 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:11:59,927 - INFO - Agent Avg Wait Inactive: 1006800.0s
+2025-05-25 21:11:59,927 - INFO - Agent Avg Queue Inactive: 460.7
+2025-05-25 21:12:10,591 - INFO - Episode 39/50
+2025-05-25 21:12:10,591 - INFO - Agent Reward: 4692.3
+2025-05-25 21:12:10,591 - INFO - Agent Avg Waiting Time (All Lanes): 214586.0 seconds
+2025-05-25 21:12:10,591 - INFO - Agent Avg Queue Length (All Lanes): 102.8 vehicles
+2025-05-25 21:12:10,591 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:12:10,592 - INFO - Agent Avg Wait Active: 0.1s
+2025-05-25 21:12:10,592 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:12:10,592 - INFO - Agent Avg Wait Inactive: 858344.0s
+2025-05-25 21:12:10,592 - INFO - Agent Avg Queue Inactive: 411.3
+2025-05-25 21:12:21,475 - INFO - Episode 40/50
+2025-05-25 21:12:21,475 - INFO - Agent Reward: 5325.7
+2025-05-25 21:12:21,475 - INFO - Agent Avg Waiting Time (All Lanes): 229408.1 seconds
+2025-05-25 21:12:21,475 - INFO - Agent Avg Queue Length (All Lanes): 110.2 vehicles
+2025-05-25 21:12:21,475 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:12:21,475 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:12:21,475 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:12:21,475 - INFO - Agent Avg Wait Inactive: 917632.5s
+2025-05-25 21:12:21,475 - INFO - Agent Avg Queue Inactive: 440.8
+2025-05-25 21:12:32,275 - INFO - Episode 41/50
+2025-05-25 21:12:32,275 - INFO - Agent Reward: 5284.0
+2025-05-25 21:12:32,275 - INFO - Agent Avg Waiting Time (All Lanes): 231806.1 seconds
+2025-05-25 21:12:32,275 - INFO - Agent Avg Queue Length (All Lanes): 109.4 vehicles
+2025-05-25 21:12:32,275 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:12:32,275 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:12:32,275 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:12:32,275 - INFO - Agent Avg Wait Inactive: 927224.4s
+2025-05-25 21:12:32,275 - INFO - Agent Avg Queue Inactive: 437.6
+2025-05-25 21:12:43,267 - INFO - Episode 42/50
+2025-05-25 21:12:43,267 - INFO - Agent Reward: 5763.6
+2025-05-25 21:12:43,267 - INFO - Agent Avg Waiting Time (All Lanes): 248590.3 seconds
+2025-05-25 21:12:43,267 - INFO - Agent Avg Queue Length (All Lanes): 114.2 vehicles
+2025-05-25 21:12:43,267 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:12:43,267 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:12:43,267 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:12:43,267 - INFO - Agent Avg Wait Inactive: 994361.2s
+2025-05-25 21:12:43,267 - INFO - Agent Avg Queue Inactive: 457.0
+2025-05-25 21:12:54,805 - INFO - Episode 43/50
+2025-05-25 21:12:54,805 - INFO - Agent Reward: 5861.0
+2025-05-25 21:12:54,805 - INFO - Agent Avg Waiting Time (All Lanes): 301678.6 seconds
+2025-05-25 21:12:54,805 - INFO - Agent Avg Queue Length (All Lanes): 125.2 vehicles
+2025-05-25 21:12:54,805 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:12:54,805 - INFO - Agent Avg Wait Active: 2136.0s
+2025-05-25 21:12:54,805 - INFO - Agent Avg Queue Active: 1.5
+2025-05-25 21:12:54,805 - INFO - Agent Avg Wait Inactive: 1204578.5s
+2025-05-25 21:12:54,805 - INFO - Agent Avg Queue Inactive: 499.3
+2025-05-25 21:13:04,836 - INFO - Episode 44/50
+2025-05-25 21:13:04,836 - INFO - Agent Reward: 4289.7
+2025-05-25 21:13:04,836 - INFO - Agent Avg Waiting Time (All Lanes): 180999.7 seconds
+2025-05-25 21:13:04,836 - INFO - Agent Avg Queue Length (All Lanes): 95.6 vehicles
+2025-05-25 21:13:04,836 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:04,836 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:13:04,836 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:13:04,836 - INFO - Agent Avg Wait Inactive: 723998.9s
+2025-05-25 21:13:04,836 - INFO - Agent Avg Queue Inactive: 382.2
+2025-05-25 21:13:16,395 - INFO - Episode 45/50
+2025-05-25 21:13:16,395 - INFO - Agent Reward: 5094.3
+2025-05-25 21:13:16,395 - INFO - Agent Avg Waiting Time (All Lanes): 218939.7 seconds
+2025-05-25 21:13:16,395 - INFO - Agent Avg Queue Length (All Lanes): 105.8 vehicles
+2025-05-25 21:13:16,395 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:16,395 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:13:16,395 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:13:16,395 - INFO - Agent Avg Wait Inactive: 875758.6s
+2025-05-25 21:13:16,395 - INFO - Agent Avg Queue Inactive: 423.2
+2025-05-25 21:13:27,691 - INFO - Episode 46/50
+2025-05-25 21:13:27,691 - INFO - Agent Reward: 5439.1
+2025-05-25 21:13:27,691 - INFO - Agent Avg Waiting Time (All Lanes): 264182.6 seconds
+2025-05-25 21:13:27,691 - INFO - Agent Avg Queue Length (All Lanes): 120.9 vehicles
+2025-05-25 21:13:27,691 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:27,691 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:13:27,691 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:13:27,691 - INFO - Agent Avg Wait Inactive: 1056730.5s
+2025-05-25 21:13:27,691 - INFO - Agent Avg Queue Inactive: 483.7
+2025-05-25 21:13:38,893 - INFO - Episode 47/50
+2025-05-25 21:13:38,893 - INFO - Agent Reward: 6345.4
+2025-05-25 21:13:38,893 - INFO - Agent Avg Waiting Time (All Lanes): 332848.2 seconds
+2025-05-25 21:13:38,893 - INFO - Agent Avg Queue Length (All Lanes): 133.7 vehicles
+2025-05-25 21:13:38,893 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:38,893 - INFO - Agent Avg Wait Active: 137.4s
+2025-05-25 21:13:38,893 - INFO - Agent Avg Queue Active: 0.6
+2025-05-25 21:13:38,893 - INFO - Agent Avg Wait Inactive: 1331255.6s
+2025-05-25 21:13:38,893 - INFO - Agent Avg Queue Inactive: 534.2
+2025-05-25 21:13:48,852 - INFO - Episode 48/50
+2025-05-25 21:13:48,852 - INFO - Agent Reward: 4943.0
+2025-05-25 21:13:48,852 - INFO - Agent Avg Waiting Time (All Lanes): 200586.8 seconds
+2025-05-25 21:13:48,852 - INFO - Agent Avg Queue Length (All Lanes): 101.7 vehicles
+2025-05-25 21:13:48,852 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:48,852 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:13:48,852 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:13:48,852 - INFO - Agent Avg Wait Inactive: 802347.1s
+2025-05-25 21:13:48,852 - INFO - Agent Avg Queue Inactive: 406.8
+2025-05-25 21:13:58,533 - INFO - Episode 49/50
+2025-05-25 21:13:58,533 - INFO - Agent Reward: 4861.4
+2025-05-25 21:13:58,533 - INFO - Agent Avg Waiting Time (All Lanes): 227547.3 seconds
+2025-05-25 21:13:58,533 - INFO - Agent Avg Queue Length (All Lanes): 105.2 vehicles
+2025-05-25 21:13:58,533 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:13:58,533 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-25 21:13:58,533 - INFO - Agent Avg Queue Active: 0.0
+2025-05-25 21:13:58,533 - INFO - Agent Avg Wait Inactive: 910189.1s
+2025-05-25 21:13:58,533 - INFO - Agent Avg Queue Inactive: 420.8
+2025-05-25 21:14:09,019 - INFO - Episode 50/50
+2025-05-25 21:14:09,019 - INFO - Agent Reward: 4977.1
+2025-05-25 21:14:09,019 - INFO - Agent Avg Waiting Time (All Lanes): 230658.2 seconds
+2025-05-25 21:14:09,019 - INFO - Agent Avg Queue Length (All Lanes): 103.0 vehicles
+2025-05-25 21:14:09,019 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-25 21:14:09,019 - INFO - Agent Avg Wait Active: 17.0s
+2025-05-25 21:14:09,020 - INFO - Agent Avg Queue Active: 0.1
+2025-05-25 21:14:09,020 - INFO - Agent Avg Wait Inactive: 922615.7s
+2025-05-25 21:14:09,020 - INFO - Agent Avg Queue Inactive: 412.0
+2025-05-25 21:14:09,020 - INFO - 
+=== Final Agent Results ===
+2025-05-25 21:14:09,020 - INFO - Average Reward: 5317.4
+2025-05-25 21:14:09,020 - INFO - Average Waiting Time (All Lanes): 250099.2 seconds
+2025-05-25 21:14:09,020 - INFO - Average Queue Length (All Lanes): 113.4 vehicles
+2025-05-25 21:14:09,020 - INFO - Average Throughput: 0.001 vehicles/step
+2025-05-25 21:14:09,020 - INFO - Average Wait Active: 172.5 seconds
+2025-05-25 21:14:09,020 - INFO - Average Queue Active: 0.3 vehicles
+2025-05-25 21:14:09,020 - INFO - Average Wait Inactive: 1000224.1 seconds
+2025-05-25 21:14:09,020 - INFO - Average Queue Inactive: 453.3 vehicles
+2025-05-25 21:14:09,022 - INFO - Results saved to 'agent_test_results.csv'
+2025-05-25 21:14:09,633 - INFO - Plots saved to 'agent_metrics.png'
+2025-05-25 21:14:09,640 - INFO - Environment closed successfully
+2025-05-26 19:50:02,395 - INFO - Environment initialized successfully
+2025-05-26 19:50:03,136 - INFO - Agent initialized successfully
+2025-05-26 19:50:03,147 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-26 19:50:03,147 - INFO - === Agent Testing Started ===
+2025-05-26 19:50:12,910 - INFO - Episode 1/50
+2025-05-26 19:50:12,910 - INFO - Agent Reward: 4979.7
+2025-05-26 19:50:12,910 - INFO - Agent Avg Waiting Time (All Lanes): 149098.5 seconds
+2025-05-26 19:50:12,910 - INFO - Agent Avg Queue Length (All Lanes): 42.5 vehicles
+2025-05-26 19:50:12,910 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:50:12,910 - INFO - Agent Avg Wait Active: 0.2s
+2025-05-26 19:50:12,910 - INFO - Agent Avg Queue Active: 0.1
+2025-05-26 19:50:12,910 - INFO - Agent Avg Wait Inactive: 894591.1s
+2025-05-26 19:50:12,910 - INFO - Agent Avg Queue Inactive: 424.6
+2025-05-26 19:50:23,485 - INFO - Episode 2/50
+2025-05-26 19:50:23,485 - INFO - Agent Reward: 5712.4
+2025-05-26 19:50:23,485 - INFO - Agent Avg Waiting Time (All Lanes): 169845.8 seconds
+2025-05-26 19:50:23,485 - INFO - Agent Avg Queue Length (All Lanes): 48.5 vehicles
+2025-05-26 19:50:23,485 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:50:23,485 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:50:23,486 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:50:23,486 - INFO - Agent Avg Wait Inactive: 1019074.6s
+2025-05-26 19:50:23,486 - INFO - Agent Avg Queue Inactive: 485.5
+2025-05-26 19:50:24,093 - INFO - Environment closed successfully
+2025-05-26 19:51:18,366 - INFO - Environment initialized successfully
+2025-05-26 19:51:19,106 - INFO - Agent initialized successfully
+2025-05-26 19:51:19,112 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-26 19:51:19,112 - INFO - === Agent Testing Started ===
+2025-05-26 19:51:28,825 - INFO - Episode 1/50
+2025-05-26 19:51:28,825 - INFO - Agent Reward: 4979.7
+2025-05-26 19:51:28,825 - INFO - Agent Avg Waiting Time (All Lanes): 372.7 seconds
+2025-05-26 19:51:28,825 - INFO - Agent Avg Queue Length (All Lanes): 42.5 vehicles
+2025-05-26 19:51:28,825 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:51:28,825 - INFO - Agent Avg Wait Active: 0.2s
+2025-05-26 19:51:28,825 - INFO - Agent Avg Queue Active: 0.1
+2025-05-26 19:51:28,825 - INFO - Agent Avg Wait Inactive: 894591.1s
+2025-05-26 19:51:28,825 - INFO - Agent Avg Queue Inactive: 424.6
+2025-05-26 19:51:39,235 - INFO - Episode 2/50
+2025-05-26 19:51:39,235 - INFO - Agent Reward: 5712.4
+2025-05-26 19:51:39,235 - INFO - Agent Avg Waiting Time (All Lanes): 424.6 seconds
+2025-05-26 19:51:39,235 - INFO - Agent Avg Queue Length (All Lanes): 48.5 vehicles
+2025-05-26 19:51:39,235 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:51:39,235 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:51:39,235 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:51:39,235 - INFO - Agent Avg Wait Inactive: 1019074.6s
+2025-05-26 19:51:39,235 - INFO - Agent Avg Queue Inactive: 485.5
+2025-05-26 19:51:49,217 - INFO - Episode 3/50
+2025-05-26 19:51:49,218 - INFO - Agent Reward: 4982.6
+2025-05-26 19:51:49,218 - INFO - Agent Avg Waiting Time (All Lanes): 382.0 seconds
+2025-05-26 19:51:49,218 - INFO - Agent Avg Queue Length (All Lanes): 42.5 vehicles
+2025-05-26 19:51:49,218 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:51:49,218 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:51:49,218 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:51:49,218 - INFO - Agent Avg Wait Inactive: 916879.1s
+2025-05-26 19:51:49,218 - INFO - Agent Avg Queue Inactive: 425.2
+2025-05-26 19:51:58,579 - INFO - Episode 4/50
+2025-05-26 19:51:58,579 - INFO - Agent Reward: 4665.9
+2025-05-26 19:51:58,579 - INFO - Agent Avg Waiting Time (All Lanes): 314.2 seconds
+2025-05-26 19:51:58,579 - INFO - Agent Avg Queue Length (All Lanes): 37.4 vehicles
+2025-05-26 19:51:58,579 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:51:58,579 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:51:58,580 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:51:58,580 - INFO - Agent Avg Wait Inactive: 754062.5s
+2025-05-26 19:51:58,580 - INFO - Agent Avg Queue Inactive: 374.3
+2025-05-26 19:52:09,359 - INFO - Episode 5/50
+2025-05-26 19:52:09,359 - INFO - Agent Reward: 5822.0
+2025-05-26 19:52:09,359 - INFO - Agent Avg Waiting Time (All Lanes): 430.0 seconds
+2025-05-26 19:52:09,359 - INFO - Agent Avg Queue Length (All Lanes): 47.4 vehicles
+2025-05-26 19:52:09,359 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:52:09,359 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:52:09,359 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:52:09,359 - INFO - Agent Avg Wait Inactive: 1031940.0s
+2025-05-26 19:52:09,359 - INFO - Agent Avg Queue Inactive: 473.6
+2025-05-26 19:52:22,333 - INFO - Episode 6/50
+2025-05-26 19:52:22,333 - INFO - Agent Reward: 7147.1
+2025-05-26 19:52:22,333 - INFO - Agent Avg Waiting Time (All Lanes): 561.1 seconds
+2025-05-26 19:52:22,333 - INFO - Agent Avg Queue Length (All Lanes): 57.6 vehicles
+2025-05-26 19:52:22,333 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:52:22,333 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:52:22,333 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:52:22,333 - INFO - Agent Avg Wait Inactive: 1346620.2s
+2025-05-26 19:52:22,333 - INFO - Agent Avg Queue Inactive: 576.4
+2025-05-26 19:52:32,791 - INFO - Episode 7/50
+2025-05-26 19:52:32,791 - INFO - Agent Reward: 4999.7
+2025-05-26 19:52:32,791 - INFO - Agent Avg Waiting Time (All Lanes): 363.6 seconds
+2025-05-26 19:52:32,791 - INFO - Agent Avg Queue Length (All Lanes): 41.1 vehicles
+2025-05-26 19:52:32,791 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:52:32,791 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:52:32,791 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:52:32,791 - INFO - Agent Avg Wait Inactive: 872736.8s
+2025-05-26 19:52:32,791 - INFO - Agent Avg Queue Inactive: 411.3
+2025-05-26 19:52:43,755 - INFO - Episode 8/50
+2025-05-26 19:52:43,756 - INFO - Agent Reward: 4968.6
+2025-05-26 19:52:43,756 - INFO - Agent Avg Waiting Time (All Lanes): 364.8 seconds
+2025-05-26 19:52:43,756 - INFO - Agent Avg Queue Length (All Lanes): 40.9 vehicles
+2025-05-26 19:52:43,756 - INFO - Agent Avg Throughput: 0.000 vehicles/step
+2025-05-26 19:52:43,756 - INFO - Agent Avg Wait Active: 0.0s
+2025-05-26 19:52:43,756 - INFO - Agent Avg Queue Active: 0.0
+2025-05-26 19:52:43,756 - INFO - Agent Avg Wait Inactive: 875423.9s
+2025-05-26 19:52:43,756 - INFO - Agent Avg Queue Inactive: 409.4
+2025-05-26 19:52:50,504 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-26 19:56:04,379 - INFO - Environment initialized successfully
+2025-05-26 19:56:05,135 - INFO - Agent initialized successfully
+2025-05-26 19:56:05,142 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-26 19:56:05,142 - INFO - === Agent Testing Started ===
+2025-05-26 19:56:14,917 - INFO - Episode 1/50
+2025-05-26 19:56:14,917 - INFO - Agent Reward: 4979.7
+2025-05-26 19:56:14,918 - INFO - Agent Avg Waiting Time: 223647.8 seconds
+2025-05-26 19:56:14,918 - INFO - Agent Avg Queue Length: 106.2 vehicles
+2025-05-26 19:56:18,058 - ERROR - Error closing environment: unpack requires a buffer of 4 bytes
+2025-05-26 19:56:51,048 - INFO - Environment initialized successfully
+2025-05-26 19:56:51,789 - INFO - Agent initialized successfully
+2025-05-26 19:56:51,795 - INFO - Successfully loaded model from dqn_model.pth
+2025-05-26 19:56:51,795 - INFO - === Agent Testing Started ===
+2025-05-26 19:57:01,210 - INFO - Episode 1/50
+2025-05-26 19:57:01,211 - INFO - Agent Reward: 4979.7
+2025-05-26 19:57:01,211 - INFO - Agent Avg Waiting Time: 372.7 seconds
+2025-05-26 19:57:01,211 - INFO - Agent Avg Queue Length: 42.5 vehicles
+2025-05-26 19:57:11,624 - INFO - Episode 2/50
+2025-05-26 19:57:11,624 - INFO - Agent Reward: 5712.4
+2025-05-26 19:57:11,624 - INFO - Agent Avg Waiting Time: 424.6 seconds
+2025-05-26 19:57:11,624 - INFO - Agent Avg Queue Length: 48.5 vehicles
+2025-05-26 19:57:22,276 - INFO - Episode 3/50
+2025-05-26 19:57:22,276 - INFO - Agent Reward: 4982.6
+2025-05-26 19:57:22,276 - INFO - Agent Avg Waiting Time: 382.0 seconds
+2025-05-26 19:57:22,276 - INFO - Agent Avg Queue Length: 42.5 vehicles
+2025-05-26 19:57:31,339 - INFO - Episode 4/50
+2025-05-26 19:57:31,339 - INFO - Agent Reward: 4665.9
+2025-05-26 19:57:31,339 - INFO - Agent Avg Waiting Time: 314.2 seconds
+2025-05-26 19:57:31,339 - INFO - Agent Avg Queue Length: 37.4 vehicles
+2025-05-26 19:57:42,562 - INFO - Episode 5/50
+2025-05-26 19:57:42,563 - INFO - Agent Reward: 5822.0
+2025-05-26 19:57:42,563 - INFO - Agent Avg Waiting Time: 430.0 seconds
+2025-05-26 19:57:42,563 - INFO - Agent Avg Queue Length: 47.4 vehicles
+2025-05-26 19:57:55,497 - INFO - Episode 6/50
+2025-05-26 19:57:55,497 - INFO - Agent Reward: 7147.1
+2025-05-26 19:57:55,497 - INFO - Agent Avg Waiting Time: 561.1 seconds
+2025-05-26 19:57:55,497 - INFO - Agent Avg Queue Length: 57.6 vehicles
+2025-05-26 19:58:05,307 - INFO - Episode 7/50
+2025-05-26 19:58:05,307 - INFO - Agent Reward: 4999.7
+2025-05-26 19:58:05,307 - INFO - Agent Avg Waiting Time: 363.6 seconds
+2025-05-26 19:58:05,307 - INFO - Agent Avg Queue Length: 41.1 vehicles
+2025-05-26 19:58:15,130 - INFO - Episode 8/50
+2025-05-26 19:58:15,131 - INFO - Agent Reward: 4968.6
+2025-05-26 19:58:15,131 - INFO - Agent Avg Waiting Time: 364.8 seconds
+2025-05-26 19:58:15,131 - INFO - Agent Avg Queue Length: 40.9 vehicles
+2025-05-26 19:58:24,704 - INFO - Episode 9/50
+2025-05-26 19:58:24,704 - INFO - Agent Reward: 5118.5
+2025-05-26 19:58:24,704 - INFO - Agent Avg Waiting Time: 407.5 seconds
+2025-05-26 19:58:24,704 - INFO - Agent Avg Queue Length: 42.8 vehicles
+2025-05-26 19:58:34,637 - INFO - Episode 10/50
+2025-05-26 19:58:34,637 - INFO - Agent Reward: 4933.1
+2025-05-26 19:58:34,637 - INFO - Agent Avg Waiting Time: 378.5 seconds
+2025-05-26 19:58:34,637 - INFO - Agent Avg Queue Length: 41.9 vehicles
+2025-05-26 19:58:45,108 - INFO - Episode 11/50
+2025-05-26 19:58:45,108 - INFO - Agent Reward: 5180.8
+2025-05-26 19:58:45,108 - INFO - Agent Avg Waiting Time: 377.2 seconds
+2025-05-26 19:58:45,108 - INFO - Agent Avg Queue Length: 43.2 vehicles
+2025-05-26 19:58:56,054 - INFO - Episode 12/50
+2025-05-26 19:58:56,054 - INFO - Agent Reward: 5642.4
+2025-05-26 19:58:56,054 - INFO - Agent Avg Waiting Time: 459.4 seconds
+2025-05-26 19:58:56,054 - INFO - Agent Avg Queue Length: 49.5 vehicles
+2025-05-26 19:59:06,770 - INFO - Episode 13/50
+2025-05-26 19:59:06,770 - INFO - Agent Reward: 5995.4
+2025-05-26 19:59:06,770 - INFO - Agent Avg Waiting Time: 507.9 seconds
+2025-05-26 19:59:06,770 - INFO - Agent Avg Queue Length: 50.2 vehicles
+2025-05-26 19:59:18,485 - INFO - Episode 14/50
+2025-05-26 19:59:18,485 - INFO - Agent Reward: 5154.5
+2025-05-26 19:59:18,485 - INFO - Agent Avg Waiting Time: 512.8 seconds
+2025-05-26 19:59:18,485 - INFO - Agent Avg Queue Length: 53.0 vehicles
+2025-05-26 19:59:28,126 - INFO - Episode 15/50
+2025-05-26 19:59:28,127 - INFO - Agent Reward: 5140.7
+2025-05-26 19:59:28,127 - INFO - Agent Avg Waiting Time: 403.2 seconds
+2025-05-26 19:59:28,127 - INFO - Agent Avg Queue Length: 43.0 vehicles
+2025-05-26 19:59:37,537 - INFO - Episode 16/50
+2025-05-26 19:59:37,537 - INFO - Agent Reward: 4612.2
+2025-05-26 19:59:37,537 - INFO - Agent Avg Waiting Time: 334.4 seconds
+2025-05-26 19:59:37,537 - INFO - Agent Avg Queue Length: 40.2 vehicles
+2025-05-26 19:59:48,708 - INFO - Episode 17/50
+2025-05-26 19:59:48,709 - INFO - Agent Reward: 4938.6
+2025-05-26 19:59:48,709 - INFO - Agent Avg Waiting Time: 521.4 seconds
+2025-05-26 19:59:48,709 - INFO - Agent Avg Queue Length: 52.2 vehicles
+2025-05-26 19:59:58,509 - INFO - Episode 18/50
+2025-05-26 19:59:58,510 - INFO - Agent Reward: 5180.0
+2025-05-26 19:59:58,510 - INFO - Agent Avg Waiting Time: 399.1 seconds
+2025-05-26 19:59:58,510 - INFO - Agent Avg Queue Length: 43.5 vehicles
+2025-05-26 20:00:07,038 - INFO - Episode 19/50
+2025-05-26 20:00:07,038 - INFO - Agent Reward: 4369.8
+2025-05-26 20:00:07,038 - INFO - Agent Avg Waiting Time: 309.0 seconds
+2025-05-26 20:00:07,038 - INFO - Agent Avg Queue Length: 37.8 vehicles
+2025-05-26 20:00:17,169 - INFO - Episode 20/50
+2025-05-26 20:00:17,169 - INFO - Agent Reward: 4963.5
+2025-05-26 20:00:17,169 - INFO - Agent Avg Waiting Time: 379.8 seconds
+2025-05-26 20:00:17,169 - INFO - Agent Avg Queue Length: 42.2 vehicles
+2025-05-26 20:00:27,344 - INFO - Episode 21/50
+2025-05-26 20:00:27,344 - INFO - Agent Reward: 5116.5
+2025-05-26 20:00:27,344 - INFO - Agent Avg Waiting Time: 382.8 seconds
+2025-05-26 20:00:27,344 - INFO - Agent Avg Queue Length: 42.5 vehicles
+2025-05-26 20:00:38,212 - INFO - Episode 22/50
+2025-05-26 20:00:38,212 - INFO - Agent Reward: 6213.8
+2025-05-26 20:00:38,212 - INFO - Agent Avg Waiting Time: 538.8 seconds
+2025-05-26 20:00:38,212 - INFO - Agent Avg Queue Length: 53.0 vehicles
+2025-05-26 20:00:47,384 - INFO - Episode 23/50
+2025-05-26 20:00:47,384 - INFO - Agent Reward: 4127.7
+2025-05-26 20:00:47,384 - INFO - Agent Avg Waiting Time: 296.9 seconds
+2025-05-26 20:00:47,384 - INFO - Agent Avg Queue Length: 37.7 vehicles
+2025-05-26 20:00:57,529 - INFO - Episode 24/50
+2025-05-26 20:00:57,529 - INFO - Agent Reward: 5165.9
+2025-05-26 20:00:57,529 - INFO - Agent Avg Waiting Time: 391.8 seconds
+2025-05-26 20:00:57,529 - INFO - Agent Avg Queue Length: 43.4 vehicles
+2025-05-26 20:01:07,638 - INFO - Episode 25/50
+2025-05-26 20:01:07,638 - INFO - Agent Reward: 4817.4
+2025-05-26 20:01:07,638 - INFO - Agent Avg Waiting Time: 374.8 seconds
+2025-05-26 20:01:07,638 - INFO - Agent Avg Queue Length: 42.1 vehicles
+2025-05-26 20:01:18,869 - INFO - Episode 26/50
+2025-05-26 20:01:18,869 - INFO - Agent Reward: 6026.7
+2025-05-26 20:01:18,869 - INFO - Agent Avg Waiting Time: 445.5 seconds
+2025-05-26 20:01:18,869 - INFO - Agent Avg Queue Length: 48.1 vehicles
+2025-05-26 20:01:30,086 - INFO - Episode 27/50
+2025-05-26 20:01:30,086 - INFO - Agent Reward: 6165.4
+2025-05-26 20:01:30,087 - INFO - Agent Avg Waiting Time: 528.0 seconds
+2025-05-26 20:01:30,087 - INFO - Agent Avg Queue Length: 51.6 vehicles
+2025-05-26 20:01:40,495 - INFO - Episode 28/50
+2025-05-26 20:01:40,495 - INFO - Agent Reward: 5912.4
+2025-05-26 20:01:40,495 - INFO - Agent Avg Waiting Time: 498.8 seconds
+2025-05-26 20:01:40,495 - INFO - Agent Avg Queue Length: 49.9 vehicles
+2025-05-26 20:01:53,641 - INFO - Episode 29/50
+2025-05-26 20:01:53,641 - INFO - Agent Reward: 7114.5
+2025-05-26 20:01:53,641 - INFO - Agent Avg Waiting Time: 534.7 seconds
+2025-05-26 20:01:53,641 - INFO - Agent Avg Queue Length: 56.4 vehicles
+2025-05-26 20:02:04,398 - INFO - Episode 30/50
+2025-05-26 20:02:04,398 - INFO - Agent Reward: 5467.5
+2025-05-26 20:02:04,398 - INFO - Agent Avg Waiting Time: 400.8 seconds
+2025-05-26 20:02:04,398 - INFO - Agent Avg Queue Length: 45.8 vehicles
+2025-05-26 20:02:15,193 - INFO - Episode 31/50
+2025-05-26 20:02:15,193 - INFO - Agent Reward: 4710.7
+2025-05-26 20:02:15,193 - INFO - Agent Avg Waiting Time: 517.7 seconds
+2025-05-26 20:02:15,193 - INFO - Agent Avg Queue Length: 51.6 vehicles
+2025-05-26 20:02:25,271 - INFO - Episode 32/50
+2025-05-26 20:02:25,272 - INFO - Agent Reward: 4994.4
+2025-05-26 20:02:25,272 - INFO - Agent Avg Waiting Time: 390.0 seconds
+2025-05-26 20:02:25,272 - INFO - Agent Avg Queue Length: 42.6 vehicles
+2025-05-26 20:02:36,014 - INFO - Episode 33/50
+2025-05-26 20:02:36,014 - INFO - Agent Reward: 5701.3
+2025-05-26 20:02:36,014 - INFO - Agent Avg Waiting Time: 423.8 seconds
+2025-05-26 20:02:36,014 - INFO - Agent Avg Queue Length: 46.6 vehicles
+2025-05-26 20:02:45,023 - INFO - Episode 34/50
+2025-05-26 20:02:45,023 - INFO - Agent Reward: 4036.2
+2025-05-26 20:02:45,023 - INFO - Agent Avg Waiting Time: 265.6 seconds
+2025-05-26 20:02:45,023 - INFO - Agent Avg Queue Length: 35.1 vehicles
+2025-05-26 20:02:56,239 - INFO - Episode 35/50
+2025-05-26 20:02:56,239 - INFO - Agent Reward: 6386.2
+2025-05-26 20:02:56,239 - INFO - Agent Avg Waiting Time: 554.3 seconds
+2025-05-26 20:02:56,239 - INFO - Agent Avg Queue Length: 54.2 vehicles
+2025-05-26 20:03:06,222 - INFO - Episode 36/50
+2025-05-26 20:03:06,222 - INFO - Agent Reward: 5352.5
+2025-05-26 20:03:06,222 - INFO - Agent Avg Waiting Time: 419.5 seconds
+2025-05-26 20:03:06,222 - INFO - Agent Avg Queue Length: 43.9 vehicles
+2025-05-26 20:03:17,433 - INFO - Episode 37/50
+2025-05-26 20:03:17,433 - INFO - Agent Reward: 6004.3
+2025-05-26 20:03:17,433 - INFO - Agent Avg Waiting Time: 452.0 seconds
+2025-05-26 20:03:17,433 - INFO - Agent Avg Queue Length: 48.8 vehicles
+2025-05-26 20:03:27,987 - INFO - Episode 38/50
+2025-05-26 20:03:27,987 - INFO - Agent Reward: 5172.5
+2025-05-26 20:03:27,987 - INFO - Agent Avg Waiting Time: 419.5 seconds
+2025-05-26 20:03:27,987 - INFO - Agent Avg Queue Length: 46.1 vehicles
+2025-05-26 20:03:37,798 - INFO - Episode 39/50
+2025-05-26 20:03:37,798 - INFO - Agent Reward: 4692.3
+2025-05-26 20:03:37,798 - INFO - Agent Avg Waiting Time: 357.6 seconds
+2025-05-26 20:03:37,798 - INFO - Agent Avg Queue Length: 41.1 vehicles
+2025-05-26 20:03:48,371 - INFO - Episode 40/50
+2025-05-26 20:03:48,372 - INFO - Agent Reward: 5325.7
+2025-05-26 20:03:48,372 - INFO - Agent Avg Waiting Time: 382.3 seconds
+2025-05-26 20:03:48,372 - INFO - Agent Avg Queue Length: 44.1 vehicles
+2025-05-26 20:03:58,527 - INFO - Episode 41/50
+2025-05-26 20:03:58,527 - INFO - Agent Reward: 5284.0
+2025-05-26 20:03:58,527 - INFO - Agent Avg Waiting Time: 386.3 seconds
+2025-05-26 20:03:58,527 - INFO - Agent Avg Queue Length: 43.8 vehicles
+2025-05-26 20:04:09,281 - INFO - Episode 42/50
+2025-05-26 20:04:09,281 - INFO - Agent Reward: 5763.6
+2025-05-26 20:04:09,281 - INFO - Agent Avg Waiting Time: 414.3 seconds
+2025-05-26 20:04:09,282 - INFO - Agent Avg Queue Length: 45.7 vehicles
+2025-05-26 20:04:20,012 - INFO - Episode 43/50
+2025-05-26 20:04:20,012 - INFO - Agent Reward: 5861.0
+2025-05-26 20:04:20,012 - INFO - Agent Avg Waiting Time: 502.8 seconds
+2025-05-26 20:04:20,012 - INFO - Agent Avg Queue Length: 50.1 vehicles
+2025-05-26 20:04:29,399 - INFO - Episode 44/50
+2025-05-26 20:04:29,400 - INFO - Agent Reward: 4289.7
+2025-05-26 20:04:29,400 - INFO - Agent Avg Waiting Time: 301.7 seconds
+2025-05-26 20:04:29,400 - INFO - Agent Avg Queue Length: 38.2 vehicles
+2025-05-26 20:04:39,408 - INFO - Episode 45/50
+2025-05-26 20:04:39,408 - INFO - Agent Reward: 5094.3
+2025-05-26 20:04:39,408 - INFO - Agent Avg Waiting Time: 364.9 seconds
+2025-05-26 20:04:39,408 - INFO - Agent Avg Queue Length: 42.3 vehicles
+2025-05-26 20:04:50,058 - INFO - Episode 46/50
+2025-05-26 20:04:50,059 - INFO - Agent Reward: 5439.1
+2025-05-26 20:04:50,059 - INFO - Agent Avg Waiting Time: 440.3 seconds
+2025-05-26 20:04:50,059 - INFO - Agent Avg Queue Length: 48.4 vehicles
+2025-05-26 20:05:01,066 - INFO - Episode 47/50
+2025-05-26 20:05:01,066 - INFO - Agent Reward: 6345.4
+2025-05-26 20:05:01,066 - INFO - Agent Avg Waiting Time: 554.7 seconds
+2025-05-26 20:05:01,067 - INFO - Agent Avg Queue Length: 53.5 vehicles
+2025-05-26 20:05:10,946 - INFO - Episode 48/50
+2025-05-26 20:05:10,946 - INFO - Agent Reward: 4943.0
+2025-05-26 20:05:10,946 - INFO - Agent Avg Waiting Time: 334.3 seconds
+2025-05-26 20:05:10,946 - INFO - Agent Avg Queue Length: 40.7 vehicles
+2025-05-26 20:05:20,532 - INFO - Episode 49/50
+2025-05-26 20:05:20,532 - INFO - Agent Reward: 4861.4
+2025-05-26 20:05:20,533 - INFO - Agent Avg Waiting Time: 379.2 seconds
+2025-05-26 20:05:20,533 - INFO - Agent Avg Queue Length: 42.1 vehicles
+2025-05-26 20:05:30,006 - INFO - Episode 50/50
+2025-05-26 20:05:30,006 - INFO - Agent Reward: 4977.1
+2025-05-26 20:05:30,006 - INFO - Agent Avg Waiting Time: 384.4 seconds
+2025-05-26 20:05:30,006 - INFO - Agent Avg Queue Length: 41.2 vehicles
+2025-05-26 20:05:30,006 - INFO - 
+=== Final Agent Results ===
+2025-05-26 20:05:30,006 - INFO - Average Reward: 5317.4
+2025-05-26 20:05:30,006 - INFO - Average Waiting Time: 416.8 seconds
+2025-05-26 20:05:30,006 - INFO - Average Queue Length: 45.4 vehicles
+2025-05-26 20:05:30,009 - INFO - Results saved to agent_test_results.csv
+2025-05-26 20:05:30,384 - INFO - Plots saved to agent_metrics.png
+2025-05-26 20:05:30,390 - INFO - Environment closed successfully
